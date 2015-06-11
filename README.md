@@ -1,3 +1,3 @@
-A resource for doing things _au naturel_.
+A fork of [YouMightNotNeedjQuery.com](http://youmightnotneedjquery.com). You might not need scripts at all.
 
-### [YouMightNotNeedjQuery.com](http://youmightnotneedjquery.com)
+### [YouMightNotNeedJs.com](http://youmightnotneedjs.com)
