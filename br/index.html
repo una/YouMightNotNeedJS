@@ -991,6 +991,23 @@ outerHeight(el);
               </div>
             </div>
           </div>
+          <div id="outer_width" class="comparison">
+            <h3><a href="#outer_width">Outer Width</a></h3>
+            <div data-browser="jquery" class="browser jquery">
+              <h4>jQuery</h4>
+              <div data-lang="javascript" class="code-block language-javascript">
+                <pre><code>$(el).outerWidth();
+</code></pre>
+              </div>
+            </div>
+            <div data-browser="ie8" class="browser ie8">
+              <h4>IE8+</h4>
+              <div data-lang="javascript" class="code-block language-javascript">
+                <pre><code>el.offsetWidth
+</code></pre>
+              </div>
+            </div>
+          </div>
           <div id="outer_width_with_margin" class="comparison">
             <h3><a href="#outer_width_with_margin">Outer Width With Margin</a></h3>
             <div data-browser="jquery" class="browser jquery">
@@ -1027,23 +1044,6 @@ outerWidth(el);
 }
 
 outerWidth(el);
-</code></pre>
-              </div>
-            </div>
-          </div>
-          <div id="outer_width" class="comparison">
-            <h3><a href="#outer_width">Outer Width</a></h3>
-            <div data-browser="jquery" class="browser jquery">
-              <h4>jQuery</h4>
-              <div data-lang="javascript" class="code-block language-javascript">
-                <pre><code>$(el).outerWidth();
-</code></pre>
-              </div>
-            </div>
-            <div data-browser="ie8" class="browser ie8">
-              <h4>IE8+</h4>
-              <div data-lang="javascript" class="code-block language-javascript">
-                <pre><code>el.offsetWidth
 </code></pre>
               </div>
             </div>
@@ -1391,37 +1391,6 @@ for (var i = siblings.length; i--;) {
       <section id="events">
         <div class="inner">
           <h2>EVENTOS</h2>
-          <div id="off" class="comparison">
-            <h3><a href="#off">Off</a></h3>
-            <div data-browser="jquery" class="browser jquery">
-              <h4>jQuery</h4>
-              <div data-lang="javascript" class="code-block language-javascript">
-                <pre><code>$(el).off(eventName, eventHandler);
-</code></pre>
-              </div>
-            </div>
-            <div data-browser="ie8" class="browser ie8">
-              <h4>IE8+</h4>
-              <div data-lang="javascript" class="code-block language-javascript">
-                <pre><code>function removeEventListener(el, eventName, handler) {
-  if (el.removeEventListener)
-    el.removeEventListener(eventName, handler);
-  else
-    el.detachEvent('on' + eventName, handler);
-}
-
-removeEventListener(el, eventName, handler);
-</code></pre>
-              </div>
-            </div>
-            <div data-browser="ie9" class="browser ie9">
-              <h4>IE9+</h4>
-              <div data-lang="javascript" class="code-block language-javascript">
-                <pre><code>el.removeEventListener(eventName, eventHandler);
-</code></pre>
-              </div>
-            </div>
-          </div>
           <div id="on" class="comparison">
             <h3><a href="#on">On</a></h3>
             <div data-browser="jquery" class="browser jquery">
@@ -1452,6 +1421,37 @@ addEventListener(el, eventName, handler);
               <h4>IE9+</h4>
               <div data-lang="javascript" class="code-block language-javascript">
                 <pre><code>el.addEventListener(eventName, eventHandler);
+</code></pre>
+              </div>
+            </div>
+          </div>
+          <div id="off" class="comparison">
+            <h3><a href="#off">Off</a></h3>
+            <div data-browser="jquery" class="browser jquery">
+              <h4>jQuery</h4>
+              <div data-lang="javascript" class="code-block language-javascript">
+                <pre><code>$(el).off(eventName, eventHandler);
+</code></pre>
+              </div>
+            </div>
+            <div data-browser="ie8" class="browser ie8">
+              <h4>IE8+</h4>
+              <div data-lang="javascript" class="code-block language-javascript">
+                <pre><code>function removeEventListener(el, eventName, handler) {
+  if (el.removeEventListener)
+    el.removeEventListener(eventName, handler);
+  else
+    el.detachEvent('on' + eventName, handler);
+}
+
+removeEventListener(el, eventName, handler);
+</code></pre>
+              </div>
+            </div>
+            <div data-browser="ie9" class="browser ie9">
+              <h4>IE9+</h4>
+              <div data-lang="javascript" class="code-block language-javascript">
+                <pre><code>el.removeEventListener(eventName, eventHandler);
 </code></pre>
               </div>
             </div>
@@ -1606,6 +1606,30 @@ forEach(array, function(item, i){
               </div>
             </div>
           </div>
+          <div id="bind" class="comparison">
+            <h3><a href="#bind">Bind</a></h3>
+            <div data-browser="jquery" class="browser jquery">
+              <h4>jQuery</h4>
+              <div data-lang="javascript" class="code-block language-javascript">
+                <pre><code>$.proxy(fn, context);
+</code></pre>
+              </div>
+            </div>
+            <div data-browser="ie8" class="browser ie8">
+              <h4>IE8+</h4>
+              <div data-lang="javascript" class="code-block language-javascript">
+                <pre><code>fn.apply(context, arguments);
+</code></pre>
+              </div>
+            </div>
+            <div data-browser="ie9" class="browser ie9">
+              <h4>IE9+</h4>
+              <div data-lang="javascript" class="code-block language-javascript">
+                <pre><code>fn.bind(context);
+</code></pre>
+              </div>
+            </div>
+          </div>
           <div id="deep_extend" class="comparison">
             <h3><a href="#deep_extend">Deep Extend</a></h3>
             <div data-browser="jquery" class="browser jquery">
@@ -1641,30 +1665,6 @@ forEach(array, function(item, i){
 };
 
 deepExtend({}, objA, objB);
-</code></pre>
-              </div>
-            </div>
-          </div>
-          <div id="bind" class="comparison">
-            <h3><a href="#bind">Bind</a></h3>
-            <div data-browser="jquery" class="browser jquery">
-              <h4>jQuery</h4>
-              <div data-lang="javascript" class="code-block language-javascript">
-                <pre><code>$.proxy(fn, context);
-</code></pre>
-              </div>
-            </div>
-            <div data-browser="ie8" class="browser ie8">
-              <h4>IE8+</h4>
-              <div data-lang="javascript" class="code-block language-javascript">
-                <pre><code>fn.apply(context, arguments);
-</code></pre>
-              </div>
-            </div>
-            <div data-browser="ie9" class="browser ie9">
-              <h4>IE9+</h4>
-              <div data-lang="javascript" class="code-block language-javascript">
-                <pre><code>fn.bind(context);
 </code></pre>
               </div>
             </div>
