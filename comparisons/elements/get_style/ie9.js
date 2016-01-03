@@ -1,1 +1,0 @@
-getComputedStyle(el)[ruleName];

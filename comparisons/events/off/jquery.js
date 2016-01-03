@@ -1,1 +1,0 @@
-$(el).off(eventName, eventHandler);

@@ -1,1 +1,0 @@
-$.parseHTML(htmlString);

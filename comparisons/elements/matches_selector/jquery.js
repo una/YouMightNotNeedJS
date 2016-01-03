@@ -1,1 +1,0 @@
-$(el).is('.my-class');

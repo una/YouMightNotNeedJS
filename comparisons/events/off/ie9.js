@@ -1,1 +1,0 @@
-el.removeEventListener(eventName, eventHandler);

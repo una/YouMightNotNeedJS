@@ -1,1 +1,0 @@
-el.style.display = '';

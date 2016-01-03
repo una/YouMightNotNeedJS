@@ -152,12 +152,12 @@ header.page-header .inner h1 {
   height: 2.45em;
 }
 @media (min-width: 768px) {
-  .browser {
+  .code {
     float: right;
     clear: right;
     width: 49%;
   }
-  .browser.jquery {
+  .code.html {
     float: left;
     clear: left;
     margin-right: 2%;

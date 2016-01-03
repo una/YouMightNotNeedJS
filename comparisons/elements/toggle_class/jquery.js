@@ -1,1 +1,0 @@
-$(el).toggleClass(className);

@@ -1,1 +1,0 @@
-el.classList.add(className);

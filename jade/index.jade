@@ -33,22 +33,18 @@ body
         h1
           | You might <span class="highlighted">no</span>t need <span class="highlighted">JavaScript</span>
 
-      .old-ie-message
-        | You certainly can support IE 9 and below without jQuery, but we don't.  Please stop messing with us.
-
     .explanation
       .inner
         p
-          | JavaScript great, and by all means use it if it makes it easier to develop your application.
+          | JavaScript great, and by all means use it, while also being aware that you can build so many functional UI components without the additional dependancy.
 
         p
-          | If you're developing a library on the other hand, please take a moment to consider if you actually need JavaScript as a component dependency.
           | Maybe you can include a few lines of utility code, or a mixin, and forgo the requirement.  If you're only targeting more modern browsers,
           | you might not need anything more than what the browser ships with.
 
         p
           | This site is fully copied from <a href="http://youmightnotneedjquery.com">youmightnotneedjquery.com</a>, an excellent resource for vanilla JavaSript.
-          | But this time, we take a look at the power of modern native HTML and CSS as well as some of the syntactic sugar of Sass.
+          | But this time, we take a look at the power of modern native HTML and CSS as well as some of the syntactic sugar of Sass. Because, you might not need scripts for that task at all!
 
     .share-buttons
 
@@ -86,20 +82,17 @@ body
                 if co.alternatives
                     +alternatives(co.alternatives.txt)
 
-                for browser in ['jquery', 'ie8', 'ie9', 'ie10']
-                  if co[browser]
-                    .browser(data-browser=getNamePart(browser), class=getNamePart(browser))
+                for code in ['html', 'css', 'ie10', 'ie9', 'ie8', 'scss']
+                  if co[code]
+                    .code(data-code=getNamePart(code), class=getNamePart(code))
 
-                      if browser === 'jquery'
-                        h4 jQuery
-                      else
-                        h4= browser.toUpperCase() + '+'
+                      h4= code.toUpperCase()
 
-                      for lang in ['js', 'css']
-                        if co[browser][lang]
+                      for lang in ['html', 'scss', 'css']
+                        if co[code][lang]
                           .code-block(class='language-' + fullLanguage(lang), data-lang=fullLanguage(lang))
                             pre
-                              code= co[browser][lang]
+                              code= co[code][lang]
 
     footer
       script.
