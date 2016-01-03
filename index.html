@@ -5,15 +5,15 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-  <title>You Might Not Need jQuery</title>
-  <meta name="description" content="Examples of how to do common event, element, ajax and utility operations with plain javascript.">
+  <title>You Might Not Need JavaScript</title>
+  <meta name="description" content="Examples of how to do common event, and element operations with plain HTML and CSS.">
   <link rel="icon" href="http://static.hubspot.com/favicon.ico">
   <link rel="stylesheet" href="css/prism.css">
   <link rel="stylesheet" href="css/index.css">
   <script type="text/javascript" src="//use.typekit.net/ghy0wve.js"></script>
   <script type="text/javascript">
     try{Typekit.load();}catch(e){}
-
+    
   </script>
   <script src="js/prism.js"></script>
   <script src="js/index.js"></script>
@@ -22,136 +22,130 @@
   <div class="page">
     <header class="page-header">
       <div class="inner">
-        <h1>You might <span class="highlighted">no</span>t need <span class="highlighted">JS</span></h1>
+        <h1>You might <span class="highlighted">no</span>t need <span class="highlighted">JavaScript</span></h1>
       </div>
       <div class="old-ie-message">You certainly can support IE 9 and below without jQuery, but we don't.  Please stop messing with us.</div>
     </header>
     <div class="explanation">
       <div class="inner">
-        <p>Javascript is the scripting language of the web. It's great, and by all means use it if it makes it easier to develop your application.</p>
+        <p>JavaScript great, and by all means use it if it makes it easier to develop your application.</p>
         <p>
-          However, please take a moment to consider if you actually need Javascript as a dependency. You should always separate presentational styles from functional styles, and with HTML and CSS advances, you can likely get rid of a lot of scripting you may otherwise need.
-
-          Maybe you can include a few lines of semantic HTML/CSS forgo Javascript altogether.  If you're only targeting more modern browsers, you might not need anything more than what the browser ships with.
+          If you're developing a library on the other hand, please take a moment to consider if you actually need JavaScript as a component dependency.
+          Maybe you can include a few lines of utility code, or a mixin, and forgo the requirement.  If you're only targeting more modern browsers,
+          you might not need anything more than what the browser ships with.
         </p>
         <p>
-          At the very least, make sure you know what is out there, what's available now, and what's coming down the pipeline.
+          This site is fully copied from <a href="http://youmightnotneedjquery.com">youmightnotneedjquery.com</a>, an excellent resource for vanilla JavaSript.
+          But this time, we take a look at the power of modern native HTML and CSS as well as some of the syntactic sugar of Sass.
         </p>
-        <p>This project is a clone of the original <a href="http://youmightnotneedjquery.com/">"You Might Not Need jQuery"</a></p>
       </div>
     </div>
-    <!-- <div class="share-buttons">
+    <div class="share-buttons">
       <div class="share-button twitter-share-button">
         <iframe src="http://hubstar.io/twitter/spin?via=HubSpotDev&amp;text=You%20might%20not%20need%20jQuery&amp;url=http://YouMightNotNeedjQuery.com&amp;name=%22You%20might%20not%20need%20jQuery%22" frameborder="0" scrolling="0"></iframe>
       </div>
       <div class="share-button github-stars-button">
         <iframe src="http://hubstar.io/github/spin/HubSpot/YouMightNotNeedjQuery" frameborder="0" scrolling="0"></iframe>
       </div>
-    </div> -->
+    </div>
     <header class="search">
       <input type="search" placeholder="Search..." required>
-
-      <!-- the following is IE Support things: -->
-<!--       <div class="field">
-        <label for="version">What's the oldest version of IE you need to support?</label>
-        <div class="slider">
-          <input name="version" id="version" type="range" min="8" max="10" class="version-slider">
-          <div class="rule">
-            <div class="range-label">8</div>
-            <div class="range-label">9</div>
-            <div class="range-label">10</div>
-          </div>
-        </div>
-      </div> -->
     </header>
     <div class="comparisons">
       <div class="empty-message">Your search didn't match any comparisons.</div>
       <section id="ajax" class="odd">
         <div class="inner">
-          <h2>Navigation</h2>
+          <h2>AJAX</h2>
+          <div class="alternatives-block">
+            <h4>Alternatives:</h4>
+            <ul class="alternatives">
+              <li><a href=" https://github.com/ForbesLindesay/ajax" target="_blank">ajax</a></li>
+              <li><a href=" https://github.com/then/request" target="_blank">request</a></li>
+              <li><a href=" https://github.com/ded/Reqwest" target="_blank">reqwest</a></li>
+            </ul>
+          </div>
           <div id="json" class="comparison">
-            <h3><a href="#json">Accordion</a></h3>
-            <div class="alternatives-block">
-              <h4>Examples:</h4>
-              <ul class="alternatives">
-                <li><a href="http://paulrhayes.com/2009-06/accordion-using-only-css/" target="_blank">Paul Hayes</a></li>
-                <li><a href="http://codepen.io/abergin/pen/ihlDf" target="_blank">Alex Bergin</a></li>
-                <li><a href=" https://github.com/ded/Reqwest" target="_blank">reqwest</a></li>
-              </ul>
-            </div>
-            <div>
-            <h4>HTML</h4>
-              <div data-lang="html" class="code-block language-javascript">
-                <pre><code>&lt;div class="accordion">
-  &lt;label for="item-1" class="accordion-label">Item 1&lt;/label>&lt;input type="radio" class="accordion-trigger" id="item-1" name="item-1" />
-  &lt;div class="accordion-content">  &lt;p>You think water moves fast? You should see ice. It moves like it has a mind. Like it knows it killed the world once and got a taste for murder. After the avalanche, it took us a week to climb out. Now, I don't know exactly when we turned on each other, but I know that seven of us survived the slide... and only five made it out. Now we took an oath, that I'm breaking now. We said we'd say it was the snow that killed the other two, but it wasn't. Nature is lethal but it doesn't hold a candle to man. &lt;/p>
-
-  &lt;/div>
-    &lt;label for="item-2" class="accordion-label">Item 2&lt;/label>&lt;input type="radio" class="accordion-trigger" id="item-2" name="item-1" />
-  &lt;div class="accordion-content">  &lt;p>You think water moves fast? You should see ice. It moves like it has a mind. Like it knows it killed the world once and got a taste for murder. After the avalanche, it took us a week to climb out. Now, I don't know exactly when we turned on each other, but I know that seven of us survived the slide... and only five made it out. Now we took an oath, that I'm breaking now. We said we'd say it was the snow that killed the other two, but it wasn't. Nature is lethal but it doesn't hold a candle to man. &lt;/p>
-
-  &lt;/div>
-    &lt;label for="item-3" class="accordion-label">Item 3&lt;/label>&lt;input type="radio" class="accordion-trigger" id="item-3" name="item-1" />
-  &lt;div class="accordion-content">  &lt;p>You think water moves fast? You should see ice. It moves like it has a mind. Like it knows it killed the world once and got a taste for murder. After the avalanche, it took us a week to climb out. Now, I don't know exactly when we turned on each other, but I know that seven of us survived the slide... and only five made it out. Now we took an oath, that I'm breaking now. We said we'd say it was the snow that killed the other two, but it wasn't. Nature is lethal but it doesn't hold a candle to man. &lt;/p>
-
-  &lt;/div>
-&lt;/div></code></pre>
-              </div>
+            <h3><a href="#json">JSON</a></h3>
             <div data-browser="jquery" class="browser jquery">
               <h4>jQuery</h4>
               <div data-lang="javascript" class="code-block language-javascript">
-                <pre><code>$(document).ready(function() {
+                <pre><code>$.getJSON('/my/url', function(data) {
 
-  $('.acc-btn').click(function() {
-    $('.acc-content').slideUp('normal');
-      if($(this).next().is(':hidden') == true) {
-        $(this).next().slideDown('normal');
-       }
-   });
-   $('.acc-content').hide();
-
-});</code></pre>
+});
+</code></pre>
               </div>
             </div>
+            <div data-browser="ie8" class="browser ie8">
+              <h4>IE8+</h4>
+              <div data-lang="javascript" class="code-block language-javascript">
+                <pre><code>var request = new XMLHttpRequest();
+request.open('GET', '/my/url', true);
 
-            <div>
-              <h4><a href="http://caniuse.com/#search=%3Atarget">IE9+</a> Sass </h4>
-              <div data-lang="css" class="code-block language-css">
-                <pre><code>.accordion {
-  margin: 0 auto;
-  max-width: 50vw;
-}
-
-.accordion-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.5s ease-in-out;
-}
-
-.accordion-label {
-  border: 1px solid;
-  cursor: pointer;
-  display: block;
-}
-
-.accordion-trigger {
-  display: none;
-
-  &:checked {
-    + .accordion-content {
-      max-height: 300px;
+request.onreadystatechange = function() {
+  if (this.readyState === 4) {
+    if (this.status &gt;= 200 &amp;&amp; this.status &lt; 400) {
+      // Success!
+      var data = JSON.parse(this.responseText);
+    } else {
+      // Error :(
     }
   }
-}</code></pre>
+};
+
+request.send();
+request = null;
+</code></pre>
+              </div>
+            </div>
+            <div data-browser="ie9" class="browser ie9">
+              <h4>IE9+</h4>
+              <div data-lang="javascript" class="code-block language-javascript">
+                <pre><code>var request = new XMLHttpRequest();
+request.open('GET', '/my/url', true);
+
+request.onload = function() {
+  if (request.status &gt;= 200 &amp;&amp; request.status &lt; 400) {
+    // Success!
+    var data = JSON.parse(request.responseText);
+  } else {
+    // We reached our target server, but it returned an error
+
+  }
+};
+
+request.onerror = function() {
+  // There was a connection error of some sort
+};
+
+request.send();
+</code></pre>
+              </div>
+            </div>
+            <div data-browser="ie10" class="browser ie10">
+              <h4>IE10+</h4>
+              <div data-lang="javascript" class="code-block language-javascript">
+                <pre><code>var request = new XMLHttpRequest();
+request.open('GET', '/my/url', true);
+
+request.onload = function() {
+  if (this.status &gt;= 200 &amp;&amp; this.status &lt; 400) {
+    // Success!
+    var data = JSON.parse(this.response);
+  } else {
+    // We reached our target server, but it returned an error
+
+  }
+};
+
+request.onerror = function() {
+  // There was a connection error of some sort
+};
+
+request.send();
+</code></pre>
               </div>
             </div>
           </div>
-
-
-
-
-
-
           <div id="post" class="comparison">
             <h3><a href="#post">Post</a></h3>
             <div data-browser="jquery" class="browser jquery">
@@ -509,23 +503,6 @@ for (var i = el.children.length; i--;) {
               </div>
             </div>
           </div>
-          <div id="clone" class="comparison">
-            <h3><a href="#clone">Clone</a></h3>
-            <div data-browser="jquery" class="browser jquery">
-              <h4>jQuery</h4>
-              <div data-lang="javascript" class="code-block language-javascript">
-                <pre><code>$(el).clone();
-</code></pre>
-              </div>
-            </div>
-            <div data-browser="ie8" class="browser ie8">
-              <h4>IE8+</h4>
-              <div data-lang="javascript" class="code-block language-javascript">
-                <pre><code>el.cloneNode(true);
-</code></pre>
-              </div>
-            </div>
-          </div>
           <div id="contains" class="comparison">
             <h3><a href="#contains">Contains</a></h3>
             <div data-browser="jquery" class="browser jquery">
@@ -539,6 +516,23 @@ for (var i = el.children.length; i--;) {
               <h4>IE8+</h4>
               <div data-lang="javascript" class="code-block language-javascript">
                 <pre><code>el !== child &amp;&amp; el.contains(child);
+</code></pre>
+              </div>
+            </div>
+          </div>
+          <div id="clone" class="comparison">
+            <h3><a href="#clone">Clone</a></h3>
+            <div data-browser="jquery" class="browser jquery">
+              <h4>jQuery</h4>
+              <div data-lang="javascript" class="code-block language-javascript">
+                <pre><code>$(el).clone();
+</code></pre>
+              </div>
+            </div>
+            <div data-browser="ie8" class="browser ie8">
+              <h4>IE8+</h4>
+              <div data-lang="javascript" class="code-block language-javascript">
+                <pre><code>el.cloneNode(true);
 </code></pre>
               </div>
             </div>
@@ -1407,6 +1401,37 @@ for (var i = siblings.length; i--;) {
       <section id="events">
         <div class="inner">
           <h2>Events</h2>
+          <div id="off" class="comparison">
+            <h3><a href="#off">Off</a></h3>
+            <div data-browser="jquery" class="browser jquery">
+              <h4>jQuery</h4>
+              <div data-lang="javascript" class="code-block language-javascript">
+                <pre><code>$(el).off(eventName, eventHandler);
+</code></pre>
+              </div>
+            </div>
+            <div data-browser="ie8" class="browser ie8">
+              <h4>IE8+</h4>
+              <div data-lang="javascript" class="code-block language-javascript">
+                <pre><code>function removeEventListener(el, eventName, handler) {
+  if (el.removeEventListener)
+    el.removeEventListener(eventName, handler);
+  else
+    el.detachEvent('on' + eventName, handler);
+}
+
+removeEventListener(el, eventName, handler);
+</code></pre>
+              </div>
+            </div>
+            <div data-browser="ie9" class="browser ie9">
+              <h4>IE9+</h4>
+              <div data-lang="javascript" class="code-block language-javascript">
+                <pre><code>el.removeEventListener(eventName, eventHandler);
+</code></pre>
+              </div>
+            </div>
+          </div>
           <div id="on" class="comparison">
             <h3><a href="#on">On</a></h3>
             <div data-browser="jquery" class="browser jquery">
@@ -1437,37 +1462,6 @@ addEventListener(el, eventName, handler);
               <h4>IE9+</h4>
               <div data-lang="javascript" class="code-block language-javascript">
                 <pre><code>el.addEventListener(eventName, eventHandler);
-</code></pre>
-              </div>
-            </div>
-          </div>
-          <div id="off" class="comparison">
-            <h3><a href="#off">Off</a></h3>
-            <div data-browser="jquery" class="browser jquery">
-              <h4>jQuery</h4>
-              <div data-lang="javascript" class="code-block language-javascript">
-                <pre><code>$(el).off(eventName, eventHandler);
-</code></pre>
-              </div>
-            </div>
-            <div data-browser="ie8" class="browser ie8">
-              <h4>IE8+</h4>
-              <div data-lang="javascript" class="code-block language-javascript">
-                <pre><code>function removeEventListener(el, eventName, handler) {
-  if (el.removeEventListener)
-    el.removeEventListener(eventName, handler);
-  else
-    el.detachEvent('on' + eventName, handler);
-}
-
-removeEventListener(el, eventName, handler);
-</code></pre>
-              </div>
-            </div>
-            <div data-browser="ie9" class="browser ie9">
-              <h4>IE9+</h4>
-              <div data-lang="javascript" class="code-block language-javascript">
-                <pre><code>el.removeEventListener(eventName, eventHandler);
 </code></pre>
               </div>
             </div>
@@ -1959,10 +1953,10 @@ parseHTML(htmlString);
             var peeps = ['adamfschwartz', 'zackbloom']
           else
             var peeps = ['zackbloom', 'adamfschwartz']
-
+            
           document.write('<p>Made by <a href="http://twitter.com/'+ peeps[0] + '">@' + peeps[0] + '</a> and <a href="http://twitter.com/' + peeps[1] + '">@' + peeps[1] + '</a> at <a href="http://dev.hubspot.com">HubSpot</a>.</p>');
         })()
-
+        
       </script>
     </footer>
   </div>
@@ -1973,7 +1967,7 @@ parseHTML(htmlString);
     n.id=i;n.src='//js.hubspot.com/analytics/'+(Math.ceil(new Date()/r)*r)+'/51294.js';
     e.parentNode.insertBefore(n, e);
     })(document,"script","hs-analytics",300000);
-
+    
   </script>
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -1984,7 +1978,7 @@ parseHTML(htmlString);
     ga('create', 'UA-50254005-2', 'auto', {name: 'e'});
     ga('send', 'pageview');
     ga('e.send', 'pageview');
-
+    
   </script>
   <script>
     (function(){
@@ -1993,7 +1987,7 @@ parseHTML(htmlString);
         recommends = ['hubspotdev', 'zackbloom', 'adamfschwartz'];
       else
         recommends = ['hubspotdev', 'adamfschwartz', 'zackbloom'];
-
+        
       button = document.querySelector('.twitter-share-button');
       if (button)
         button.setAttribute('data-related', recommends.join(','));

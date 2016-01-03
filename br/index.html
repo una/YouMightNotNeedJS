@@ -497,23 +497,6 @@ for (var i = el.children.length; i--;) {
               </div>
             </div>
           </div>
-          <div id="clone" class="comparison">
-            <h3><a href="#clone">Clone</a></h3>
-            <div data-browser="jquery" class="browser jquery">
-              <h4>jQuery</h4>
-              <div data-lang="javascript" class="code-block language-javascript">
-                <pre><code>$(el).clone();
-</code></pre>
-              </div>
-            </div>
-            <div data-browser="ie8" class="browser ie8">
-              <h4>IE8+</h4>
-              <div data-lang="javascript" class="code-block language-javascript">
-                <pre><code>el.cloneNode(true);
-</code></pre>
-              </div>
-            </div>
-          </div>
           <div id="contains" class="comparison">
             <h3><a href="#contains">Contains</a></h3>
             <div data-browser="jquery" class="browser jquery">
@@ -527,6 +510,23 @@ for (var i = el.children.length; i--;) {
               <h4>IE8+</h4>
               <div data-lang="javascript" class="code-block language-javascript">
                 <pre><code>el !== child &amp;&amp; el.contains(child);
+</code></pre>
+              </div>
+            </div>
+          </div>
+          <div id="clone" class="comparison">
+            <h3><a href="#clone">Clone</a></h3>
+            <div data-browser="jquery" class="browser jquery">
+              <h4>jQuery</h4>
+              <div data-lang="javascript" class="code-block language-javascript">
+                <pre><code>$(el).clone();
+</code></pre>
+              </div>
+            </div>
+            <div data-browser="ie8" class="browser ie8">
+              <h4>IE8+</h4>
+              <div data-lang="javascript" class="code-block language-javascript">
+                <pre><code>el.cloneNode(true);
 </code></pre>
               </div>
             </div>
@@ -1391,6 +1391,37 @@ for (var i = siblings.length; i--;) {
       <section id="events">
         <div class="inner">
           <h2>EVENTOS</h2>
+          <div id="off" class="comparison">
+            <h3><a href="#off">Off</a></h3>
+            <div data-browser="jquery" class="browser jquery">
+              <h4>jQuery</h4>
+              <div data-lang="javascript" class="code-block language-javascript">
+                <pre><code>$(el).off(eventName, eventHandler);
+</code></pre>
+              </div>
+            </div>
+            <div data-browser="ie8" class="browser ie8">
+              <h4>IE8+</h4>
+              <div data-lang="javascript" class="code-block language-javascript">
+                <pre><code>function removeEventListener(el, eventName, handler) {
+  if (el.removeEventListener)
+    el.removeEventListener(eventName, handler);
+  else
+    el.detachEvent('on' + eventName, handler);
+}
+
+removeEventListener(el, eventName, handler);
+</code></pre>
+              </div>
+            </div>
+            <div data-browser="ie9" class="browser ie9">
+              <h4>IE9+</h4>
+              <div data-lang="javascript" class="code-block language-javascript">
+                <pre><code>el.removeEventListener(eventName, eventHandler);
+</code></pre>
+              </div>
+            </div>
+          </div>
           <div id="on" class="comparison">
             <h3><a href="#on">On</a></h3>
             <div data-browser="jquery" class="browser jquery">
@@ -1421,37 +1452,6 @@ addEventListener(el, eventName, handler);
               <h4>IE9+</h4>
               <div data-lang="javascript" class="code-block language-javascript">
                 <pre><code>el.addEventListener(eventName, eventHandler);
-</code></pre>
-              </div>
-            </div>
-          </div>
-          <div id="off" class="comparison">
-            <h3><a href="#off">Off</a></h3>
-            <div data-browser="jquery" class="browser jquery">
-              <h4>jQuery</h4>
-              <div data-lang="javascript" class="code-block language-javascript">
-                <pre><code>$(el).off(eventName, eventHandler);
-</code></pre>
-              </div>
-            </div>
-            <div data-browser="ie8" class="browser ie8">
-              <h4>IE8+</h4>
-              <div data-lang="javascript" class="code-block language-javascript">
-                <pre><code>function removeEventListener(el, eventName, handler) {
-  if (el.removeEventListener)
-    el.removeEventListener(eventName, handler);
-  else
-    el.detachEvent('on' + eventName, handler);
-}
-
-removeEventListener(el, eventName, handler);
-</code></pre>
-              </div>
-            </div>
-            <div data-browser="ie9" class="browser ie9">
-              <h4>IE9+</h4>
-              <div data-lang="javascript" class="code-block language-javascript">
-                <pre><code>el.removeEventListener(eventName, eventHandler);
 </code></pre>
               </div>
             </div>

@@ -12,9 +12,9 @@ head
   meta(http-equiv='X-UA-Compatible', content='chrome=1')
   meta(name='viewport', content='width=device-width, initial-scale=1, user-scalable=no')
 
-  title You Might Not Need jQuery
+  title You Might Not Need JavaScript
 
-  meta(name='description', content='Examples of how to do common event, element, ajax and utility operations with plain javascript.')
+  meta(name='description', content='Examples of how to do common event, and element operations with plain HTML and CSS.')
   link(rel='icon', href='http://static.hubspot.com/favicon.ico')
 
   link(rel='stylesheet', href='css/prism.css')
@@ -31,7 +31,7 @@ body
     header.page-header
       .inner
         h1
-          | You might <span class="highlighted">no</span>t need <span class="highlighted">jQuery</span>
+          | You might <span class="highlighted">no</span>t need <span class="highlighted">JavaScript</span>
 
       .old-ie-message
         | You certainly can support IE 9 and below without jQuery, but we don't.  Please stop messing with us.
@@ -39,17 +39,16 @@ body
     .explanation
       .inner
         p
-          | jQuery and its cousins are great, and by all means use them if it makes it easier to develop your application.
+          | JavaScript great, and by all means use it if it makes it easier to develop your application.
 
         p
-          | If you're developing a library on the other hand, please take a moment to consider if you actually need jQuery as a dependency.
-          | Maybe you can include a few lines of utility code, and forgo the requirement.  If you're only targeting more modern browsers,
+          | If you're developing a library on the other hand, please take a moment to consider if you actually need JavaScript as a component dependency.
+          | Maybe you can include a few lines of utility code, or a mixin, and forgo the requirement.  If you're only targeting more modern browsers,
           | you might not need anything more than what the browser ships with.
 
         p
-          | At the very least, make sure you know what <a href="https://docs.google.com/document/d/1LPaPA30bLUB_publLIMF0RlhdnPx_ePXm7oW02iiT6o">jQuery is doing for you</a>, and what it's not.  Some developers believe that jQuery
-          | is protecting us from a great demon of browser incompatibility when, in truth, post-IE8, browsers are pretty easy to
-          | deal with on their own.
+          | This site is fully copied from <a href="http://youmightnotneedjquery.com">youmightnotneedjquery.com</a>, an excellent resource for vanilla JavaSript.
+          | But this time, we take a look at the power of modern native HTML and CSS as well as some of the syntactic sugar of Sass.
 
     .share-buttons
 
@@ -62,17 +61,6 @@ body
     header.search
 
       input(type="search", placeholder="Search...", required)
-
-      .field
-        label(for="version") What's the oldest version of IE you need to support?
-
-        .slider
-          input(name="version", id="version", type="range", min="8", max="10").version-slider
-
-          .rule
-            .range-label 8
-            .range-label 9
-            .range-label 10
 
     .comparisons
 
