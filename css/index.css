@@ -71,7 +71,7 @@ body {
 header.page-header {
   width: 44em;
   max-width: 100%;
-  padding: 9em 0 2em;
+  padding: 3em 0 2em;
   margin: 0 auto;
   text-align: center;
 }
@@ -89,7 +89,7 @@ header.page-header {
 }
 header.page-header .inner {
   padding: 3em 2em 2.4em;
-  background: #414141;
+  background: #c69;
   max-height: 178px;
 }
 header.page-header .inner h1 {

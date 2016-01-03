@@ -43,7 +43,7 @@ body
           | you might not need anything more than what the browser ships with.
 
         p
-          | This site is fully copied from <a href="http://youmightnotneedjquery.com">youmightnotneedjquery.com</a>, an excellent resource for vanilla JavaSript.
+          | This site is fully copied from <a href="http://youmightnotneedjquery.com">youmightnotneedjquery.com</a>, an excellent resource for vanilla JavaSript created by <a href="http://twitter.com/adamfschwartz">@adamfschwartz</a> and <a href="http://twitter.com/zachbloom">@zackbloom</a>.
           | But this time, we take a look at the power of modern native HTML and CSS as well as some of the syntactic sugar of Sass. Because, you might not need scripts for that task at all!
 
     .share-buttons
@@ -95,15 +95,7 @@ body
                               code= co[code][lang]
 
     footer
-      script.
-        (function(){
-          if (Math.random() >= 0.5)
-            var peeps = ['adamfschwartz', 'zackbloom']
-          else
-            var peeps = ['zackbloom', 'adamfschwartz']
-
-          document.write('<p>Made by <a href="http://twitter.com/'+ peeps[0] + '">@' + peeps[0] + '</a> and <a href="http://twitter.com/' + peeps[1] + '">@' + peeps[1] + '</a> at <a href="http://dev.hubspot.com">HubSpot</a>.</p>');
-        })()
+      p Made by <a href="http://twitter.com/una">@una</a> based on <a href="http://youmightnotneedjquery.com">youmightnotneedjquery.com</a>.
 
   script.
     (function(d,s,i,r) {
@@ -122,19 +114,5 @@ body
     ga('create', 'UA-50254005-2', 'auto', {name: 'e'});
     ga('send', 'pageview');
     ga('e.send', 'pageview');
-
-  script.
-    (function(){
-      var recommends, button;
-      if (Math.random() >= 0.5)
-        recommends = ['hubspotdev', 'zackbloom', 'adamfschwartz'];
-      else
-        recommends = ['hubspotdev', 'adamfschwartz', 'zackbloom'];
-
-      button = document.querySelector('.twitter-share-button');
-      if (button)
-        button.setAttribute('data-related', recommends.join(','));
-    })();
-  script(type='text/javascript', src='http://platform.twitter.com/widgets.js')
 
   div(style='-webkit-transform: translateZ(0);')

@@ -14,7 +14,7 @@
   "devDependencies": {
     "readfiletree": "0.0.1",
     "gulp-util": "~2.2.9",
-    "gulp": "~3.3.0",
+    "gulp": "~3.3.4",
     "gulp-coffee": "~1.2.5",
     "gulp-jade": "~0.3.0",
     "gulp-stylus": "0.0.7",
