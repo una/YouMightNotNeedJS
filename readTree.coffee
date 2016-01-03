@@ -14,8 +14,8 @@ get = (cb) ->
       out[title] = {}
 
       for name, comp of comps
-        if name is 'alternatives.txt'
-          name = '_alternatives'
+        if name is 'resources.txt'
+          name = '_resources'
 
         out[title][name] = {}
 

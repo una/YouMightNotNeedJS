@@ -3,7 +3,7 @@ doctype html
 //- This will go into the HTML file to let people know to edit this file instead:
 // Please edit the index.jade or the files in comparisons/, this file is generated
 
-include _alternatives
+include _resources
 
 <!--[if lt IE 10 ]> <html class="old-ie"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--> <html> <!--<![endif]-->
@@ -36,7 +36,7 @@ body
     .explanation
       .inner
         p
-          | JavaScript great, and by all means use it, while also being aware that you can build so many functional UI components without the additional dependancy.
+          | JavaScript is great, and by all means use it, while also being aware that you can build so many functional UI components without the additional dependancy.
 
         p
           | Maybe you can include a few lines of utility code, or a mixin, and forgo the requirement.  If you're only targeting more modern browsers,
@@ -69,8 +69,8 @@ body
           .inner
             h2= titleCase(comp.title)
 
-            if comp.comparison._alternatives
-              +alternatives(comp.comparison._alternatives)
+            if comp.comparison._resources
+              +resources(comp.comparison._resources)
 
             for co, name in comp.comparison
               - if (name[0] === '_') continue;
@@ -79,8 +79,8 @@ body
                 h3
                   a(href='#' + name.replace(' ', '-'))= titleCase(name.replace(/_/g, ' '))
 
-                if co.alternatives
-                    +alternatives(co.alternatives.txt)
+                if co.resources
+                    +resources(co.resources.txt)
 
                 for code in ['html', 'css', 'ie10', 'ie9', 'ie8', 'scss']
                   if co[code]

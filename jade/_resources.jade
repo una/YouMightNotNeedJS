@@ -1,10 +1,10 @@
-mixin alternatives(list)
+mixin resources(list)
   - var alts = list.split('\n')
 
-  .alternatives-block
-    h4 Alternatives:
+  .resources-block
+    h4 resources:
 
-    ul.alternatives
+    ul.resources
 
       for alt in alts
         - var name = alt.substring(0, alt.indexOf(':'))

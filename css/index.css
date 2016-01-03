@@ -292,10 +292,10 @@ header.search .field .slider {
 .hidden {
   display: none;
 }
-.alternatives-block {
+.resources-block {
   text-align: center;
 }
-.alternatives-block h4 {
+.resources-block h4 {
   font-size: 1.1em;
   display: inline-block;
   font-weight: 200;
@@ -306,12 +306,12 @@ header.search .field .slider {
   margin-bottom: 0;
   line-height: 1;
 }
-.alternatives-block ul {
+.resources-block ul {
   display: inline-block;
   list-style: none;
   padding: 0;
 }
-.alternatives-block ul li {
+.resources-block ul li {
   display: inline-block;
   padding-left: 10px;
 }
