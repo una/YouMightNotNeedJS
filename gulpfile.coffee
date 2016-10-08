@@ -22,6 +22,8 @@ fullLanguage = (ext) ->
   LANGS =
     js: 'javascript'
     css: 'css'
+    scss: 'scss'
+    html: 'markup'
 
   LANGS[ext]
 

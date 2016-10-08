@@ -51,7 +51,7 @@ body
         iframe(src='http://hubstar.io/twitter/spin?via=HubSpotDev&text=You%20might%20not%20need%20JavaScript&url=http://YouMightNotNeedJS.com&name=%22You%20might%20not%20need%20JavaScript%22', frameborder=0, scrolling=0)
 
       .share-button.github-stars-button
-        iframe(src='http://hubstar.io/github/spin/una/youmightnotneedjs', frameborder=0, scrolling=0)
+        iframe(src='http://hubstar.io/github/spin/una/YouMightNotNeedJS', frameborder=0, scrolling=0)
 
     header.search
 
@@ -81,13 +81,13 @@ body
                 if co.resources
                     +resources(co.resources.txt)
 
-                for code in ['html', 'css', 'ie10', 'ie9', 'ie8', 'scss']
+                for code in ['html', 'css', 'scss', 'markup']
                   if co[code]
                     .code(data-code=getNamePart(code), class=getNamePart(code))
 
                       h4= code.toUpperCase()
 
-                      for lang in ['html', 'scss', 'css']
+                      for lang in ['html', 'scss', 'css', 'markup']
                         if co[code][lang]
                           .code-block(class='language-' + fullLanguage(lang), data-lang=fullLanguage(lang))
                             pre
@@ -95,23 +95,5 @@ body
 
     footer
       p Made by <a href="http://twitter.com/una">@una</a> based on <a href="http://youmightnotneedjquery.com">youmightnotneedjquery.com</a>.
-
-  script.
-    (function(d,s,i,r) {
-    if (d.getElementById(i)){return;}
-    var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
-    n.id=i;n.src='//js.hubspot.com/analytics/'+(Math.ceil(new Date()/r)*r)+'/51294.js';
-    e.parentNode.insertBefore(n, e);
-    })(document,"script","hs-analytics",300000);
-
-  script.
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-45159009-1', 'auto');
-    ga('create', 'UA-50254005-2', 'auto', {name: 'e'});
-    ga('send', 'pageview');
-    ga('e.send', 'pageview');
 
   div(style='-webkit-transform: translateZ(0);')

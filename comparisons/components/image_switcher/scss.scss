@@ -1,0 +1,47 @@
+.image-link { 
+  display: block; 
+  width: 240px; 
+  height: 160px; 
+  position: absolute; 
+  top: 0; left: 0; 
+
+  span {
+    width: 109px; 
+    display: block; 
+    height: 19px; 
+    padding: 5px; 
+    background: #eee; 
+    border: 1px solid #ccc;
+  }
+
+  .image-link:hover { 
+    z-index: 100; 
+    span { background: #ccc; 
+    }
+  }
+}
+
+#one { 
+  background: url(../images/1.jpg) no-repeat; z-index: 2; 
+  span { 
+    position: absolute; left: 0; bottom: -35px;
+  }
+}
+#two { 
+  background: url(../images/2.jpg) no-repeat;
+  span { 
+    position: absolute; left: 0; bottom: -65px;
+  }
+}
+#three { 
+  background: url(../images/3.jpg) no-repeat;
+  span { 
+    position: absolute; left: 120px; bottom: -35px;
+  }
+}
+#four { 
+  background: url(../images/4.jpg) no-repeat;
+  span { 
+    position: absolute; left: 120px; bottom: -65px;
+  }
+}

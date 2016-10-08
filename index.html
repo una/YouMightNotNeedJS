@@ -42,7 +42,7 @@
         <iframe src="http://hubstar.io/twitter/spin?via=HubSpotDev&amp;text=You%20might%20not%20need%20JavaScript&amp;url=http://YouMightNotNeedJS.com&amp;name=%22You%20might%20not%20need%20JavaScript%22" frameborder="0" scrolling="0"></iframe>
       </div>
       <div class="share-button github-stars-button">
-        <iframe src="http://hubstar.io/github/spin/una/youmightnotneedjs" frameborder="0" scrolling="0"></iframe>
+        <iframe src="http://hubstar.io/github/spin/una/YouMightNotNeedJS" frameborder="0" scrolling="0"></iframe>
       </div>
     </div>
     <header class="search">
@@ -53,40 +53,98 @@
       <section id="components" class="odd">
         <div class="inner">
           <h2>Components</h2>
-          <div class="resources-block">
-            <h4>resources:</h4>
-            <ul class="resources">
-              <li><a href=" https://github.com/ded/bonzo" target="_blank">bonzo</a></li>
-              <li><a href=" https://github.com/julienw/dollardom" target="_blank">$dom</a></li>
-            </ul>
-          </div>
           <div id="image_gallery" class="comparison">
             <h3><a href="#image_gallery">Image Gallery</a></h3>
             <div data-code="html" class="code html">
               <h4>HTML</h4>
-              <div class="code-block language-undefined">
-                <pre><code>&lt;!-- TODO  --&gt;</code></pre>
+              <div data-lang="markup" class="code-block language-markup">
+                <pre><code>hi</code></pre>
               </div>
             </div>
-            <div data-code="ie10" class="code ie10">
-              <h4>IE10</h4>
+            <div data-code="css" class="code css">
+              <h4>CSS</h4>
               <div data-lang="css" class="code-block language-css">
-                <pre><code>/* TODO */</code></pre>
+                <pre><code>?todo</code></pre>
               </div>
             </div>
           </div>
           <div id="image_switcher" class="comparison">
             <h3><a href="#image_switcher">Image Switcher</a></h3>
+            <div class="resources-block">
+              <h4>resources:</h4>
+              <ul class="resources">
+                <li><a href=" https://css-tricks.com/video-screencasts/82-css-image-switcher/" target="_blank">CSSTricks Image Switcher</a></li>
+              </ul>
+            </div>
             <div data-code="html" class="code html">
               <h4>HTML</h4>
               <div class="code-block language-undefined">
-                <pre><code>&lt;!-- TODO  --&gt;</code></pre>
+                <pre><code>&lt;ul id=&quot;switcher-wrap&quot;&gt;
+  &lt;li id=&quot;one&quot; class=&quot;image-link&quot; href=&quot;#&quot;&gt;
+    &lt;span&gt;Image One&lt;/span&gt;
+  &lt;/li&gt;
+  &lt;li id=&quot;two&quot; class=&quot;image-link&quot; href=&quot;#&quot;&gt;
+    &lt;span&gt;Image Two&lt;/span&gt;
+  &lt;/li&gt;
+  &lt;li id=&quot;three&quot; class=&quot;image-link&quot; href=&quot;#&quot;&gt;
+    &lt;span&gt;Image Three&lt;/span&gt;
+  &lt;/li&gt;
+  &lt;li id=&quot;four&quot; class=&quot;image-link&quot; href=&quot;#&quot;&gt;
+    &lt;span&gt;Image Four&lt;/span&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
               </div>
             </div>
-            <div data-code="ie10" class="code ie10">
-              <h4>IE10</h4>
-              <div data-lang="css" class="code-block language-css">
-                <pre><code>/* TODO */</code></pre>
+            <div data-code="scss" class="code scss">
+              <h4>SCSS</h4>
+              <div data-lang="scss" class="code-block language-scss">
+                <pre><code>.image-link { 
+  display: block; 
+  width: 240px; 
+  height: 160px; 
+  position: absolute; 
+  top: 0; left: 0; 
+
+  span {
+    width: 109px; 
+    display: block; 
+    height: 19px; 
+    padding: 5px; 
+    background: #eee; 
+    border: 1px solid #ccc;
+  }
+
+  .image-link:hover { 
+    z-index: 100; 
+    span { background: #ccc; 
+    }
+  }
+}
+
+#one { 
+  background: url(../images/1.jpg) no-repeat; z-index: 2; 
+  span { 
+    position: absolute; left: 0; bottom: -35px;
+  }
+}
+#two { 
+  background: url(../images/2.jpg) no-repeat;
+  span { 
+    position: absolute; left: 0; bottom: -65px;
+  }
+}
+#three { 
+  background: url(../images/3.jpg) no-repeat;
+  span { 
+    position: absolute; left: 120px; bottom: -35px;
+  }
+}
+#four { 
+  background: url(../images/4.jpg) no-repeat;
+  span { 
+    position: absolute; left: 120px; bottom: -65px;
+  }
+}</code></pre>
               </div>
             </div>
           </div>
@@ -94,12 +152,12 @@
             <h3><a href="#modal">Modal</a></h3>
             <div data-code="html" class="code html">
               <h4>HTML</h4>
-              <div class="code-block language-undefined">
+              <div data-lang="markup" class="code-block language-markup">
                 <pre><code>&lt;!-- TODO  --&gt;</code></pre>
               </div>
             </div>
-            <div data-code="ie10" class="code ie10">
-              <h4>IE10</h4>
+            <div data-code="css" class="code css">
+              <h4>CSS</h4>
               <div data-lang="css" class="code-block language-css">
                 <pre><code>/* TODO */</code></pre>
               </div>
@@ -109,7 +167,7 @@
             <h3><a href="#slider">Slider</a></h3>
             <div data-code="html" class="code html">
               <h4>HTML</h4>
-              <div class="code-block language-undefined">
+              <div data-lang="markup" class="code-block language-markup">
                 <pre><code>&lt;!-- TODO  --&gt;</code></pre>
               </div>
             </div>
@@ -129,14 +187,8 @@
             <h3><a href="#color_picker">Color Picker</a></h3>
             <div data-code="html" class="code html">
               <h4>HTML</h4>
-              <div class="code-block language-undefined">
+              <div data-lang="markup" class="code-block language-markup">
                 <pre><code>&lt;!-- To Do --&gt;</code></pre>
-              </div>
-            </div>
-            <div data-code="ie10" class="code ie10">
-              <h4>IE10</h4>
-              <div data-lang="css" class="code-block language-css">
-                <pre><code>/* To Do */</code></pre>
               </div>
             </div>
           </div>
@@ -152,14 +204,8 @@
             </div>
             <div data-code="html" class="code html">
               <h4>HTML</h4>
-              <div class="code-block language-undefined">
+              <div data-lang="markup" class="code-block language-markup">
                 <pre><code>&lt;!-- To Do --&gt;</code></pre>
-              </div>
-            </div>
-            <div data-code="ie10" class="code ie10">
-              <h4>IE10</h4>
-              <div data-lang="css" class="code-block language-css">
-                <pre><code>/* To Do */</code></pre>
               </div>
             </div>
           </div>
@@ -167,14 +213,8 @@
             <h3><a href="#form_validation">Form Validation</a></h3>
             <div data-code="html" class="code html">
               <h4>HTML</h4>
-              <div class="code-block language-undefined">
+              <div data-lang="markup" class="code-block language-markup">
                 <pre><code>&lt;!-- To Do --&gt;</code></pre>
-              </div>
-            </div>
-            <div data-code="ie10" class="code ie10">
-              <h4>IE10</h4>
-              <div data-lang="css" class="code-block language-css">
-                <pre><code>/* To Do */</code></pre>
               </div>
             </div>
           </div>
@@ -195,7 +235,7 @@
             <h3><a href="#accordion">Accordion</a></h3>
             <div data-code="html" class="code html">
               <h4>HTML</h4>
-              <div class="code-block language-undefined">
+              <div data-lang="markup" class="code-block language-markup">
                 <pre><code>$.getJSON('/my/url', function(data) {
 
 });
@@ -231,7 +271,7 @@ request.send();
             <h3><a href="#lightbox">Lightbox</a></h3>
             <div data-code="html" class="code html">
               <h4>HTML</h4>
-              <div class="code-block language-undefined">
+              <div data-lang="markup" class="code-block language-markup">
                 <pre><code>$.ajax({
   type: 'POST',
   url: '/my/url',
@@ -255,7 +295,7 @@ request.send(data);
             <h3><a href="#tabs">Tabs</a></h3>
             <div data-code="html" class="code html">
               <h4>HTML</h4>
-              <div class="code-block language-undefined">
+              <div data-lang="markup" class="code-block language-markup">
                 <pre><code>$.ajax({
   type: 'GET',
   url: '/my/url',
@@ -269,76 +309,6 @@ request.send(data);
 </code></pre>
               </div>
             </div>
-            <div data-code="ie10" class="code ie10">
-              <h4>IE10</h4>
-              <div data-lang="css" class="code-block language-css">
-                <pre><code>var request = new XMLHttpRequest();
-request.open('GET', '/my/url', true);
-
-request.onload = function() {
-  if (this.status &gt;= 200 &amp;&amp; this.status &lt; 400) {
-    // Success!
-    var resp = this.response;
-  } else {
-    // We reached our target server, but it returned an error
-
-  }
-};
-
-request.onerror = function() {
-  // There was a connection error of some sort
-};
-
-request.send();
-</code></pre>
-              </div>
-            </div>
-            <div data-code="ie9" class="code ie9">
-              <h4>IE9</h4>
-              <div data-lang="css" class="code-block language-css">
-                <pre><code>var request = new XMLHttpRequest();
-request.open('GET', '/my/url', true);
-
-request.onload = function() {
-  if (request.status &gt;= 200 &amp;&amp; request.status &lt; 400) {
-    // Success!
-    var resp = request.responseText;
-  } else {
-    // We reached our target server, but it returned an error
-
-  }
-};
-
-request.onerror = function() {
-  // There was a connection error of some sort
-};
-
-request.send();
-</code></pre>
-              </div>
-            </div>
-            <div data-code="ie8" class="code ie8">
-              <h4>IE8</h4>
-              <div data-lang="css" class="code-block language-css">
-                <pre><code>var request = new XMLHttpRequest();
-request.open('GET', '/my/url', true);
-
-request.onreadystatechange = function() {
-  if (this.readyState === 4) {
-    if (this.status &gt;= 200 &amp;&amp; this.status &lt; 400) {
-      // Success!
-      var resp = this.responseText;
-    } else {
-      // Error :(
-    }
-  }
-};
-
-request.send();
-request = null;
-</code></pre>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -347,25 +317,5 @@ request = null;
       <p>Made by <a href="http://twitter.com/una">@una</a> based on <a href="http://youmightnotneedjquery.com">youmightnotneedjquery.com</a>.</p>
     </footer>
   </div>
-  <script>
-    (function(d,s,i,r) {
-    if (d.getElementById(i)){return;}
-    var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
-    n.id=i;n.src='//js.hubspot.com/analytics/'+(Math.ceil(new Date()/r)*r)+'/51294.js';
-    e.parentNode.insertBefore(n, e);
-    })(document,"script","hs-analytics",300000);
-    
-  </script>
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-45159009-1', 'auto');
-    ga('create', 'UA-50254005-2', 'auto', {name: 'e'});
-    ga('send', 'pageview');
-    ga('e.send', 'pageview');
-    
-  </script>
   <div style="-webkit-transform: translateZ(0);"></div>
 </body>
