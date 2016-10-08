@@ -55,30 +55,16 @@
           <h2>Components</h2>
           <div id="image_gallery" class="comparison">
             <h3><a href="#image_gallery">Image Gallery</a></h3>
-            <div data-code="html" class="code html">
-              <h4>HTML</h4>
-              <div data-lang="markup" class="code-block language-markup">
-                <pre><code>hi</code></pre>
-              </div>
-            </div>
-            <div data-code="css" class="code css">
-              <h4>CSS</h4>
-              <div data-lang="css" class="code-block language-css">
-                <pre><code>?todo</code></pre>
-              </div>
-            </div>
-          </div>
-          <div id="image_switcher" class="comparison">
-            <h3><a href="#image_switcher">Image Switcher</a></h3>
             <div class="resources-block">
               <h4>resources:</h4>
               <ul class="resources">
                 <li><a href=" https://css-tricks.com/video-screencasts/82-css-image-switcher/" target="_blank">CSSTricks Image Switcher</a></li>
+                <li><a href=" http://bashooka.com/coding/pure-css3-image-sliders/" target="_blank">10 Pure CSS Image Sliders</a></li>
               </ul>
             </div>
             <div data-code="html" class="code html">
               <h4>HTML</h4>
-              <div class="code-block language-undefined">
+              <div data-lang="markup" class="code-block language-markup">
                 <pre><code>&lt;ul id=&quot;switcher-wrap&quot;&gt;
   &lt;li id=&quot;one&quot; class=&quot;image-link&quot; href=&quot;#&quot;&gt;
     &lt;span&gt;Image One&lt;/span&gt;
@@ -122,25 +108,25 @@
 }
 
 #one { 
-  background: url(../images/1.jpg) no-repeat; z-index: 2; 
+  background: url(../images/1.jpg); z-index: 2; 
   span { 
     position: absolute; left: 0; bottom: -35px;
   }
 }
 #two { 
-  background: url(../images/2.jpg) no-repeat;
+  background: url(../images/2.jpg);
   span { 
     position: absolute; left: 0; bottom: -65px;
   }
 }
 #three { 
-  background: url(../images/3.jpg) no-repeat;
+  background: url(../images/3.jpg);
   span { 
     position: absolute; left: 120px; bottom: -35px;
   }
 }
 #four { 
-  background: url(../images/4.jpg) no-repeat;
+  background: url(../images/4.jpg);
   span { 
     position: absolute; left: 120px; bottom: -65px;
   }
@@ -150,16 +136,47 @@
           </div>
           <div id="modal" class="comparison">
             <h3><a href="#modal">Modal</a></h3>
+            <div class="resources-block">
+              <h4>resources:</h4>
+              <ul class="resources">
+                <li><a href=" http://codepen.io/ohnoitsaustin/pen/zGmJjz" target="_blank">Austin Lord's CodePen</a></li>
+                <li><a href=" " target="_blank">Simple Example by Daniel Griffith</a></li>
+              </ul>
+            </div>
             <div data-code="html" class="code html">
               <h4>HTML</h4>
               <div data-lang="markup" class="code-block language-markup">
-                <pre><code>&lt;!-- TODO  --&gt;</code></pre>
+                <pre><code>&lt;button&gt;Click Me&lt;/button&gt;
+
+&lt;div class=&quot;modal&quot;&gt;
+  &lt;p&gt;Hello World!&lt;/p&gt;
+&lt;/div&gt;</code></pre>
               </div>
             </div>
-            <div data-code="css" class="code css">
-              <h4>CSS</h4>
-              <div data-lang="css" class="code-block language-css">
-                <pre><code>/* TODO */</code></pre>
+            <div data-code="scss" class="code scss">
+              <h4>SCSS</h4>
+              <div data-lang="scss" class="code-block language-scss">
+                <pre><code>// styling to center the modal
+.modal {  
+  opacity: 0;
+  visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.3s ease-in-out;
+}
+
+// modal fades in when button 
+// is in focus (i.e. clicked on)
+button:focus + .modal {
+  opacity: 1;
+  visibility: visible;
+}</code></pre>
               </div>
             </div>
           </div>

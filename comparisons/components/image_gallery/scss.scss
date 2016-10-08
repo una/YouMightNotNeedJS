@@ -22,25 +22,25 @@
 }
 
 #one { 
-  background: url(../images/1.jpg) no-repeat; z-index: 2; 
+  background: url(../images/1.jpg); z-index: 2; 
   span { 
     position: absolute; left: 0; bottom: -35px;
   }
 }
 #two { 
-  background: url(../images/2.jpg) no-repeat;
+  background: url(../images/2.jpg);
   span { 
     position: absolute; left: 0; bottom: -65px;
   }
 }
 #three { 
-  background: url(../images/3.jpg) no-repeat;
+  background: url(../images/3.jpg);
   span { 
     position: absolute; left: 120px; bottom: -35px;
   }
 }
 #four { 
-  background: url(../images/4.jpg) no-repeat;
+  background: url(../images/4.jpg);
   span { 
     position: absolute; left: 120px; bottom: -65px;
   }
