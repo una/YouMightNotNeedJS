@@ -1,0 +1,31 @@
+$slide-width: 300px;
+$slide-height: 200px;
+
+#slider {
+	width: $slide-width;
+	height: $slide-height;
+	overflow: hidden;
+}
+
+.slide {
+	width: $slide-width;
+	height: $slide-height;
+	float: left;
+	position: relative;
+}
+
+#slide-holder {
+  // wide enough to fit all the slides
+	width: 400%;
+	position: relative;
+	left: 0;
+	animation: scroller 6s infinite;
+}
+
+// need a step for each slide
+@keyframes scroller {
+  0% { left: 0; }
+  33% { left: -$slide-width; }
+  66% { left: -$slide-width*2; }
+  100% { left: 0; }
+}

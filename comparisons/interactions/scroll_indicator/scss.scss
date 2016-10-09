@@ -1,0 +1,39 @@
+$scroller-height: 6px;
+$scroller-color: #0089f2;
+$scroller-background: #ddd;
+$body-background: white;
+
+html,body {
+	margin: 0;
+}
+
+.scroller {
+	position: fixed;
+	top: 0;
+	height: 0;
+	width: 100%;
+	background: $body-background;
+}
+
+main {
+	margin-top: 0;
+}
+
+body {	
+	background: linear-gradient(to right top, 
+      $scroller-color 50%, 
+      $scroller-background 50%);
+	//6px = height of scroller but calc won't work with variables
+	background-size: 100% calc(100% - 100vh + 6px); 
+	background-repeat: no-repeat;
+}
+
+body:before {
+	content:'';
+	position: fixed;
+	top: $scroller-height;
+	bottom: 0;
+	width: 100%;
+	z-index: -1;
+	background: $body-background;
+}

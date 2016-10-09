@@ -1,0 +1,3 @@
+CSS Slider Builder: http://cssslider.com/
+12 CSS Slider Examples: http://xdesigns.net/2013/08/css-slider/
+CSS Gallery: http://benschwarz.github.io/gallery-css/

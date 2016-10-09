@@ -1,2 +1,2 @@
 CSSTricks Image Switcher: https://css-tricks.com/video-screencasts/82-css-image-switcher/
-10 Pure CSS Image Sliders: http://bashooka.com/coding/pure-css3-image-sliders/
+Tiffany Tse CSS Slider: http://codepen.io/tiffanytse/pen/BnDlb
