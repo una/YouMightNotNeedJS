@@ -1,1 +1,29 @@
-/* TODO */
+// Visually hide radio buttons
+input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+}
+
+// Style label/entry for accordion
+label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+
+// Style accordion content
+section {
+  height: 0;
+  transition: .3s all;
+  overflow: hidden;
+}
+
+// Open content when clicking label
+#toggle1:checked ~ #content1,
+#toggle2:checked ~ #content2,
+#toggle3:checked ~ #content3,
+#toggle4:checked ~ #content4 {
+  // set height for transition duration to work
+  // (also can set to auto without transition)
+  height: 200px;
+}

@@ -82,17 +82,19 @@ body
                 if co.resources
                     +resources(co.resources.txt)
 
-                for code in ['html', 'css', 'scss', 'markup']
-                  if co[code]
-                    .code(data-code=getNamePart(code), class=getNamePart(code))
+                div.comparison-group
 
-                      h4= code.toUpperCase()
+                  for code in ['html', 'css', 'scss', 'markup']
+                    if co[code]
+                      .code(data-code=getNamePart(code), class=getNamePart(code))
 
-                      for lang in ['html', 'scss', 'css', 'markup']
-                        if co[code][lang]
-                          .code-block(class='language-' + fullLanguage(lang), data-lang=fullLanguage(lang))
-                            pre
-                              code= co[code][lang]
+                        h4= code.toUpperCase()
+
+                        for lang in ['html', 'scss', 'css', 'markup']
+                          if co[code][lang]
+                            .code-block(class='language-' + fullLanguage(lang), data-lang=fullLanguage(lang))
+                              pre
+                                code= co[code][lang]
 
     footer
       p Made by <a href="http://twitter.com/una">@una</a> based on <a href="http://youmightnotneedjquery.com">youmightnotneedjquery.com</a>.

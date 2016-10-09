@@ -1,0 +1,2 @@
+4 Ways to Create CSS Accordions: http://www.hongkiat.com/blog/css-only-accordion/
+CodePen Example by Oliver Knoblich: http://codepen.io/oknoblich/pen/tKfab

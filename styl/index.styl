@@ -130,17 +130,6 @@ header.page-header
       width 100%
       height 2.45em
 
-@media (min-width: 768px)
-  .code
-    float right
-    clear right
-    width 49%
-
-  .code.html
-    float left
-    clear left
-    margin-right 2%
-
 .old-ie-message
   display none
 
@@ -344,3 +333,12 @@ footer
 
   a
     color inherit
+
+.comparison-group
+  display flex
+  flex-wrap wrap
+
+  .code
+    flex 1
+    margin 10px
+    flex-basis 400px

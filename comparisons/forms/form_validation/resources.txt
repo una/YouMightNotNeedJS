@@ -1,0 +1,2 @@
+MDN Data Form Validation: https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms/Data_form_validation
+Phone Number Validation by SitePoint: https://codepen.io/SitePoint/pen/Eambf
