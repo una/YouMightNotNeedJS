@@ -1,0 +1,2 @@
+Functional CSS Tabs Revisited: https://css-tricks.com/functional-css-tabs-re-revisited/
+Material Design CSS Tabs: http://codepen.io/mildrenben/pen/bdGdOb
