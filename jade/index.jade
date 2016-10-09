@@ -19,7 +19,8 @@ head
   link(rel='stylesheet', href='css/prism.css')
   link(rel='stylesheet', href='css/index.css')
 
-  script(type='text/javascript', src='//use.typekit.net/ghy0wve.js')
+  link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Lato')
+
   script(type='text/javascript').
     try{Typekit.load();}catch(e){}
 
@@ -45,13 +46,13 @@ body
           | This site is fully copied from <a href="http://youmightnotneedjquery.com">youmightnotneedjquery.com</a>, an excellent resource for vanilla JavaSript created by <a href="http://twitter.com/adamfschwartz">@adamfschwartz</a> and <a href="http://twitter.com/zachbloom">@zackbloom</a>.
           | But this time, we take a look at the power of modern native HTML and CSS as well as some of the syntactic sugar of Sass. Because, you might not need scripts for that task at all!
 
-    .share-buttons
+    //- .share-buttons
 
-      .share-button.twitter-share-button
-        iframe(src='http://hubstar.io/twitter/spin?via=HubSpotDev&text=You%20might%20not%20need%20JavaScript&url=http://YouMightNotNeedJS.com&name=%22You%20might%20not%20need%20JavaScript%22', frameborder=0, scrolling=0)
+    //-   .share-button.twitter-share-button
+    //-     iframe(src='http://hubstar.io/twitter/spin?via=HubSpotDev&text=You%20might%20not%20need%20JavaScript&url=http://YouMightNotNeedJS.com&name=%22You%20might%20not%20need%20JavaScript%22', frameborder=0, scrolling=0)
 
-      .share-button.github-stars-button
-        iframe(src='http://hubstar.io/github/spin/una/YouMightNotNeedJS', frameborder=0, scrolling=0)
+    //-   .share-button.github-stars-button
+    //-     iframe(src='http://hubstar.io/github/spin/una/YouMightNotNeedJS', frameborder=0, scrolling=0)
 
     header.search
 

@@ -1,1 +1,34 @@
-/* TODO */
+$thumbnail-size: 40px;
+$background-color: black;
+
+.thumbnail {
+  max-width: $thumbnail-size;
+}
+
+.lightbox {
+  // Hide lightbox image
+	display: none;
+
+	// Position/style of lightbox
+	position: fixed;
+	z-index: 999;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	top: 0;
+	left: 0;
+	background: $background-color;
+}
+
+.lightbox img {
+	/// Pad the lightbox image
+	max-width: 90%;
+	max-height: 80%;
+	margin-top: 2%;
+}
+
+.lightbox:target {
+	// Remove default outline and unhide lightbox
+	outline: none;
+	display: block;
+}

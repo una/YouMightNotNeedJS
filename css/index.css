@@ -60,7 +60,7 @@ input[type="search"][required]:invalid::-webkit-search-cancel-button:after {
   filter: alpha(opacity=0);
 }
 body {
-  font-family: "proxima-nova", "Helvetica Neue", Helvetica, arial, sans-serif;
+  font-family: "Lato", "Helvetica Neue", Helvetica, arial, sans-serif;
   color: #444;
   margin: 0;
   -webkit-font-smoothing: antialiased;
@@ -342,7 +342,7 @@ section .comparison {
 section h2 {
   font-size: 3em;
   font-weight: 100;
-  letter-spacing: 0.3em;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   color: #888;
   text-align: center;
