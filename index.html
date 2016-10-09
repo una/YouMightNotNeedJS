@@ -261,6 +261,20 @@ button:focus + .modal {
               </div>
             </div>
           </div>
+          <div id="file_upload" class="comparison">
+            <h3><a href="#file_upload">File Upload</a></h3>
+            <div class="comparison-group">
+              <div data-code="html" class="code html">
+                <h4>HTML</h4>
+                <div data-lang="markup" class="code-block language-markup">
+                  <pre><code>&lt;form&gt;
+  &lt;input type=&quot;file&quot; accept=&quot;image/*&quot;&gt;
+  &lt;input type=&quot;submit&quot;&gt;
+&lt;/form&gt;</code></pre>
+                </div>
+              </div>
+            </div>
+          </div>
           <div id="form_validation" class="comparison">
             <h3><a href="#form_validation">Form Validation</a></h3>
             <div class="resources-block">
@@ -294,20 +308,6 @@ button:focus + .modal {
   &lt;input id=&quot;item4&quot; type=&quot;tel&quot; pattern=&quot;^\d{4}-\d{3}-\d{4}$&quot; required &gt;
 
   &lt;button&gt;Submit&lt;/button&gt;
-&lt;/form&gt;</code></pre>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div id="file_upload" class="comparison">
-            <h3><a href="#file_upload">File Upload</a></h3>
-            <div class="comparison-group">
-              <div data-code="html" class="code html">
-                <h4>HTML</h4>
-                <div data-lang="markup" class="code-block language-markup">
-                  <pre><code>&lt;form&gt;
-  &lt;input type=&quot;file&quot; accept=&quot;image/*&quot;&gt;
-  &lt;input type=&quot;submit&quot;&gt;
 &lt;/form&gt;</code></pre>
                 </div>
               </div>
@@ -401,7 +401,6 @@ body:before {
                 <h4>HTML</h4>
                 <div data-lang="markup" class="code-block language-markup">
                   <pre><code>&lt;div class=&quot;togglebox&quot;&gt;
-
   &lt;input id=&quot;toggle1&quot; type=&quot;radio&quot; name=&quot;toggle&quot; /&gt;
   &lt;label for=&quot;toggle1&quot;&gt;Label 1&lt;/label&gt;
   &lt;section id=&quot;content1&quot;&gt;
@@ -524,17 +523,85 @@ $background-color: black;
           </div>
           <div id="tabs" class="comparison">
             <h3><a href="#tabs">Tabs</a></h3>
+            <div class="resources-block">
+              <h4>resources:</h4>
+              <ul class="resources">
+                <li><a href=" https://css-tricks.com/functional-css-tabs-re-revisited/" target="_blank">Functional CSS Tabs Revisited</a></li>
+                <li><a href=" http://codepen.io/mildrenben/pen/bdGdOb" target="_blank">Material Design CSS Tabs</a></li>
+              </ul>
+            </div>
             <div class="comparison-group">
               <div data-code="html" class="code html">
                 <h4>HTML</h4>
                 <div data-lang="markup" class="code-block language-markup">
-                  <pre><code>&lt;!-- TODO --&gt;</code></pre>
+                  <pre><code>&lt;div class=&quot;tabs&quot;&gt;
+    
+   &lt;div class=&quot;tab&quot;&gt;
+       &lt;input type=&quot;radio&quot; id=&quot;tab-1&quot; checked&gt;
+       &lt;label for=&quot;tab-1&quot;&gt;Label One&lt;/label&gt;
+       &lt;div class=&quot;content&quot;&gt;
+          &lt;p&gt;Tab One Content&lt;/p&gt;
+       &lt;/div&gt; 
+   &lt;/div&gt;
+    
+   &lt;div class=&quot;tab&quot;&gt;
+       &lt;input type=&quot;radio&quot; id=&quot;tab-2&quot;&gt;
+       &lt;label for=&quot;tab-2&quot;&gt;Label Two&lt;/label&gt;
+       &lt;div class=&quot;content&quot;&gt;
+           &lt;p&gt;Tab Two Content&lt;/p&gt;
+       &lt;/div&gt; 
+   &lt;/div&gt;
+    
+    &lt;div class=&quot;tab&quot;&gt;
+       &lt;input type=&quot;radio&quot; id=&quot;tab-3&quot;&gt;
+       &lt;label for=&quot;tab-3&quot;&gt;Label Three&lt;/label&gt;
+       &lt;div class=&quot;content&quot;&gt;
+           &lt;p&gt;Tab Three Content&lt;/p&gt;
+       &lt;/div&gt; 
+   &lt;/div&gt;
+    
+&lt;/div&gt;</code></pre>
                 </div>
               </div>
               <div data-code="scss" class="code scss">
                 <h4>SCSS</h4>
                 <div data-lang="scss" class="code-block language-scss">
-                  <pre><code>/* TODO */</code></pre>
+                  <pre><code>.tabs {
+  position: relative;  
+  // set height to be even for all tab groups
+  min-height: 200px;
+  clear: both;
+}
+
+.tab {
+  float: left;
+   
+}
+
+.tab label {
+  left: 0;
+  // set label height
+  top: 1em;
+}
+
+.tab [type=radio] {
+  display: none;   
+}
+
+.content {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  opacity: 0;
+}
+
+[type=radio]:checked ~ label {
+  z-index: 2;
+}
+
+[type=radio]:checked ~ label ~ .content {
+  z-index: 1;
+  opacity: 1;
+}</code></pre>
                 </div>
               </div>
             </div>
