@@ -13,16 +13,17 @@
 
 #slide-holder {
   // wide enough to fit all the slides
-	width: 300%;
+	width: 400%;
 	position: relative;
 	left: 0;
-	animation: scroller 6s infinite;
+  will-change: transform;
+	animation: scroller 10s infinite;
 }
 
 // need a step for each slide
 @keyframes scroller {
-  0% { left: 0; }
-  33% { left: -$slide-width; }
-  66% { left: -$slide-width*2; }
-  100% { left: 0; }
+  0% { transform: translateX(0); }
+  33% { transform: translateX(-$slide-width); }
+  66% { transform: translateX(-$slide-width*2); }
+  100% { transform: translateX(0); }
 }
