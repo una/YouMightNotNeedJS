@@ -26,6 +26,8 @@ head
 
   script(src='js/prism.js')
   script(src='js/index.js')
+  script(src='https://assets.codepen.io/assets/embed/ei.js')
+
 body
   .page
     header.page-header
@@ -81,6 +83,16 @@ body
 
                 if co.resources
                     +resources(co.resources.txt)
+
+              div.codpen-example
+
+                for code in ['codepen']
+                  if co[code]
+                      h4= code.toUpperCase()
+
+                      for lang in ['html', 'markup']
+                        if co[code][lang]
+                          !{co[code][lang]}
 
                 div.comparison-group
 

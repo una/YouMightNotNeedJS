@@ -16,6 +16,7 @@
   </script>
   <script src="js/prism.js"></script>
   <script src="js/index.js"></script>
+  <script src="https://assets.codepen.io/assets/embed/ei.js"></script>
 </head>
 <body>
   <div class="page">
@@ -55,26 +56,25 @@
                 <li><a href=" http://benschwarz.github.io/gallery-css/" target="_blank">CSS Gallery</a></li>
               </ul>
             </div>
+          </div>
+          <div class="codpen-example">
+            <h4>CODEPEN</h4><p data-height="260" data-theme-id="light" data-slug-hash="BLxNZq" data-default-tab="result" data-user="una" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/una/pen/BLxNZq/">CSS-Only Slider: youmightnotneedjs.com</a> by Una Kravets (<a href="http://codepen.io/una">@una</a>) on <a href="http://codepen.io">CodePen</a>.</p>
             <div class="comparison-group">
               <div data-code="html" class="code html">
                 <h4>HTML</h4>
                 <div data-lang="markup" class="code-block language-markup">
-                  <pre><code>&lt;div id=&quot;slider&quot;&gt;
+                  <pre><code>&lt;div id=&quot;slider&quot;&gt;&lt;/div&gt;
 &lt;div id=&quot;slide-holder&quot;&gt;
   &lt;div class=&quot;slide&quot;&gt;content1&lt;/div&gt;
   &lt;div class=&quot;slide&quot;&gt;content2&lt;/div&gt;
   &lt;div class=&quot;slide&quot;&gt;content3&lt;/div&gt;
-  &lt;div class=&quot;slide&quot;&gt;content4&lt;/div&gt;
 &lt;/div&gt;</code></pre>
                 </div>
               </div>
               <div data-code="scss" class="code scss">
                 <h4>SCSS</h4>
                 <div data-lang="scss" class="code-block language-scss">
-                  <pre><code>$slide-width: 300px;
-$slide-height: 200px;
-
-#slider {
+                  <pre><code>#slider {
 	width: $slide-width;
 	height: $slide-height;
 	overflow: hidden;
@@ -89,7 +89,7 @@ $slide-height: 200px;
 
 #slide-holder {
   // wide enough to fit all the slides
-	width: 400%;
+	width: 300%;
 	position: relative;
 	left: 0;
 	animation: scroller 6s infinite;
@@ -115,6 +115,9 @@ $slide-height: 200px;
                 <li><a href=" " target="_blank">Simple Example by Daniel Griffith</a></li>
               </ul>
             </div>
+          </div>
+          <div class="codpen-example">
+            <h4>CODEPEN</h4><p data-height="260" data-theme-id="light" data-slug-hash="pEVjwj" data-default-tab="result" data-user="una" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/una/pen/pEVjwj/">CSS-Only Modal: youmightnotneedjs.com</a> by Una Kravets (<a href="http://codepen.io/una">@una</a>) on <a href="http://codepen.io">CodePen</a>.</p>
             <div class="comparison-group">
               <div data-code="html" class="code html">
                 <h4>HTML</h4>
@@ -129,19 +132,11 @@ $slide-height: 200px;
               <div data-code="scss" class="code scss">
                 <h4>SCSS</h4>
                 <div data-lang="scss" class="code-block language-scss">
-                  <pre><code>// styling to center the modal
+                  <pre><code>// modal is invisible until
+// sibling is focused
 .modal {  
   opacity: 0;
   visibility: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transition: 0.3s ease-in-out;
 }
 
 // modal fades in when button 
@@ -163,6 +158,8 @@ button:focus + .modal {
                 <li><a href=" http://codepen.io/tiffanytse/pen/BnDlb" target="_blank">Tiffany Tse CSS Slider</a></li>
               </ul>
             </div>
+          </div>
+          <div class="codpen-example">
             <div class="comparison-group">
               <div data-code="html" class="code html">
                 <h4>HTML</h4>
@@ -250,6 +247,8 @@ button:focus + .modal {
           </div>
           <div id="color_picker" class="comparison">
             <h3><a href="#color_picker">Color Picker</a></h3>
+          </div>
+          <div class="codpen-example">
             <div class="comparison-group">
               <div data-code="html" class="code html">
                 <h4>HTML</h4>
@@ -263,6 +262,8 @@ button:focus + .modal {
           </div>
           <div id="file_upload" class="comparison">
             <h3><a href="#file_upload">File Upload</a></h3>
+          </div>
+          <div class="codpen-example">
             <div class="comparison-group">
               <div data-code="html" class="code html">
                 <h4>HTML</h4>
@@ -284,6 +285,8 @@ button:focus + .modal {
                 <li><a href=" https://codepen.io/SitePoint/pen/Eambf" target="_blank">Phone Number Validation by SitePoint</a></li>
               </ul>
             </div>
+          </div>
+          <div class="codpen-example">
             <div class="comparison-group">
               <div data-code="html" class="code html">
                 <h4>HTML</h4>
@@ -326,6 +329,8 @@ button:focus + .modal {
                 <li><a href=" http://codepen.io/MadeByMike/pen/ZOrEmr" target="_blank">Example by Mike Riethmuller</a></li>
               </ul>
             </div>
+          </div>
+          <div class="codpen-example">
             <div class="comparison-group">
               <div data-code="html" class="code html">
                 <h4>HTML</h4>
@@ -396,6 +401,8 @@ body:before {
                 <li><a href=" http://codepen.io/oknoblich/pen/tKfab" target="_blank">CodePen Example by Oliver Knoblich</a></li>
               </ul>
             </div>
+          </div>
+          <div class="codpen-example">
             <div class="comparison-group">
               <div data-code="html" class="code html">
                 <h4>HTML</h4>
@@ -465,6 +472,8 @@ section {
                 <li><a href=" http://codepen.io/gschier/pen/HCoqh" target="_blank">Gregory Schier's Codepen</a></li>
               </ul>
             </div>
+          </div>
+          <div class="codpen-example">
             <div class="comparison-group">
               <div data-code="html" class="code html">
                 <h4>HTML</h4>
@@ -530,6 +539,8 @@ $background-color: black;
                 <li><a href=" http://codepen.io/mildrenben/pen/bdGdOb" target="_blank">Material Design CSS Tabs</a></li>
               </ul>
             </div>
+          </div>
+          <div class="codpen-example">
             <div class="comparison-group">
               <div data-code="html" class="code html">
                 <h4>HTML</h4>

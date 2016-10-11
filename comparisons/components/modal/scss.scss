@@ -1,16 +1,8 @@
-// styling to center the modal
+// modal is invisible until
+// sibling is focused
 .modal {  
   opacity: 0;
   visibility: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transition: 0.3s ease-in-out;
 }
 
 // modal fades in when button 

@@ -1,6 +1,3 @@
-$slide-width: 300px;
-$slide-height: 200px;
-
 #slider {
 	width: $slide-width;
 	height: $slide-height;
@@ -16,7 +13,7 @@ $slide-height: 200px;
 
 #slide-holder {
   // wide enough to fit all the slides
-	width: 400%;
+	width: 300%;
 	position: relative;
 	left: 0;
 	animation: scroller 6s infinite;
