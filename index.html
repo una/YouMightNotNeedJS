@@ -5,8 +5,14 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-  <title>You Might Not Need JavaScript</title>
   <meta name="description" content="Examples of how to do common event, and element operations with plain HTML and CSS.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@una">
+  <meta name="twitter:creator" content="@una">
+  <meta name="twitter:title" content="You Might Not Need JavaScript">
+  <meta name="twitter:description" content="Examples of how to do common event, and element operations with plain HTML and CSS.">
+  <meta name="twitter:image" content="http://youmightnotneedjs.com/shareimg.jpg">
+  <title>You Might Not Need JavaScript</title>
   <link rel="stylesheet" href="css/prism.css">
   <link rel="stylesheet" href="css/index.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
@@ -106,49 +112,6 @@
               </div>
             </div>
           </div>
-          <div id="modal" class="comparison">
-            <h3><a href="#modal">Modal</a></h3>
-            <div class="resources-block">
-              <h4>resources:</h4>
-              <ul class="resources">
-                <li><a href=" http://codepen.io/ohnoitsaustin/pen/zGmJjz" target="_blank">Austin Lord's CodePen</a></li>
-                <li><a href=" " target="_blank">Simple Example by Daniel Griffith</a></li>
-              </ul>
-            </div>
-            <div class="codpen-example">
-              <h4>CODEPEN</h4><p data-height="265" data-theme-id="light" data-slug-hash="pEVjwj" data-default-tab="result" data-user="una" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/una/pen/pEVjwj/">CSS-Only Modal: youmightnotneedjs.com</a> by Una Kravets (<a href="http://codepen.io/una">@una</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-            </div>
-            <div class="comparison-group">
-              <div data-code="html" class="code html">
-                <h4>HTML</h4>
-                <div data-lang="markup" class="code-block language-markup">
-                  <pre><code>&lt;button&gt;Click Me&lt;/button&gt;
-
-&lt;div class=&quot;modal&quot;&gt;
-  &lt;p&gt;Hello World!&lt;/p&gt;
-&lt;/div&gt;</code></pre>
-                </div>
-              </div>
-              <div data-code="scss" class="code scss">
-                <h4>SCSS</h4>
-                <div data-lang="scss" class="code-block language-scss">
-                  <pre><code>// modal is invisible until
-// sibling is focused
-.modal {  
-  opacity: 0;
-  visibility: hidden;
-}
-
-// modal fades in when button 
-// is in focus (i.e. clicked on)
-button:focus + .modal {
-  opacity: 1;
-  visibility: visible;
-}</code></pre>
-                </div>
-              </div>
-            </div>
-          </div>
           <div id="view_switcher" class="comparison">
             <h3><a href="#view_switcher">View Switcher</a></h3>
             <div class="resources-block">
@@ -210,6 +173,49 @@ button:focus + .modal {
       opacity: 1;
      }
   }
+}</code></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="modal" class="comparison">
+            <h3><a href="#modal">Modal</a></h3>
+            <div class="resources-block">
+              <h4>resources:</h4>
+              <ul class="resources">
+                <li><a href=" http://codepen.io/ohnoitsaustin/pen/zGmJjz" target="_blank">Austin Lord's CodePen</a></li>
+                <li><a href=" " target="_blank">Simple Example by Daniel Griffith</a></li>
+              </ul>
+            </div>
+            <div class="codpen-example">
+              <h4>CODEPEN</h4><p data-height="265" data-theme-id="light" data-slug-hash="pEVjwj" data-default-tab="result" data-user="una" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/una/pen/pEVjwj/">CSS-Only Modal: youmightnotneedjs.com</a> by Una Kravets (<a href="http://codepen.io/una">@una</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+            </div>
+            <div class="comparison-group">
+              <div data-code="html" class="code html">
+                <h4>HTML</h4>
+                <div data-lang="markup" class="code-block language-markup">
+                  <pre><code>&lt;button&gt;Click Me&lt;/button&gt;
+
+&lt;div class=&quot;modal&quot;&gt;
+  &lt;p&gt;Hello World!&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+              </div>
+              <div data-code="scss" class="code scss">
+                <h4>SCSS</h4>
+                <div data-lang="scss" class="code-block language-scss">
+                  <pre><code>// modal is invisible until
+// sibling is focused
+.modal {  
+  opacity: 0;
+  visibility: hidden;
+}
+
+// modal fades in when button 
+// is in focus (i.e. clicked on)
+button:focus + .modal {
+  opacity: 1;
+  visibility: visible;
 }</code></pre>
                 </div>
               </div>
