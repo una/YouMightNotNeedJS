@@ -1,5 +1,5 @@
 (function() {
-  var filter, hide, setMinVersion, showFirst,
+  var filter, hide, showFirst,
     __slice = [].slice;
 
   showFirst = function() {
@@ -29,41 +29,6 @@
       el = els[_i];
       if (el) {
         _results.push(el.style.display = 'none');
-      }
-    }
-    return _results;
-  };
-
-  setMinVersion = function(version) {
-    var block, blocks, section, versions, _i, _j, _len, _len1, _ref, _results;
-    if (version == null) {
-      version = 10;
-    }
-    version = parseInt(version);
-    _ref = document.querySelectorAll('.comparison');
-    _results = [];
-    for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-      section = _ref[_i];
-      blocks = section.querySelectorAll('.browser');
-      versions = {};
-      for (_j = 0, _len1 = blocks.length; _j < _len1; _j++) {
-        block = blocks[_j];
-        versions[block.getAttribute('data-browser')] = block;
-      }
-      switch (version) {
-        case 8:
-          showFirst(versions['ie8']);
-          _results.push(hide(versions['ie9'], versions['ie10']));
-          break;
-        case 9:
-          showFirst(versions['ie9'], versions['ie8']);
-          _results.push(hide(versions['ie10']));
-          break;
-        case 10:
-          _results.push(showFirst(versions['ie10'], versions['ie9'], versions['ie8']));
-          break;
-        default:
-          _results.push(void 0);
       }
     }
     return _results;
