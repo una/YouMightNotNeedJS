@@ -103,32 +103,18 @@ header.page-header
 
 .share-buttons
   clearfix()
-  width 54em
-  max-width 100%
-  margin 3em auto
-  padding 0 1em
+  max-width 250px
+  margin 2em auto 0
+  height 2em
 
   .twitter-share-button
     float left
+    width 90px
+    height 1em
 
   .github-stars-button
-    float right
-
-  .share-button
-    width 48%
-
-    @media (max-width: 840px)
-      width auto
-
-      &.twitter-share-button
-        margin-bottom 1em
-
-      &.twitter-share-button, &.github-stars-button
-        float none
-
-    iframe
-      width 100%
-      height 2.45em
+    float left
+    height 1em
 
 .old-ie-message
   display none
