@@ -46,6 +46,49 @@
       <section id="components" class="odd">
         <div class="inner">
           <h2>Components</h2>
+          <div id="modal" class="comparison">
+            <h3><a href="#modal">Modal</a></h3>
+            <div class="resources-block">
+              <h4>resources:</h4>
+              <ul class="resources">
+                <li><a href=" http://codepen.io/ohnoitsaustin/pen/zGmJjz" target="_blank">Austin Lord's CodePen</a></li>
+                <li><a href=" " target="_blank">Simple Example by Daniel Griffith</a></li>
+              </ul>
+            </div>
+            <div class="codpen-example">
+              <h4>CODEPEN</h4><p data-height="265" data-theme-id="light" data-slug-hash="pEVjwj" data-default-tab="result" data-user="una" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/una/pen/pEVjwj/">CSS-Only Modal: youmightnotneedjs.com</a> by Una Kravets (<a href="http://codepen.io/una">@una</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+            </div>
+            <div class="comparison-group">
+              <div data-code="html" class="code html">
+                <h4>HTML</h4>
+                <div data-lang="markup" class="code-block language-markup">
+                  <pre><code>&lt;button&gt;Click Me&lt;/button&gt;
+
+&lt;div class=&quot;modal&quot;&gt;
+  &lt;p&gt;Hello World!&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+              </div>
+              <div data-code="scss" class="code scss">
+                <h4>SCSS</h4>
+                <div data-lang="scss" class="code-block language-scss">
+                  <pre><code>// modal is invisible until
+// sibling is focused
+.modal {  
+  opacity: 0;
+  visibility: hidden;
+}
+
+// modal fades in when button 
+// is in focus (i.e. clicked on)
+button:focus + .modal {
+  opacity: 1;
+  visibility: visible;
+}</code></pre>
+                </div>
+              </div>
+            </div>
+          </div>
           <div id="image_slider" class="comparison">
             <h3><a href="#image_slider">Image Slider</a></h3>
             <div class="resources-block">
@@ -101,49 +144,6 @@
   33% { left: -$slide-width; }
   66% { left: -$slide-width*2; }
   100% { left: 0; }
-}</code></pre>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div id="modal" class="comparison">
-            <h3><a href="#modal">Modal</a></h3>
-            <div class="resources-block">
-              <h4>resources:</h4>
-              <ul class="resources">
-                <li><a href=" http://codepen.io/ohnoitsaustin/pen/zGmJjz" target="_blank">Austin Lord's CodePen</a></li>
-                <li><a href=" " target="_blank">Simple Example by Daniel Griffith</a></li>
-              </ul>
-            </div>
-            <div class="codpen-example">
-              <h4>CODEPEN</h4><p data-height="265" data-theme-id="light" data-slug-hash="pEVjwj" data-default-tab="result" data-user="una" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/una/pen/pEVjwj/">CSS-Only Modal: youmightnotneedjs.com</a> by Una Kravets (<a href="http://codepen.io/una">@una</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-            </div>
-            <div class="comparison-group">
-              <div data-code="html" class="code html">
-                <h4>HTML</h4>
-                <div data-lang="markup" class="code-block language-markup">
-                  <pre><code>&lt;button&gt;Click Me&lt;/button&gt;
-
-&lt;div class=&quot;modal&quot;&gt;
-  &lt;p&gt;Hello World!&lt;/p&gt;
-&lt;/div&gt;</code></pre>
-                </div>
-              </div>
-              <div data-code="scss" class="code scss">
-                <h4>SCSS</h4>
-                <div data-lang="scss" class="code-block language-scss">
-                  <pre><code>// modal is invisible until
-// sibling is focused
-.modal {  
-  opacity: 0;
-  visibility: hidden;
-}
-
-// modal fades in when button 
-// is in focus (i.e. clicked on)
-button:focus + .modal {
-  opacity: 1;
-  visibility: visible;
 }</code></pre>
                 </div>
               </div>
@@ -438,6 +438,7 @@ section {
               </ul>
             </div>
             <div class="codpen-example">
+              <h4>CODEPEN</h4><p data-height="265" data-theme-id="light" data-slug-hash="wzjGAj" data-default-tab="result" data-user="una" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/una/pen/wzjGAj/">CSS Only Lightbox: youmightnotneedjs.com</a> by Una Kravets (<a href="http://codepen.io/una">@una</a>) on <a href="http://codepen.io">CodePen</a>.</p>
             </div>
             <div class="comparison-group">
               <div data-code="html" class="code html">
@@ -505,15 +506,15 @@ $background-color: black;
               </ul>
             </div>
             <div class="codpen-example">
+              <h4>CODEPEN</h4><p data-height="265" data-theme-id="light" data-slug-hash="KgRzRE" data-default-tab="result" data-user="una" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/una/pen/KgRzRE/">KgRzRE</a> by Una Kravets (<a href="http://codepen.io/una">@una</a>) on <a href="http://codepen.io">CodePen</a>.</p>
             </div>
             <div class="comparison-group">
               <div data-code="html" class="code html">
                 <h4>HTML</h4>
                 <div data-lang="markup" class="code-block language-markup">
-                  <pre><code>&lt;div class=&quot;tabs&quot;&gt;
-    
+                  <pre><code>&lt;div class=&quot;tabs&quot;&gt;    
    &lt;div class=&quot;tab&quot;&gt;
-       &lt;input type=&quot;radio&quot; id=&quot;tab-1&quot; checked&gt;
+       &lt;input type=&quot;radio&quot; name=&quot;tabgroup&quot; id=&quot;tab-1&quot; checked&gt;
        &lt;label for=&quot;tab-1&quot;&gt;Label One&lt;/label&gt;
        &lt;div class=&quot;content&quot;&gt;
           &lt;p&gt;Tab One Content&lt;/p&gt;
@@ -521,7 +522,7 @@ $background-color: black;
    &lt;/div&gt;
     
    &lt;div class=&quot;tab&quot;&gt;
-       &lt;input type=&quot;radio&quot; id=&quot;tab-2&quot;&gt;
+       &lt;input type=&quot;radio&quot; name=&quot;tabgroup&quot; id=&quot;tab-2&quot;&gt;
        &lt;label for=&quot;tab-2&quot;&gt;Label Two&lt;/label&gt;
        &lt;div class=&quot;content&quot;&gt;
            &lt;p&gt;Tab Two Content&lt;/p&gt;
@@ -529,13 +530,12 @@ $background-color: black;
    &lt;/div&gt;
     
     &lt;div class=&quot;tab&quot;&gt;
-       &lt;input type=&quot;radio&quot; id=&quot;tab-3&quot;&gt;
+       &lt;input type=&quot;radio&quot; name=&quot;tabgroup&quot; id=&quot;tab-3&quot;&gt;
        &lt;label for=&quot;tab-3&quot;&gt;Label Three&lt;/label&gt;
        &lt;div class=&quot;content&quot;&gt;
            &lt;p&gt;Tab Three Content&lt;/p&gt;
        &lt;/div&gt; 
    &lt;/div&gt;
-    
 &lt;/div&gt;</code></pre>
                 </div>
               </div>
@@ -546,16 +546,13 @@ $background-color: black;
   position: relative;  
   // set height to be even for all tab groups
   min-height: 200px;
-  clear: both;
 }
 
 .tab {
   float: left;
-   
 }
 
 .tab label {
-  left: 0;
   // set label height
   top: 1em;
 }
@@ -566,7 +563,7 @@ $background-color: black;
 
 .content {
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
+  top: 1em; left: 0; right: 0; bottom: 0;
   opacity: 0;
 }
 

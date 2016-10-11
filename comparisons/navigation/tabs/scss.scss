@@ -2,16 +2,13 @@
   position: relative;  
   // set height to be even for all tab groups
   min-height: 200px;
-  clear: both;
 }
 
 .tab {
   float: left;
-   
 }
 
 .tab label {
-  left: 0;
   // set label height
   top: 1em;
 }
@@ -22,7 +19,7 @@
 
 .content {
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
+  top: 1em; left: 0; right: 0; bottom: 0;
   opacity: 0;
 }
 
