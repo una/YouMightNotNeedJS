@@ -13,8 +13,17 @@
   top: 1em;
 }
 
+// Visually hide radio buttons
 .tab [type=radio] {
-  display: none;   
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  
+  &:focus + label {
+    outline: 2px dotted #000;
+  }
 }
 
 .content {
