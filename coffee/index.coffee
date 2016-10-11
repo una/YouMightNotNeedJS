@@ -48,9 +48,6 @@ filter = (term) ->
 document.addEventListener 'DOMContentLoaded', ->
   slider = document.querySelector('.version-slider')
 
-  do handleChange = ->
-    setMinVersion slider.value
-
   slider.addEventListener 'change', handleChange
 
   search = document.querySelector('input[type="search"]')
