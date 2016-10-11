@@ -44,16 +44,3 @@ filter = (term) ->
     comparisons.classList.add 'empty'
   else
     comparisons.classList.remove 'empty'
-
-document.addEventListener 'DOMContentLoaded', ->
-  slider = document.querySelector('.version-slider')
-
-  do handleChange = ->
-    setMinVersion slider.value
-
-  slider.addEventListener 'change', handleChange
-
-  search = document.querySelector('input[type="search"]')
-
-  search.addEventListener 'input', ->
-    filter search.value
