@@ -129,15 +129,33 @@ header.page-header .inner h1 {
 .share-buttons .twitter-share-button {
   float: left;
 }
+.share-buttons .twitter-share-button:after {
+  background: #55aace;
+  content: '★';
+}
 .share-buttons .github-stars-button {
   float: right;
+}
+.share-buttons .github-stars-button:after {
+  background: #444;
+  content: "★";
 }
 .share-buttons .share-button {
   width: 48%;
 }
+.share-buttons .share-button:after {
+  border-radius: 0 4px 4px 0;
+  color: #eee;
+  display: inline-block;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 4em;
+}
 @media (max-width: 840px) {
   .share-buttons .share-button {
-    width: auto;
+    width: 100%;
   }
   .share-buttons .share-button.twitter-share-button {
     margin-bottom: 1em;
@@ -147,9 +165,18 @@ header.page-header .inner h1 {
     float: none;
   }
 }
-.share-buttons .share-button iframe {
-  width: 100%;
-  height: 2.45em;
+.share-buttons .share-button {
+  background: #eee;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #333;
+  font-size: 15.6px;
+  font-family: "Helvetica Neue",Helvetica,arial,sans-serif;
+  font-weight: 700;
+  line-height: 2.4;
+  padding-right: 70px;
+  position: relative;
 }
 .old-ie-message {
   display: none;

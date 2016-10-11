@@ -50,11 +50,11 @@ body
 
     .share-buttons
 
-      .share-button.twitter-share-button
-        iframe(src='http://hubstar.io/twitter/spin?via=HubSpotDev&text=You%20might%20not%20need%20JavaScript&url=http://YouMightNotNeedJS.com&name=%22You%20might%20not%20need%20JavaScript%22', frameborder=0, scrolling=0)
+      button.share-button.twitter-share-button(type='button', data-url='https://twitter.com/intent/tweet?text=You%20might%20not%20need%20JavaScript%20http%3A%2F%2FYouMightNotNeedJS.com%20via%20%40una&source=webclient ', data-popup='true')
+        | Tweet "You might not need JavaScript"        
 
-      .share-button.github-stars-button
-        iframe(src='http://hubstar.io/github/spin/una/YouMightNotNeedJS', frameborder=0, scrolling=0)
+      button.share-button.github-stars-button(type='button', data-url='https://github.com/una/YouMightNotNeedJS')
+        | Star YouMightNotNeedJS on Github
 
     header.search
 
@@ -114,3 +114,21 @@ body
   div(style='-webkit-transform: translateZ(0);')
 
 <script>Prism.highlightAll();</script>
+<script>
+| var $buttons = document.querySelectorAll('.share-button');
+| var url;
+
+| [].forEach.call($buttons, function(element){
+| element.addEventListener('click', function(event) {
+|   event.preventDefault();
+|   url = element.getAttribute('data-url');
+|   if(element.getAttribute('data-popup') === 'true'){
+|     var left = screen.width / 2 - 550 / 2;
+|     var top = screen.height / 2 - 420 / 2;
+|     return window.open(url, 'intent', "scrollbars=yes,resizable=yes,toolbar=no,location=yes,width=550,height=420,left=" + (left | 0) + ",top=" + (top | 0));
+|   } else {
+|     return window.open(url, 'YouMightNotNeedJS');
+|   }
+| });
+| });
+</script>
