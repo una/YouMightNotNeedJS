@@ -2,7 +2,7 @@ body {
 	background: linear-gradient(to right top, 
       $scroller-color 50%, 
       $scroller-background 50%);
-	background-size: 100% calc(100% - 100vh + $scroller-height); 
+	background-size: 100% calc(100% - 100vh + #{$scroller-height}); 
 	background-repeat: no-repeat;
 }
 
