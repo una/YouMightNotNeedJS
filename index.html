@@ -56,9 +56,9 @@
                 <li><a href=" http://benschwarz.github.io/gallery-css/" target="_blank">CSS Gallery</a></li>
               </ul>
             </div>
-          </div>
-          <div class="codpen-example">
-            <h4>CODEPEN</h4><p data-height="260" data-theme-id="light" data-slug-hash="BLxNZq" data-default-tab="result" data-user="una" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/una/pen/BLxNZq/">CSS-Only Slider: youmightnotneedjs.com</a> by Una Kravets (<a href="http://codepen.io/una">@una</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+            <div class="codpen-example">
+              <h4>CODEPEN</h4><p data-height="265" data-theme-id="light" data-slug-hash="BLxNZq" data-default-tab="result" data-user="una" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/una/pen/BLxNZq/">CSS-Only Slider: youmightnotneedjs.com</a> by Una Kravets (<a href="http://codepen.io/una">@una</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+            </div>
             <div class="comparison-group">
               <div data-code="html" class="code html">
                 <h4>HTML</h4>
@@ -115,9 +115,9 @@
                 <li><a href=" " target="_blank">Simple Example by Daniel Griffith</a></li>
               </ul>
             </div>
-          </div>
-          <div class="codpen-example">
-            <h4>CODEPEN</h4><p data-height="260" data-theme-id="light" data-slug-hash="pEVjwj" data-default-tab="result" data-user="una" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/una/pen/pEVjwj/">CSS-Only Modal: youmightnotneedjs.com</a> by Una Kravets (<a href="http://codepen.io/una">@una</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+            <div class="codpen-example">
+              <h4>CODEPEN</h4><p data-height="265" data-theme-id="light" data-slug-hash="pEVjwj" data-default-tab="result" data-user="una" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/una/pen/pEVjwj/">CSS-Only Modal: youmightnotneedjs.com</a> by Una Kravets (<a href="http://codepen.io/una">@una</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+            </div>
             <div class="comparison-group">
               <div data-code="html" class="code html">
                 <h4>HTML</h4>
@@ -154,80 +154,61 @@ button:focus + .modal {
             <div class="resources-block">
               <h4>resources:</h4>
               <ul class="resources">
-                <li><a href=" https://css-tricks.com/video-screencasts/82-css-image-switcher/" target="_blank">CSSTricks Image Switcher</a></li>
+                <li><a href=" http://css3.bradshawenterprises.com/cfimg/" target="_blank">CSS Image Switcher Tutorial</a></li>
                 <li><a href=" http://codepen.io/tiffanytse/pen/BnDlb" target="_blank">Tiffany Tse CSS Slider</a></li>
               </ul>
             </div>
-          </div>
-          <div class="codpen-example">
+            <div class="codpen-example">
+              <h4>CODEPEN</h4><p data-height="265" data-theme-id="light" data-slug-hash="jrxbZq" data-default-tab="result" data-user="una" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/una/pen/jrxbZq/">CSS-Only Image Switcher: youmightnotneedjs.com</a> by Una Kravets (<a href="http://codepen.io/una">@una</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+            </div>
             <div class="comparison-group">
               <div data-code="html" class="code html">
                 <h4>HTML</h4>
                 <div data-lang="markup" class="code-block language-markup">
-                  <pre><code>&lt;ul id=&quot;switcher-wrap&quot;&gt;
-  &lt;li id=&quot;one&quot; class=&quot;image-link&quot; href=&quot;#&quot;&gt;
-    &lt;span&gt;Image One&lt;/span&gt;
-  &lt;/li&gt;
-  &lt;li id=&quot;two&quot; class=&quot;image-link&quot; href=&quot;#&quot;&gt;
-    &lt;span&gt;Image Two&lt;/span&gt;
-  &lt;/li&gt;
-  &lt;li id=&quot;three&quot; class=&quot;image-link&quot; href=&quot;#&quot;&gt;
-    &lt;span&gt;Image Three&lt;/span&gt;
-  &lt;/li&gt;
-  &lt;li id=&quot;four&quot; class=&quot;image-link&quot; href=&quot;#&quot;&gt;
-    &lt;span&gt;Image Four&lt;/span&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</code></pre>
+                  <pre><code>&lt;div id=&quot;slider&quot;&gt;
+
+  &lt;!-- Slide Images --&gt;
+	&lt;img id=&quot;slide-1&quot; src=&quot;img1.jpg&quot; /&gt;
+  &lt;img id=&quot;slide-2&quot; src=&quot;img2.jpg&quot; /&gt;
+  &lt;img id=&quot;slide-3&quot; src=&quot;img3.jpg&quot; /&gt;
+  &lt;img id=&quot;slide-4&quot; src=&quot;img4.jpg&quot; /&gt;
+	
+	&lt;!-- Navigation for the slides --&gt;
+	&lt;ul&gt;
+		&lt;li&gt;&lt;a href=&quot;#slide-1&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;#slide-2&quot;&gt;2&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;#slide-3&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;#slide-4&quot;&gt;4&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;</code></pre>
                 </div>
               </div>
               <div data-code="scss" class="code scss">
                 <h4>SCSS</h4>
                 <div data-lang="scss" class="code-block language-scss">
-                  <pre><code>.image-link { 
-  display: block; 
-  width: 240px; 
-  height: 160px; 
-  position: absolute; 
-  top: 0; left: 0; 
-
-  span {
-    width: 109px; 
-    display: block; 
-    height: 19px; 
-    padding: 5px; 
-    background: #eee; 
-    border: 1px solid #ccc;
-  }
-
-  .image-link:hover { 
-    z-index: 100; 
-    span { background: #ccc; 
+                  <pre><code>#slider {
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 200px;
+    
+    &amp;:target {
+      transition: all .5s ease-in-out;
     }
-  }
-}
+    
+    &amp;:not(:target), 
+    &amp;:target ~ img#slide-4  {
+      position: relative;
+      opacity: 0;
+    }
 
-#one { 
-  background: url(../images/1.jpg); z-index: 2; 
-  span { 
-    position: absolute; left: 0; bottom: -35px;
-  }
-}
-#two { 
-  background: url(../images/2.jpg);
-  span { 
-    position: absolute; left: 0; bottom: -65px;
-  }
-}
-#three { 
-  background: url(../images/3.jpg);
-  span { 
-    position: absolute; left: 120px; bottom: -35px;
-  }
-}
-#four { 
-  background: url(../images/4.jpg);
-  span { 
-    position: absolute; left: 120px; bottom: -65px;
+    // set initially visible
+    &amp;#slide-4 {
+      position: absolute;
+      opacity: 1;
+     }
   }
 }</code></pre>
                 </div>
@@ -247,8 +228,10 @@ button:focus + .modal {
           </div>
           <div id="color_picker" class="comparison">
             <h3><a href="#color_picker">Color Picker</a></h3>
-          </div>
-          <div class="codpen-example">
+            <div class="codpen-example">
+              <h4>CODEPEN</h4><p data-height="265" data-theme-id="light" data-slug-hash="BLxjoo" data-default-tab="result" data-user="una" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/una/pen/BLxjoo/">HTML File Upload: youmightnotneedjs.com</a> by Una Kravets (<a href="http://codepen.io/una">@una</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+            </div>
             <div class="comparison-group">
               <div data-code="html" class="code html">
                 <h4>HTML</h4>
@@ -262,8 +245,9 @@ button:focus + .modal {
           </div>
           <div id="file_upload" class="comparison">
             <h3><a href="#file_upload">File Upload</a></h3>
-          </div>
-          <div class="codpen-example">
+            <div class="codpen-example">
+              <h4>CODEPEN</h4><p data-height="265" data-theme-id="light" data-slug-hash="dpZGPa" data-default-tab="result" data-user="una" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/una/pen/dpZGPa/">HTML File Upload: youmightnotneedjs.com</a> by Una Kravets (<a href="http://codepen.io/una">@una</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+            </div>
             <div class="comparison-group">
               <div data-code="html" class="code html">
                 <h4>HTML</h4>
@@ -285,8 +269,9 @@ button:focus + .modal {
                 <li><a href=" https://codepen.io/SitePoint/pen/Eambf" target="_blank">Phone Number Validation by SitePoint</a></li>
               </ul>
             </div>
-          </div>
-          <div class="codpen-example">
+            <div class="codpen-example">
+              <h4>CODEPEN</h4><p data-height="320" data-theme-id="light" data-slug-hash="amGdzK" data-default-tab="result" data-user="una" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/una/pen/amGdzK/">HTML Form Validation: youmightnotneedjs.com</a> by Una Kravets (<a href="http://codepen.io/una">@una</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+            </div>
             <div class="comparison-group">
               <div data-code="html" class="code html">
                 <h4>HTML</h4>
@@ -329,8 +314,8 @@ button:focus + .modal {
                 <li><a href=" http://codepen.io/MadeByMike/pen/ZOrEmr" target="_blank">Example by Mike Riethmuller</a></li>
               </ul>
             </div>
-          </div>
-          <div class="codpen-example">
+            <div class="codpen-example">
+            </div>
             <div class="comparison-group">
               <div data-code="html" class="code html">
                 <h4>HTML</h4>
@@ -401,8 +386,8 @@ body:before {
                 <li><a href=" http://codepen.io/oknoblich/pen/tKfab" target="_blank">CodePen Example by Oliver Knoblich</a></li>
               </ul>
             </div>
-          </div>
-          <div class="codpen-example">
+            <div class="codpen-example">
+            </div>
             <div class="comparison-group">
               <div data-code="html" class="code html">
                 <h4>HTML</h4>
@@ -472,8 +457,8 @@ section {
                 <li><a href=" http://codepen.io/gschier/pen/HCoqh" target="_blank">Gregory Schier's Codepen</a></li>
               </ul>
             </div>
-          </div>
-          <div class="codpen-example">
+            <div class="codpen-example">
+            </div>
             <div class="comparison-group">
               <div data-code="html" class="code html">
                 <h4>HTML</h4>
@@ -539,8 +524,8 @@ $background-color: black;
                 <li><a href=" http://codepen.io/mildrenben/pen/bdGdOb" target="_blank">Material Design CSS Tabs</a></li>
               </ul>
             </div>
-          </div>
-          <div class="codpen-example">
+            <div class="codpen-example">
+            </div>
             <div class="comparison-group">
               <div data-code="html" class="code html">
                 <h4>HTML</h4>

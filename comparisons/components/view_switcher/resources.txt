@@ -1,2 +1,2 @@
-CSSTricks Image Switcher: https://css-tricks.com/video-screencasts/82-css-image-switcher/
+CSS Image Switcher Tutorial: http://css3.bradshawenterprises.com/cfimg/
 Tiffany Tse CSS Slider: http://codepen.io/tiffanytse/pen/BnDlb

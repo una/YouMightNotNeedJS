@@ -84,16 +84,16 @@ body
                 if co.resources
                     +resources(co.resources.txt)
 
-              div.codpen-example
+                div.codpen-example
 
-                for code in ['codepen']
-                  if co[code]
-                      h4= code.toUpperCase()
+                  for code in ['codepen']
+                    if co[code]
+                        h4= code.toUpperCase()
 
-                      for lang in ['html', 'markup']
-                        if co[code][lang]
-                          !{co[code][lang]}
-
+                        for lang in ['html', 'markup']
+                          if co[code][lang]
+                            !{co[code][lang]}
+                            
                 div.comparison-group
 
                   for code in ['html', 'css', 'scss', 'markup']

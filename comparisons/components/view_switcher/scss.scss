@@ -1,47 +1,25 @@
-.image-link { 
-  display: block; 
-  width: 240px; 
-  height: 160px; 
-  position: absolute; 
-  top: 0; left: 0; 
-
-  span {
-    width: 109px; 
-    display: block; 
-    height: 19px; 
-    padding: 5px; 
-    background: #eee; 
-    border: 1px solid #ccc;
-  }
-
-  .image-link:hover { 
-    z-index: 100; 
-    span { background: #ccc; 
+#slider {
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 200px;
+    
+    &:target {
+      transition: all .5s ease-in-out;
     }
-  }
-}
+    
+    &:not(:target), 
+    &:target ~ img#slide-4  {
+      position: relative;
+      opacity: 0;
+    }
 
-#one { 
-  background: url(../images/1.jpg); z-index: 2; 
-  span { 
-    position: absolute; left: 0; bottom: -35px;
-  }
-}
-#two { 
-  background: url(../images/2.jpg);
-  span { 
-    position: absolute; left: 0; bottom: -65px;
-  }
-}
-#three { 
-  background: url(../images/3.jpg);
-  span { 
-    position: absolute; left: 120px; bottom: -35px;
-  }
-}
-#four { 
-  background: url(../images/4.jpg);
-  span { 
-    position: absolute; left: 120px; bottom: -65px;
+    // set initially visible
+    &#slide-4 {
+      position: absolute;
+      opacity: 1;
+     }
   }
 }
