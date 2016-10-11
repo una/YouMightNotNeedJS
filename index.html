@@ -330,33 +330,11 @@ button:focus + .modal {
               <div data-code="scss" class="code scss">
                 <h4>SCSS</h4>
                 <div data-lang="scss" class="code-block language-scss">
-                  <pre><code>$scroller-height: 6px;
-$scroller-color: #0089f2;
-$scroller-background: #ddd;
-$body-background: white;
-
-html,body {
-	margin: 0;
-}
-
-.scroller {
-	position: fixed;
-	top: 0;
-	height: 0;
-	width: 100%;
-	background: $body-background;
-}
-
-main {
-	margin-top: 0;
-}
-
-body {	
+                  <pre><code>body {	
 	background: linear-gradient(to right top, 
       $scroller-color 50%, 
       $scroller-background 50%);
-	//6px = height of scroller but calc won't work with variables
-	background-size: 100% calc(100% - 100vh + 6px); 
+	background-size: 100% calc(100% - 100vh + $scroller-height); 
 	background-repeat: no-repeat;
 }
 
