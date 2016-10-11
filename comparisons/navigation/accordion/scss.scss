@@ -2,6 +2,10 @@
 input[type="radio"] {
   position: absolute;
   opacity: 0;
+
+  &:focus + label {
+    background: #000;
+  }
 }
 
 // Style label/entry for accordion
