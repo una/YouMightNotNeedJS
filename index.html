@@ -34,7 +34,7 @@
         </p>
         <p>
           This site is fully copied from <a href="http://youmightnotneedjquery.com">youmightnotneedjquery.com</a>, an excellent resource for vanilla JavaSript created by <a href="http://twitter.com/adamfschwartz">@adamfschwartz</a> and <a href="http://twitter.com/zachbloom">@zackbloom</a>.
-          But this time, we take a look at the power of modern native HTML and CSS as well as some of the syntactic sugar of Sass. Because, you might not need scripts for that task at all!
+          But this time, we take a look at the power of modern native HTML and CSS as well as some of the syntactic sugar of Sass. Because, you might not need scripts for that task at all! (Note: these methods can all be accessible, but the demos may not be. Please take a moment to test these before using in production)
         </p>
       </div>
     </div>
@@ -46,49 +46,6 @@
       <section id="components" class="odd">
         <div class="inner">
           <h2>Components</h2>
-          <div id="modal" class="comparison">
-            <h3><a href="#modal">Modal</a></h3>
-            <div class="resources-block">
-              <h4>resources:</h4>
-              <ul class="resources">
-                <li><a href=" http://codepen.io/ohnoitsaustin/pen/zGmJjz" target="_blank">Austin Lord's CodePen</a></li>
-                <li><a href=" " target="_blank">Simple Example by Daniel Griffith</a></li>
-              </ul>
-            </div>
-            <div class="codpen-example">
-              <h4>CODEPEN</h4><p data-height="265" data-theme-id="light" data-slug-hash="pEVjwj" data-default-tab="result" data-user="una" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/una/pen/pEVjwj/">CSS-Only Modal: youmightnotneedjs.com</a> by Una Kravets (<a href="http://codepen.io/una">@una</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-            </div>
-            <div class="comparison-group">
-              <div data-code="html" class="code html">
-                <h4>HTML</h4>
-                <div data-lang="markup" class="code-block language-markup">
-                  <pre><code>&lt;button&gt;Click Me&lt;/button&gt;
-
-&lt;div class=&quot;modal&quot;&gt;
-  &lt;p&gt;Hello World!&lt;/p&gt;
-&lt;/div&gt;</code></pre>
-                </div>
-              </div>
-              <div data-code="scss" class="code scss">
-                <h4>SCSS</h4>
-                <div data-lang="scss" class="code-block language-scss">
-                  <pre><code>// modal is invisible until
-// sibling is focused
-.modal {  
-  opacity: 0;
-  visibility: hidden;
-}
-
-// modal fades in when button 
-// is in focus (i.e. clicked on)
-button:focus + .modal {
-  opacity: 1;
-  visibility: visible;
-}</code></pre>
-                </div>
-              </div>
-            </div>
-          </div>
           <div id="image_slider" class="comparison">
             <h3><a href="#image_slider">Image Slider</a></h3>
             <div class="resources-block">
@@ -144,6 +101,49 @@ button:focus + .modal {
   33% { left: -$slide-width; }
   66% { left: -$slide-width*2; }
   100% { left: 0; }
+}</code></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="modal" class="comparison">
+            <h3><a href="#modal">Modal</a></h3>
+            <div class="resources-block">
+              <h4>resources:</h4>
+              <ul class="resources">
+                <li><a href=" http://codepen.io/ohnoitsaustin/pen/zGmJjz" target="_blank">Austin Lord's CodePen</a></li>
+                <li><a href=" " target="_blank">Simple Example by Daniel Griffith</a></li>
+              </ul>
+            </div>
+            <div class="codpen-example">
+              <h4>CODEPEN</h4><p data-height="265" data-theme-id="light" data-slug-hash="pEVjwj" data-default-tab="result" data-user="una" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/una/pen/pEVjwj/">CSS-Only Modal: youmightnotneedjs.com</a> by Una Kravets (<a href="http://codepen.io/una">@una</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+            </div>
+            <div class="comparison-group">
+              <div data-code="html" class="code html">
+                <h4>HTML</h4>
+                <div data-lang="markup" class="code-block language-markup">
+                  <pre><code>&lt;button&gt;Click Me&lt;/button&gt;
+
+&lt;div class=&quot;modal&quot;&gt;
+  &lt;p&gt;Hello World!&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+              </div>
+              <div data-code="scss" class="code scss">
+                <h4>SCSS</h4>
+                <div data-lang="scss" class="code-block language-scss">
+                  <pre><code>// modal is invisible until
+// sibling is focused
+.modal {  
+  opacity: 0;
+  visibility: hidden;
+}
+
+// modal fades in when button 
+// is in focus (i.e. clicked on)
+button:focus + .modal {
+  opacity: 1;
+  visibility: visible;
 }</code></pre>
                 </div>
               </div>
