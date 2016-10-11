@@ -107,17 +107,4 @@
     }
   };
 
-  document.addEventListener('DOMContentLoaded', function() {
-    var handleChange, search, slider;
-    slider = document.querySelector('.version-slider');
-    (handleChange = function() {
-      return setMinVersion(slider.value);
-    })();
-    slider.addEventListener('change', handleChange);
-    search = document.querySelector('input[type="search"]');
-    return search.addEventListener('input', function() {
-      return filter(search.value);
-    });
-  });
-
 }).call(this);
