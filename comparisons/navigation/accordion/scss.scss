@@ -4,7 +4,8 @@ input[type="radio"] {
   opacity: 0;
 
   &:focus + label {
-    background: #000;
+    color: black;
+    background-color: wheat;
   }
 }
 

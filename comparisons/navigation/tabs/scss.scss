@@ -16,13 +16,13 @@
 // Visually hide radio buttons
 .tab [type=radio] {
   position: absolute;
-  height: 1px;
-  width: 1px;
+  height: 0;
+  width: 0;
   overflow: hidden;
-  clip: rect(1px, 1px, 1px, 1px);
+  clip: rect(0, 0, 0, 0);
   
   &:focus + label {
-    outline: 2px dotted #000;
+    outline: 2px dotted black;
   }
 }
 
