@@ -208,6 +208,10 @@ header.search:after {
 header.search:after {
   clear: both;
 }
+input {
+  border-radius: 0;
+  -webkit-appearance: none;
+}
 header.search input[type="search"] {
   height: 3em;
   border: 0;
