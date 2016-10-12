@@ -51,7 +51,7 @@
         </p>
         <p>
           This site is fully copied from <a href="http://youmightnotneedjquery.com">youmightnotneedjquery.com</a>, an excellent resource for vanilla JavaScript created by <a href="http://twitter.com/adamfschwartz">@adamfschwartz</a> and <a href="http://twitter.com/zachbloom">@zackbloom</a>.
-          But this time, we take a look at the power of modern native HTML and CSS as well as some of the syntactic sugar of Sass. Because, you might not need scripts for that task at all! (Note: these methods can all be accessible, but the demos may not be. Please take a moment to test these before using in production)
+          But this time, we take a look at the power of modern native HTML and CSS as well as some of the syntactic sugar of Sass. Because, you might not need scripts for that task at all! <strong>(Note: these demos may not be accessible. Please take a moment to test them in your project before using in production)</strong>
         </p>
       </div>
     </div>
@@ -117,7 +117,7 @@
 	width: 400%;
 	position: relative;
 	left: 0;
-  will-change: transform;
+	will-change: transform;
 	animation: scroller 10s infinite;
 }
 
@@ -127,6 +127,50 @@
   33% { transform: translateX(-$slide-width); }
   66% { transform: translateX(-$slide-width*2); }
   100% { transform: translateX(0); }
+}
+</code></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="modal" class="comparison">
+            <h3><a href="#modal">Modal</a></h3>
+            <div class="resources-block">
+              <h4>resources:</h4>
+              <ul class="resources">
+                <li><a href=" http://codepen.io/ohnoitsaustin/pen/zGmJjz" target="_blank">Austin Lord's CodePen</a></li>
+                <li><a href=" " target="_blank">Simple Example by Daniel Griffith</a></li>
+              </ul>
+            </div>
+            <div class="codpen-example">
+              <h4>CODEPEN</h4><p data-height="265" data-theme-id="light" data-slug-hash="pEVjwj" data-default-tab="result" data-user="una" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/una/pen/pEVjwj/">CSS-Only Modal: youmightnotneedjs.com</a> by Una Kravets (<a href="http://codepen.io/una">@una</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+            </div>
+            <div class="comparison-group">
+              <div data-code="html" class="code html">
+                <h4>HTML</h4>
+                <div data-lang="markup" class="code-block language-markup">
+                  <pre><code>&lt;button&gt;Click Me&lt;/button&gt;
+
+&lt;div class=&quot;modal&quot;&gt;
+  &lt;p&gt;Hello World!&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+              </div>
+              <div data-code="scss" class="code scss">
+                <h4>SCSS</h4>
+                <div data-lang="scss" class="code-block language-scss">
+                  <pre><code>// modal is invisible until
+// sibling is focused
+.modal {  
+  opacity: 0;
+  visibility: hidden;
+}
+
+// modal fades in when button 
+// is in focus (i.e. clicked on)
+button:focus + .modal {
+  opacity: 1;
+  visibility: visible;
 }</code></pre>
                 </div>
               </div>
@@ -193,49 +237,6 @@
       opacity: 1;
      }
   }
-}</code></pre>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div id="modal" class="comparison">
-            <h3><a href="#modal">Modal</a></h3>
-            <div class="resources-block">
-              <h4>resources:</h4>
-              <ul class="resources">
-                <li><a href=" http://codepen.io/ohnoitsaustin/pen/zGmJjz" target="_blank">Austin Lord's CodePen</a></li>
-                <li><a href=" " target="_blank">Simple Example by Daniel Griffith</a></li>
-              </ul>
-            </div>
-            <div class="codpen-example">
-              <h4>CODEPEN</h4><p data-height="265" data-theme-id="light" data-slug-hash="pEVjwj" data-default-tab="result" data-user="una" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/una/pen/pEVjwj/">CSS-Only Modal: youmightnotneedjs.com</a> by Una Kravets (<a href="http://codepen.io/una">@una</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-            </div>
-            <div class="comparison-group">
-              <div data-code="html" class="code html">
-                <h4>HTML</h4>
-                <div data-lang="markup" class="code-block language-markup">
-                  <pre><code>&lt;button&gt;Click Me&lt;/button&gt;
-
-&lt;div class=&quot;modal&quot;&gt;
-  &lt;p&gt;Hello World!&lt;/p&gt;
-&lt;/div&gt;</code></pre>
-                </div>
-              </div>
-              <div data-code="scss" class="code scss">
-                <h4>SCSS</h4>
-                <div data-lang="scss" class="code-block language-scss">
-                  <pre><code>// modal is invisible until
-// sibling is focused
-.modal {  
-  opacity: 0;
-  visibility: hidden;
-}
-
-// modal fades in when button 
-// is in focus (i.e. clicked on)
-button:focus + .modal {
-  opacity: 1;
-  visibility: visible;
 }</code></pre>
                 </div>
               </div>
@@ -382,68 +383,79 @@ body:before {
       <section id="navigation">
         <div class="inner">
           <h2>Navigation</h2>
-          <div id="lightbox" class="comparison">
-            <h3><a href="#lightbox">Lightbox</a></h3>
+          <div id="accordion" class="comparison">
+            <h3><a href="#accordion">Accordion</a></h3>
             <div class="resources-block">
               <h4>resources:</h4>
               <ul class="resources">
-                <li><a href=" http://codepen.io/gschier/pen/HCoqh" target="_blank">Gregory Schier's Codepen</a></li>
+                <li><a href=" http://www.hongkiat.com/blog/css-only-accordion/" target="_blank">4 Ways to Create CSS Accordions</a></li>
+                <li><a href=" http://codepen.io/oknoblich/pen/tKfab" target="_blank">CodePen Example by Oliver Knoblich</a></li>
               </ul>
             </div>
             <div class="codpen-example">
-              <h4>CODEPEN</h4><p data-height="265" data-theme-id="light" data-slug-hash="wzjGAj" data-default-tab="result" data-user="una" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/una/pen/wzjGAj/">CSS Only Lightbox: youmightnotneedjs.com</a> by Una Kravets (<a href="http://codepen.io/una">@una</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+              <h4>CODEPEN</h4><p data-height="310" data-theme-id="light" data-slug-hash="EgLPmZ" data-default-tab="result" data-user="una" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/una/pen/EgLPmZ/">CSS Only Accordion: youmightnotneedjs.com</a> by Una Kravets (<a href="http://codepen.io/una">@una</a>) on <a href="http://codepen.io">CodePen</a>.</p>
             </div>
             <div class="comparison-group">
               <div data-code="html" class="code html">
                 <h4>HTML</h4>
                 <div data-lang="markup" class="code-block language-markup">
-                  <pre><code>&lt;!-- thumbnail image wrapped in a link --&gt;
-&lt;a href=&quot;#img1&quot;&gt;
-  &lt;img src=&quot;img.jpg&quot; class=&quot;thumbnail&quot;&gt;
-&lt;/a&gt;
-
-&lt;!-- lightbox container hidden with CSS --&gt;
-&lt;a href=&quot;#&quot; class=&quot;lightbox&quot; id=&quot;img1&quot;&gt;
-  &lt;img src=&quot;img.jpg&quot;&gt;
-&lt;/a&gt;</code></pre>
+                  <pre><code>&lt;div class=&quot;togglebox&quot;&gt;
+  &lt;input id=&quot;toggle1&quot; type=&quot;radio&quot; name=&quot;toggle&quot; /&gt;
+  &lt;label for=&quot;toggle1&quot;&gt;Label 1&lt;/label&gt;
+  &lt;section id=&quot;content1&quot;&gt;
+    &lt;p&gt;Content for the first accordion&lt;/p&gt;
+  &lt;/section&gt;
+  
+  &lt;input id=&quot;toggle2&quot; type=&quot;radio&quot; name=&quot;toggle&quot; /&gt;
+  &lt;label for=&quot;toggle2&quot;&gt;Label 2&lt;/label&gt;
+  &lt;section id=&quot;content2&quot;&gt;
+    &lt;p&gt;Content for the second accordion&lt;/p&gt;
+  &lt;/section&gt;
+  
+  &lt;input id=&quot;toggle3&quot; type=&quot;radio&quot; name=&quot;toggle&quot; /&gt;
+  &lt;label for=&quot;toggle3&quot;&gt;Label 3&lt;/label&gt;
+  &lt;section id=&quot;content3&quot;&gt;
+    &lt;p&gt;Content for the third accordion&lt;/p&gt;
+  &lt;/section&gt;
+&lt;/div&gt;</code></pre>
                 </div>
               </div>
               <div data-code="scss" class="code scss">
                 <h4>SCSS</h4>
                 <div data-lang="scss" class="code-block language-scss">
-                  <pre><code>$thumbnail-size: 40px;
-$background-color: black;
+                  <pre><code>// Visually hide radio buttons
+input[type=&quot;radio&quot;] {
+  position: absolute;
+  opacity: 0;
 
-.thumbnail {
-  max-width: $thumbnail-size;
+  &amp;:focus + label {
+    color: black;
+    background-color: wheat;
+  }
 }
 
-.lightbox {
-  // Hide lightbox image
-	display: none;
-
-	// Position/style of lightbox
-	position: fixed;
-	z-index: 999;
-	width: 100%;
-	height: 100%;
-	text-align: center;
-	top: 0;
-	left: 0;
-	background: $background-color;
+// Style label/entry for accordion
+label {
+  position: relative;
+  display: block;
+  cursor: pointer;
 }
 
-.lightbox img {
-	/// Pad the lightbox image
-	max-width: 90%;
-	max-height: 80%;
-	margin-top: 2%;
+// Style accordion content
+section {
+  height: 0;
+  transition: .3s all;
+  overflow: hidden;
 }
 
-.lightbox:target {
-	// Remove default outline and unhide lightbox
-	outline: none;
-	display: block;
+// Open content when clicking label
+#toggle1:checked ~ #content1,
+#toggle2:checked ~ #content2,
+#toggle3:checked ~ #content3,
+#toggle4:checked ~ #content4 {
+  // set height for transition duration to work
+  // (also can set to auto without transition)
+  height: 200px;
 }</code></pre>
                 </div>
               </div>
@@ -541,79 +553,68 @@ $background-color: black;
               </div>
             </div>
           </div>
-          <div id="accordion" class="comparison">
-            <h3><a href="#accordion">Accordion</a></h3>
+          <div id="lightbox" class="comparison">
+            <h3><a href="#lightbox">Lightbox</a></h3>
             <div class="resources-block">
               <h4>resources:</h4>
               <ul class="resources">
-                <li><a href=" http://www.hongkiat.com/blog/css-only-accordion/" target="_blank">4 Ways to Create CSS Accordions</a></li>
-                <li><a href=" http://codepen.io/oknoblich/pen/tKfab" target="_blank">CodePen Example by Oliver Knoblich</a></li>
+                <li><a href=" http://codepen.io/gschier/pen/HCoqh" target="_blank">Gregory Schier's Codepen</a></li>
               </ul>
             </div>
             <div class="codpen-example">
-              <h4>CODEPEN</h4><p data-height="310" data-theme-id="light" data-slug-hash="EgLPmZ" data-default-tab="result" data-user="una" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/una/pen/EgLPmZ/">CSS Only Accordion: youmightnotneedjs.com</a> by Una Kravets (<a href="http://codepen.io/una">@una</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+              <h4>CODEPEN</h4><p data-height="265" data-theme-id="light" data-slug-hash="wzjGAj" data-default-tab="result" data-user="una" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/una/pen/wzjGAj/">CSS Only Lightbox: youmightnotneedjs.com</a> by Una Kravets (<a href="http://codepen.io/una">@una</a>) on <a href="http://codepen.io">CodePen</a>.</p>
             </div>
             <div class="comparison-group">
               <div data-code="html" class="code html">
                 <h4>HTML</h4>
                 <div data-lang="markup" class="code-block language-markup">
-                  <pre><code>&lt;div class=&quot;togglebox&quot;&gt;
-  &lt;input id=&quot;toggle1&quot; type=&quot;radio&quot; name=&quot;toggle&quot; /&gt;
-  &lt;label for=&quot;toggle1&quot;&gt;Label 1&lt;/label&gt;
-  &lt;section id=&quot;content1&quot;&gt;
-    &lt;p&gt;Content for the first accordion&lt;/p&gt;
-  &lt;/section&gt;
-  
-  &lt;input id=&quot;toggle2&quot; type=&quot;radio&quot; name=&quot;toggle&quot; /&gt;
-  &lt;label for=&quot;toggle2&quot;&gt;Label 2&lt;/label&gt;
-  &lt;section id=&quot;content2&quot;&gt;
-    &lt;p&gt;Content for the second accordion&lt;/p&gt;
-  &lt;/section&gt;
-  
-  &lt;input id=&quot;toggle3&quot; type=&quot;radio&quot; name=&quot;toggle&quot; /&gt;
-  &lt;label for=&quot;toggle3&quot;&gt;Label 3&lt;/label&gt;
-  &lt;section id=&quot;content3&quot;&gt;
-    &lt;p&gt;Content for the third accordion&lt;/p&gt;
-  &lt;/section&gt;
-&lt;/div&gt;</code></pre>
+                  <pre><code>&lt;!-- thumbnail image wrapped in a link --&gt;
+&lt;a href=&quot;#img1&quot;&gt;
+  &lt;img src=&quot;img.jpg&quot; class=&quot;thumbnail&quot;&gt;
+&lt;/a&gt;
+
+&lt;!-- lightbox container hidden with CSS --&gt;
+&lt;a href=&quot;#&quot; class=&quot;lightbox&quot; id=&quot;img1&quot;&gt;
+  &lt;img src=&quot;img.jpg&quot;&gt;
+&lt;/a&gt;</code></pre>
                 </div>
               </div>
               <div data-code="scss" class="code scss">
                 <h4>SCSS</h4>
                 <div data-lang="scss" class="code-block language-scss">
-                  <pre><code>// Visually hide radio buttons
-input[type=&quot;radio&quot;] {
-  position: absolute;
-  opacity: 0;
+                  <pre><code>$thumbnail-size: 40px;
+$background-color: black;
 
-  &amp;:focus + label {
-    color: black;
-    background-color: wheat;
-  }
+.thumbnail {
+  max-width: $thumbnail-size;
 }
 
-// Style label/entry for accordion
-label {
-  position: relative;
-  display: block;
-  cursor: pointer;
+.lightbox {
+  // Hide lightbox image
+	display: none;
+
+	// Position/style of lightbox
+	position: fixed;
+	z-index: 999;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	top: 0;
+	left: 0;
+	background: $background-color;
 }
 
-// Style accordion content
-section {
-  height: 0;
-  transition: .3s all;
-  overflow: hidden;
+.lightbox img {
+	/// Pad the lightbox image
+	max-width: 90%;
+	max-height: 80%;
+	margin-top: 2%;
 }
 
-// Open content when clicking label
-#toggle1:checked ~ #content1,
-#toggle2:checked ~ #content2,
-#toggle3:checked ~ #content3,
-#toggle4:checked ~ #content4 {
-  // set height for transition duration to work
-  // (also can set to auto without transition)
-  height: 200px;
+.lightbox:target {
+	// Remove default outline and unhide lightbox
+	outline: none;
+	display: block;
 }</code></pre>
                 </div>
               </div>

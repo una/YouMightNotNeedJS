@@ -165,13 +165,8 @@ html.old-ie .old-ie-message {
 }
 .comparison h3 {
   text-align: center;
-  font-size: 1.8em;
+  font-size: 2em;
   font-weight: normal;
-}
-@media (min-width: 768px) {
-  .comparison h3 {
-    font-size: 2em;
-  }
 }
 .comparison h3 a {
   position: relative;
@@ -207,10 +202,6 @@ header.search:after {
 }
 header.search:after {
   clear: both;
-}
-input {
-  border-radius: 0;
-  -webkit-appearance: none;
 }
 header.search input[type="search"] {
   height: 3em;
@@ -276,6 +267,7 @@ header.search .field .slider {
   text-align: center;
 }
 .resources-block h4 {
+  font-size: 1.1em;
   display: inline-block;
   font-weight: 200;
   color: #666;
@@ -319,19 +311,13 @@ section .comparison {
   padding-bottom: -40px;
 }
 section h2 {
-  font-size: 2.2em;
+  font-size: 3em;
   font-weight: 100;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.3em;
   text-transform: uppercase;
   color: #888;
   text-align: center;
   margin: 0;
-}
-@media (min-width: 768px) {
-  section h2 {
-    font-size: 3em;
-    letter-spacing: 0.3em;
-  }
 }
 input[type='range'] {
   -webkit-appearance: none !important;
