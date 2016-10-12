@@ -159,29 +159,33 @@
               <div data-code="html" class="code html">
                 <h4>HTML</h4>
                 <div data-lang="markup" class="code-block language-markup">
-                  <pre><code>&lt;button&gt;Click Me&lt;/button&gt;
+                  <pre><code>&lt;a class=&quot;modalTrigger&quot; href=&quot;#modalDialog1&quot;&gt;
+	Click Me
+&lt;/a&gt;
 
-&lt;div class=&quot;modal&quot;&gt;
+&lt;dialog class=&quot;modal&quot; id=&quot;modalDialog1&quot; tabindex=&quot;-1&quot;&gt;
   &lt;p&gt;Hello Beautiful!&lt;/p&gt;
-&lt;/div&gt;
-</code></pre>
+&lt;/dialog&gt;</code></pre>
                 </div>
               </div>
               <div data-code="scss" class="code scss">
                 <h4>SCSS</h4>
                 <div data-lang="scss" class="code-block language-scss">
-                  <pre><code>// modal is invisible until
-// sibling is focused
+                  <pre><code>// Modal is visually hidden until focused.
+// This only sort-of works: you can't close
+// the dialog with the escape key, and it can't
+// contain anything interactive for 2 reasons: 
+// you wouldn't be able to tab without blurring 
+// the dialog, and they'd be focusable when 
+// the dialog is closed (a poor keyboard experience).
 .modal {  
   opacity: 0;
-  visibility: hidden;
 }
 
 // modal fades in when button 
 // is in focus (i.e. clicked on)
-button:focus + .modal {
+.modal:focus {
   opacity: 1;
-  visibility: visible;
 }</code></pre>
                 </div>
               </div>
