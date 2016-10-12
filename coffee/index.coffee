@@ -44,3 +44,9 @@ filter = (term) ->
     comparisons.classList.add 'empty'
   else
     comparisons.classList.remove 'empty'
+
+document.addEventListener 'DOMContentLoaded', ->
+  search = document.querySelector('input[type="search"]')
+
+  search.addEventListener 'input', ->
+    filter search.value

@@ -72,4 +72,12 @@
     }
   };
 
+  document.addEventListener('DOMContentLoaded', function() {
+    var search;
+    search = document.querySelector('input[type="search"]');
+    return search.addEventListener('input', function() {
+      return filter(search.value);
+    });
+  });
+
 }).call(this);
