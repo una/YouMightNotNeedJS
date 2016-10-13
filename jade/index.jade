@@ -4,6 +4,7 @@ doctype html
 // Please edit the index.jade or the files in comparisons/, this file is generated
 
 include _resources
+include _caniuse
 
 <!--[if lt IE 10 ]> <html class="old-ie"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--> <html> <!--<![endif]-->
@@ -89,6 +90,9 @@ body
             if comp.comparison._resources
               +resources(comp.comparison._resources)
 
+            if comp.comparison._caniuse
+              +caniuse(comp.comparison._caniuse)
+
             for co, name in comp.comparison
               - if (name[0] === '_') continue;
 
@@ -122,6 +126,9 @@ body
                             .code-block(class='language-' + fullLanguage(lang), data-lang=fullLanguage(lang))
                               pre
                                 code= co[code][lang]
+
+                if co.caniuse
+                  +caniuse(co.caniuse.txt)
 
     footer
       p made by <a href="http://twitter.com/una">@una</a> based on <a href="http://youmightnotneedjquery.com">youmightnotneedjquery.com</a> | contribute on <a href="https://github.com/una/YouMightNotNeedJS">github</a>

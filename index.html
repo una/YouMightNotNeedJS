@@ -132,6 +132,14 @@
                 </div>
               </div>
             </div>
+            <div class="resources-block">
+              <h4>can i use:</h4>
+              <ul class="resources">
+                <li><a href=" http://caniuse.com/#feat=css-animation" target="_blank">CSS Animation</a></li>
+                <li><a href=" http://caniuse.com/#feat=will-change" target="_blank">Will Change</a></li>
+                <li><a href=" http://caniuse.com/#feat=transforms2d" target="_blank">Transform</a></li>
+              </ul>
+            </div>
           </div>
           <div id="modal" class="comparison">
             <h3><a href="#modal">Modal</a></h3>
@@ -194,11 +202,11 @@ button:focus + .modal {
                 <div data-lang="markup" class="code-block language-markup">
                   <pre><code>&lt;div id=&quot;slider&quot;&gt;
 
-  &lt;!-- Slide Images --&gt;
-	&lt;img id=&quot;slide-1&quot; src=&quot;img1.jpg&quot; /&gt;
-  &lt;img id=&quot;slide-2&quot; src=&quot;img2.jpg&quot; /&gt;
-  &lt;img id=&quot;slide-3&quot; src=&quot;img3.jpg&quot; /&gt;
-  &lt;img id=&quot;slide-4&quot; src=&quot;img4.jpg&quot; /&gt;
+  	&lt;!-- Slide Images --&gt;
+	&lt;img id=&quot;slide-1&quot; src=&quot;img1.jpg&quot; alt=&quot;img description&quot;/&gt;
+  	&lt;img id=&quot;slide-2&quot; src=&quot;img2.jpg&quot; alt=&quot;img description&quot;/&gt;
+  	&lt;img id=&quot;slide-3&quot; src=&quot;img3.jpg&quot; alt=&quot;img description&quot;/&gt;
+  	&lt;img id=&quot;slide-4&quot; src=&quot;img4.jpg&quot; alt=&quot;img description&quot;/&gt;
 	
 	&lt;!-- Navigation for the slides --&gt;
 	&lt;ul&gt;
@@ -207,7 +215,8 @@ button:focus + .modal {
 		&lt;li&gt;&lt;a href=&quot;#slide-3&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
 		&lt;li&gt;&lt;a href=&quot;#slide-4&quot;&gt;4&lt;/a&gt;&lt;/li&gt;
 	&lt;/ul&gt;
-&lt;/div&gt;</code></pre>
+&lt;/div&gt;
+</code></pre>
                 </div>
               </div>
               <div data-code="scss" class="code scss">
@@ -241,6 +250,12 @@ button:focus + .modal {
                 </div>
               </div>
             </div>
+            <div class="resources-block">
+              <h4>can i use:</h4>
+              <ul class="resources">
+                <li><a href=" http://caniuse.com/#feat=css-transitions" target="_blank">Transition</a></li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
@@ -264,10 +279,17 @@ button:focus + .modal {
                 <h4>HTML</h4>
                 <div data-lang="markup" class="code-block language-markup">
                   <pre><code>&lt;form&gt;
-  &lt;input type=&quot;color&quot; /&gt;
-&lt;/form&gt;</code></pre>
+  &lt;input type=&quot;color&quot; aria-label=&quot;Select a color&quot; /&gt;
+&lt;/form&gt;
+</code></pre>
                 </div>
               </div>
+            </div>
+            <div class="resources-block">
+              <h4>can i use:</h4>
+              <ul class="resources">
+                <li><a href=" http://caniuse.com/#feat=input-color" target="_blank">Color Input Type</a></li>
+              </ul>
             </div>
           </div>
           <div id="file_upload" class="comparison">
@@ -280,9 +302,10 @@ button:focus + .modal {
                 <h4>HTML</h4>
                 <div data-lang="markup" class="code-block language-markup">
                   <pre><code>&lt;form&gt;
-  &lt;input type=&quot;file&quot; accept=&quot;image/*&quot;&gt;
+  &lt;input type=&quot;file&quot; accept=&quot;image/*&quot; aria-label=&quot;select file to upload&quot;&gt;
   &lt;input type=&quot;submit&quot;&gt;
-&lt;/form&gt;</code></pre>
+&lt;/form&gt;
+</code></pre>
                 </div>
               </div>
             </div>
@@ -327,6 +350,12 @@ button:focus + .modal {
                 </div>
               </div>
             </div>
+            <div class="resources-block">
+              <h4>can i use:</h4>
+              <ul class="resources">
+                <li><a href=" http://caniuse.com/#feat=input-pattern" target="_blank">Pattern Attribute</a></li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
@@ -359,8 +388,8 @@ button:focus + .modal {
                 <div data-lang="scss" class="code-block language-scss">
                   <pre><code>body {	
 	background: linear-gradient(to right top, 
-      $scroller-color 50%, 
-      $scroller-background 50%);
+	$scroller-color 50%, 
+	$scroller-background 50%);
 	background-size: 100% calc(100% - 100vh + #{$scroller-height}); 
 	background-repeat: no-repeat;
 }
@@ -373,9 +402,17 @@ body:before {
 	width: 100%;
 	z-index: -1;
 	background: $body-background;
-}</code></pre>
+}
+</code></pre>
                 </div>
               </div>
+            </div>
+            <div class="resources-block">
+              <h4>can i use:</h4>
+              <ul class="resources">
+                <li><a href=" http://caniuse.com/#feat=css-gradients" target="_blank">Linear Gradient</a></li>
+                <li><a href=" http://caniuse.com/#feat=viewport-units" target="_blank">Viewport Units</a></li>
+              </ul>
             </div>
           </div>
         </div>
@@ -456,6 +493,79 @@ section {
   // set height for transition duration to work
   // (also can set to auto without transition)
   height: 200px;
+}</code></pre>
+                </div>
+              </div>
+            </div>
+            <div class="resources-block">
+              <h4>can i use:</h4>
+              <ul class="resources">
+                <li><a href=" http://caniuse.com/#feat=css-transitions" target="_blank">Transition</a></li>
+              </ul>
+            </div>
+          </div>
+          <div id="lightbox" class="comparison">
+            <h3><a href="#lightbox">Lightbox</a></h3>
+            <div class="resources-block">
+              <h4>resources:</h4>
+              <ul class="resources">
+                <li><a href=" http://codepen.io/gschier/pen/HCoqh" target="_blank">Gregory Schier's Codepen</a></li>
+              </ul>
+            </div>
+            <div class="codpen-example">
+              <h4>CODEPEN</h4><p data-height="265" data-theme-id="light" data-slug-hash="wzjGAj" data-default-tab="result" data-user="una" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/una/pen/wzjGAj/">CSS Only Lightbox: youmightnotneedjs.com</a> by Una Kravets (<a href="http://codepen.io/una">@una</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+            </div>
+            <div class="comparison-group">
+              <div data-code="html" class="code html">
+                <h4>HTML</h4>
+                <div data-lang="markup" class="code-block language-markup">
+                  <pre><code>&lt;!-- thumbnail image wrapped in a link --&gt;
+&lt;a href=&quot;#img1&quot;&gt;
+  &lt;img src=&quot;img.jpg&quot; class=&quot;thumbnail&quot;&gt;
+&lt;/a&gt;
+
+&lt;!-- lightbox container hidden with CSS --&gt;
+&lt;a href=&quot;#&quot; class=&quot;lightbox&quot; id=&quot;img1&quot;&gt;
+  &lt;img src=&quot;img.jpg&quot;&gt;
+&lt;/a&gt;</code></pre>
+                </div>
+              </div>
+              <div data-code="scss" class="code scss">
+                <h4>SCSS</h4>
+                <div data-lang="scss" class="code-block language-scss">
+                  <pre><code>$thumbnail-size: 40px;
+$background-color: black;
+
+.thumbnail {
+  max-width: $thumbnail-size;
+}
+
+.lightbox {
+  // Hide lightbox image
+	display: none;
+
+	// Position/style of lightbox
+	position: fixed;
+	z-index: 999;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	top: 0;
+	left: 0;
+	background: $background-color;
+}
+
+.lightbox img {
+	/// Pad the lightbox image
+	max-width: 90%;
+	max-height: 80%;
+	margin-top: 2%;
+}
+
+.lightbox:target {
+	// Remove default outline and unhide lightbox
+	outline: none;
+	display: block;
 }</code></pre>
                 </div>
               </div>
@@ -548,73 +658,6 @@ section {
 [type=radio]:checked ~ label ~ .content {
   z-index: 1;
   opacity: 1;
-}</code></pre>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div id="lightbox" class="comparison">
-            <h3><a href="#lightbox">Lightbox</a></h3>
-            <div class="resources-block">
-              <h4>resources:</h4>
-              <ul class="resources">
-                <li><a href=" http://codepen.io/gschier/pen/HCoqh" target="_blank">Gregory Schier's Codepen</a></li>
-              </ul>
-            </div>
-            <div class="codpen-example">
-              <h4>CODEPEN</h4><p data-height="265" data-theme-id="light" data-slug-hash="wzjGAj" data-default-tab="result" data-user="una" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/una/pen/wzjGAj/">CSS Only Lightbox: youmightnotneedjs.com</a> by Una Kravets (<a href="http://codepen.io/una">@una</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-            </div>
-            <div class="comparison-group">
-              <div data-code="html" class="code html">
-                <h4>HTML</h4>
-                <div data-lang="markup" class="code-block language-markup">
-                  <pre><code>&lt;!-- thumbnail image wrapped in a link --&gt;
-&lt;a href=&quot;#img1&quot;&gt;
-  &lt;img src=&quot;img.jpg&quot; class=&quot;thumbnail&quot;&gt;
-&lt;/a&gt;
-
-&lt;!-- lightbox container hidden with CSS --&gt;
-&lt;a href=&quot;#&quot; class=&quot;lightbox&quot; id=&quot;img1&quot;&gt;
-  &lt;img src=&quot;img.jpg&quot;&gt;
-&lt;/a&gt;</code></pre>
-                </div>
-              </div>
-              <div data-code="scss" class="code scss">
-                <h4>SCSS</h4>
-                <div data-lang="scss" class="code-block language-scss">
-                  <pre><code>$thumbnail-size: 40px;
-$background-color: black;
-
-.thumbnail {
-  max-width: $thumbnail-size;
-}
-
-.lightbox {
-  // Hide lightbox image
-	display: none;
-
-	// Position/style of lightbox
-	position: fixed;
-	z-index: 999;
-	width: 100%;
-	height: 100%;
-	text-align: center;
-	top: 0;
-	left: 0;
-	background: $background-color;
-}
-
-.lightbox img {
-	/// Pad the lightbox image
-	max-width: 90%;
-	max-height: 80%;
-	margin-top: 2%;
-}
-
-.lightbox:target {
-	// Remove default outline and unhide lightbox
-	outline: none;
-	display: block;
 }</code></pre>
                 </div>
               </div>

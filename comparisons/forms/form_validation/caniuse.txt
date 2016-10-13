@@ -1,0 +1,1 @@
+Pattern Attribute: http://caniuse.com/#feat=input-pattern
