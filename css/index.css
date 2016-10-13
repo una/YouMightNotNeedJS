@@ -10,7 +10,7 @@ html {
 }
 a {
   cursor: pointer;
-  color: #08c;
+  color: #006da0;
 }
 ::-webkit-input-placeholder {
   color: rgba(0,0,0,0.5);
@@ -318,6 +318,11 @@ section h2 {
   color: #888;
   text-align: center;
   margin: 0;
+}
+@media (max-width: 840px) {
+  section h2 {
+    font-size: 2em;
+  }
 }
 input[type='range'] {
   -webkit-appearance: none !important;
