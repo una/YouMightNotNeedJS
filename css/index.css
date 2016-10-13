@@ -380,4 +380,5 @@ footer a {
   margin: 10px;
   -webkit-flex-basis: 400px;
   flex-basis: 400px;
+  overflow: auto;
 }

@@ -1,0 +1,3 @@
+CSS Animation: http://caniuse.com/#feat=css-animation
+Will Change: http://caniuse.com/#feat=will-change
+Transform: http://caniuse.com/#feat=transforms2d
