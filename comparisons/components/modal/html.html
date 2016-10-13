@@ -1,8 +1,14 @@
-<a class="modalTrigger" href="#modalDialog1">
-	Click Me
+<a class="modalTrigger" id="modalTrigger"
+   href="#modalDialog1">
+	Open dialog
 </a>
 
 <dialog class="modal" id="modalDialog1"
 		tabindex="-1" role="dialog">
-  <p>Hello Beautiful!</p>
+  <div>
+	  <a href="#modalTrigger" aria-label="Close">
+	  	&times;
+	  </a>
+	  <p>Hello Beautiful!</p>
+  </div>
 </dialog>

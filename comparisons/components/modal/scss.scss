@@ -1,16 +1,14 @@
-// Modal is visually hidden until focused.
-// This only sort-of works: you can't close
-// the dialog with the escape key, and it can't
-// contain anything interactive for 2 reasons: 
-// you wouldn't be able to tab without blurring 
-// the dialog, and they'd be focusable when 
-// the dialog is closed (a poor keyboard experience).
-.modal {  
+// Modal is hidden until it matches an anchor
+// target. This only sort-of works, as you can't close
+// it with the escape key or trap focus inside of it.
+.modal {
   opacity: 0;
+  visibility: hidden;
 }
 
-// modal fades in when button 
-// is in focus (i.e. clicked on)
-.modal:focus {
+// modal fades in when it matches
+// an anchor link (i.e. clicked on)
+#modalDialog:target {
   opacity: 1;
+  visibility: hidden;
 }
