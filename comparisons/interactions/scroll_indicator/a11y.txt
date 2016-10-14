@@ -1,0 +1,1 @@
+Usage: Purely visual (no screen reader support).
