@@ -387,3 +387,10 @@ footer a {
   flex-basis: 400px;
   overflow: auto;
 }
+.native-example iframe {
+  background: #fff;
+  border: 1px solid #eee;
+  height: 200px;
+  margin: 15px 0;
+  width: 100%;
+}

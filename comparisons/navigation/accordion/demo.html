@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        input[type="radio"] {
+            position: absolute;
+            opacity: 0;
+        }
+        input[type="radio"]:focus + label {
+            color: black;
+            background-color: wheat;
+        }
+
+        label {
+            position: relative;
+            display: block;
+            cursor: pointer;
+            background: #c69;
+            color: white;
+            padding: .5em;
+            border-bottom: 1px solid white;
+        }
+
+        section {
+            height: 0;
+            transition: .3s all;
+            overflow: hidden;
+        }
+
+        #toggle1:checked ~ #content1,
+        #toggle2:checked ~ #content2,
+        #toggle3:checked ~ #content3,
+        #toggle4:checked ~ #content4 {
+            height: 150px;
+        }
+
+        body {
+            font-family: monospace;
+            font-size: 1.5;
+        }
+
+        p {
+            padding: 0 2em;
+        }
+
+        .togglebox {
+            margin: 0 auto;
+            width: 50%;
+            border: 1px solid #c69;
+        }
+    </style>
+</head>
+<body>
+    <div class="togglebox">
+        <input id="toggle1" type="radio" name="toggle" />
+        <label for="toggle1">Label 1</label>
+        <section id="content1">
+            <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ea veritatis cumque unde dolore quasi hic praesentium, in consequatur, incidunt alias iure illum facilis qui odit excepturi tenetur, error eligendi.</span><span>Accusamus quasi eveniet dolorem, nihil cupiditate, facilis id quas consectetur mollitia quod minima excepturi maiores. A, molestias suscipit sunt provident libero magnam quas dolores aspernatur totam tenetur vel quis. Officia?</span></p>
+        </section>
+
+        <input id="toggle2" type="radio" name="toggle" />
+        <label for="toggle2">Label 2</label>
+        <section id="content2">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem tempora quia fugit eveniet nostrum amet quod aliquid repellendus sint. Adipisci voluptas ratione doloremque delectus vel nemo cumque autem beatae minus.</p>
+        </section>
+
+        <input id="toggle3" type="radio" name="toggle" />
+        <label for="toggle3">Label 3</label>
+        <section id="content3">
+            <img src="https://unsplash.it/600/150?number=200" alt="" />
+        </section>
+    </div>
+</body>
+</html>
