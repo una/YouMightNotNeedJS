@@ -1,0 +1,3 @@
+Micro-Library by Anton Staroverov: https://github.com/tonystar/float-label-css
+Plugin for Bootstrap: https://github.com/tonystar/bootstrap-float-label
+Float Label Pattern: http://mds.is/float-label-pattern/

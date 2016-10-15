@@ -1,0 +1,40 @@
+.has-float-label {
+  position: relative;
+
+  // Minimize label and move on top:
+  label {
+    position: absolute;
+    left: 0;
+    top: 0;
+    cursor: text;
+    font-size: 75%;
+    opacity: 1;
+    transition: all .2s;
+  }
+
+  input {
+    padding-top: 1em;
+
+    &::-webkit-input-placeholder {
+      opacity: 1;
+      transition: all .2s;
+    }
+
+    // Replace placeholder by sibling label
+    // when no data and not in focus:
+    &:placeholder-shown:not(:focus) {
+      // Non-supporting browsers don't see the code
+      // below. But everything is ok since the label
+      // is minimized by default. MAGIC!
+
+      &::-webkit-input-placeholder {
+        opacity: 0;
+      }
+      + label {
+          top: .25em;
+          font-size: 150%;
+          opacity: .5;
+      }
+    }
+  }
+}
