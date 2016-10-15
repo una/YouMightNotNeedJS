@@ -1,13 +1,13 @@
+html {
+  box-sizing: border-box;
+  overflow-y: scroll;
+}
 *,
 *:after,
 *:before {
   -webkit-box-sizing: inherit;
   -moz-box-sizing: inherit;
   box-sizing: inherit;
-}
-html {
-  box-sizing: border-box;
-  overflow-y: scroll;
 }
 a {
   cursor: pointer;
