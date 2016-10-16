@@ -1,0 +1,45 @@
+.tooltip {
+  position: relative;
+  cursor: help;
+  color: #c69;
+  border-bottom: 2px dotted #c69;
+}
+
+.tooltip::before,
+.tooltip::after {
+  position: absolute;
+  left: 50%;
+  opacity: 0;
+  z-index: -100;
+  transition: opacity .5s;
+}
+
+.tooltip:hover::before,
+.tooltip:focus::before,
+.tooltip:hover::after,
+.tooltip:focus::after {
+  opacity: 1;
+  z-index: 100;
+}
+
+/* makes the tooltip ballon */
+.tooltip::before {
+  background: #c69;
+  border-radius: 0.3em;
+  bottom: 185%;
+  color: #fff;
+  width: 14em;
+  padding: 0.5em;
+  margin-left: -8em;
+  content: attr(data-tip);
+}
+
+/* makes the triangle part of the tooltip */
+.tooltip::after {
+  content: "";
+  border-style: solid;
+  border-width: 1em .75em 0 .75em;
+  border-color: #c69 transparent transparent transparent;
+  bottom: 100%;
+  margin-left: -0.5em;
+}

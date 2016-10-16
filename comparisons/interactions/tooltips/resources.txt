@@ -1,0 +1,2 @@
+CSS Portal Tooltip Generator: http://www.cssportal.com/css-tooltip-generator/
+Balloon.css: https://kazzkiq.github.io/balloon.css/

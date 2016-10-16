@@ -213,10 +213,10 @@ button:focus + .modal {
 	
 	&lt;!-- Navigation for the slides --&gt;
 	&lt;ul&gt;
-		&lt;li&gt;&lt;a href=&quot;#slide-1&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href=&quot;#slide-2&quot;&gt;2&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href=&quot;#slide-3&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href=&quot;#slide-4&quot;&gt;4&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;#slide-1&quot; aria-label=&quot;Image 1&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;#slide-2&quot; aria-label=&quot;Image 2&quot;&gt;2&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;#slide-3&quot; aria-label=&quot;Image 3&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;#slide-4&quot; aria-label=&quot;Image 4&quot;&gt;4&lt;/a&gt;&lt;/li&gt;
 	&lt;/ul&gt;
 &lt;/div&gt;
 </code></pre>
@@ -418,6 +418,90 @@ body:before {
               </ul>
             </div>
           </div>
+          <div id="tooltips" class="comparison">
+            <h3><a href="#tooltips">Tooltips</a></h3>
+            <div class="resources-block">
+              <h4>resources:</h4>
+              <ul class="resources">
+                <li><a href=" http://www.cssportal.com/css-tooltip-generator/" target="_blank">CSS Portal Tooltip Generator</a></li>
+                <li><a href=" https://kazzkiq.github.io/balloon.css/" target="_blank">Balloon.css</a></li>
+              </ul>
+            </div>
+            <div class="codpen-example">
+              <h4>CODEPEN</h4><p data-height="320" data-theme-id="light" data-slug-hash="BLOoGO" data-default-tab="result" data-user="josephjguerra" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/josephjguerra/pen/BLOoGO/">CSS Tooltips: youmightnotneedjs.com</a> by Joseph J Guerra (<a href="http://codepen.io/josephjguerra">@josephjguerra</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+
+            </div>
+            <div class="comparison-group">
+              <div data-code="html" class="code html">
+                <h4>HTML</h4>
+                <div data-lang="markup" class="code-block language-markup">
+                  <pre><code>&lt;p&gt;You can use good old HTML and CSS to make tooltips, instead of jQuery or JavaScript.&lt;/p&gt;
+
+&lt;p&gt;To create a tooltip, add the &lt;span class=&quot;tooltip&quot; data-tip=&quot;tooltips are wicked cool&quot; tabindex=&quot;1&quot;&gt;tooltip&lt;/span&gt; class and  &lt;span class=&quot;tooltip&quot; data-tip=&quot;data-* stores extra info in HTML5 elements&quot; tabindex=&quot;2&quot;&gt;data-tip&lt;/span&gt; attribute with your message.&lt;/p&gt;
+
+&lt;p&gt;These tooltips work with tabindex too. Try it with &lt;span class=&quot;tooltip&quot; data-tip=&quot;the button next to cap slock&quot; tabindex=&quot;3&quot;&gt;tab&lt;/span&gt; on your keyboard.&lt;/p&gt;
+</code></pre>
+                </div>
+              </div>
+              <div data-code="css" class="code css">
+                <h4>CSS</h4>
+                <div data-lang="css" class="code-block language-css">
+                  <pre><code>.tooltip {
+  position: relative;
+  cursor: help;
+  color: #c69;
+  border-bottom: 2px dotted #c69;
+}
+
+.tooltip::before,
+.tooltip::after {
+  position: absolute;
+  left: 50%;
+  opacity: 0;
+  z-index: -100;
+  transition: opacity .5s;
+}
+
+.tooltip:hover::before,
+.tooltip:focus::before,
+.tooltip:hover::after,
+.tooltip:focus::after {
+  opacity: 1;
+  z-index: 100;
+}
+
+/* makes the tooltip ballon */
+.tooltip::before {
+  background: #c69;
+  border-radius: 0.3em;
+  bottom: 185%;
+  color: #fff;
+  width: 14em;
+  padding: 0.5em;
+  margin-left: -8em;
+  content: attr(data-tip);
+}
+
+/* makes the triangle part of the tooltip */
+.tooltip::after {
+  content: &quot;&quot;;
+  border-style: solid;
+  border-width: 1em .75em 0 .75em;
+  border-color: #c69 transparent transparent transparent;
+  bottom: 100%;
+  margin-left: -0.5em;
+}
+</code></pre>
+                </div>
+              </div>
+            </div>
+            <div class="resources-block">
+              <h4>can i use:</h4>
+              <ul class="resources">
+                <li><a href=" http://caniuse.com/#feat=css-transitions" target="_blank">Transition</a></li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
       <section id="navigation">
@@ -507,6 +591,73 @@ section {
               </ul>
             </div>
           </div>
+          <div id="lightbox" class="comparison">
+            <h3><a href="#lightbox">Lightbox</a></h3>
+            <div class="resources-block">
+              <h4>resources:</h4>
+              <ul class="resources">
+                <li><a href=" http://codepen.io/gschier/pen/HCoqh" target="_blank">Gregory Schier's Codepen</a></li>
+              </ul>
+            </div>
+            <div class="codpen-example">
+              <h4>CODEPEN</h4><p data-height="265" data-theme-id="light" data-slug-hash="wzjGAj" data-default-tab="result" data-user="una" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/una/pen/wzjGAj/">CSS Only Lightbox: youmightnotneedjs.com</a> by Una Kravets (<a href="http://codepen.io/una">@una</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+            </div>
+            <div class="comparison-group">
+              <div data-code="html" class="code html">
+                <h4>HTML</h4>
+                <div data-lang="markup" class="code-block language-markup">
+                  <pre><code>&lt;!-- thumbnail image wrapped in a link --&gt;
+&lt;a href=&quot;#img1&quot;&gt;
+  &lt;img src=&quot;img.jpg&quot; class=&quot;thumbnail&quot;&gt;
+&lt;/a&gt;
+
+&lt;!-- lightbox container hidden with CSS --&gt;
+&lt;a href=&quot;#&quot; class=&quot;lightbox&quot; id=&quot;img1&quot;&gt;
+  &lt;img src=&quot;img.jpg&quot;&gt;
+&lt;/a&gt;</code></pre>
+                </div>
+              </div>
+              <div data-code="scss" class="code scss">
+                <h4>SCSS</h4>
+                <div data-lang="scss" class="code-block language-scss">
+                  <pre><code>$thumbnail-size: 40px;
+$background-color: black;
+
+.thumbnail {
+  max-width: $thumbnail-size;
+}
+
+.lightbox {
+  // Hide lightbox image
+	display: none;
+
+	// Position/style of lightbox
+	position: fixed;
+	z-index: 999;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	top: 0;
+	left: 0;
+	background: $background-color;
+}
+
+.lightbox img {
+	/// Pad the lightbox image
+	max-width: 90%;
+	max-height: 80%;
+	margin-top: 2%;
+}
+
+.lightbox:target {
+	// Remove default outline and unhide lightbox
+	outline: none;
+	display: block;
+}</code></pre>
+                </div>
+              </div>
+            </div>
+          </div>
           <div id="tabs" class="comparison">
             <h3><a href="#tabs">Tabs</a></h3>
             <div class="resources-block">
@@ -594,73 +745,6 @@ section {
 [type=radio]:checked ~ label ~ .content {
   z-index: 1;
   opacity: 1;
-}</code></pre>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div id="lightbox" class="comparison">
-            <h3><a href="#lightbox">Lightbox</a></h3>
-            <div class="resources-block">
-              <h4>resources:</h4>
-              <ul class="resources">
-                <li><a href=" http://codepen.io/gschier/pen/HCoqh" target="_blank">Gregory Schier's Codepen</a></li>
-              </ul>
-            </div>
-            <div class="codpen-example">
-              <h4>CODEPEN</h4><p data-height="265" data-theme-id="light" data-slug-hash="wzjGAj" data-default-tab="result" data-user="una" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/una/pen/wzjGAj/">CSS Only Lightbox: youmightnotneedjs.com</a> by Una Kravets (<a href="http://codepen.io/una">@una</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-            </div>
-            <div class="comparison-group">
-              <div data-code="html" class="code html">
-                <h4>HTML</h4>
-                <div data-lang="markup" class="code-block language-markup">
-                  <pre><code>&lt;!-- thumbnail image wrapped in a link --&gt;
-&lt;a href=&quot;#img1&quot;&gt;
-  &lt;img src=&quot;img.jpg&quot; class=&quot;thumbnail&quot;&gt;
-&lt;/a&gt;
-
-&lt;!-- lightbox container hidden with CSS --&gt;
-&lt;a href=&quot;#&quot; class=&quot;lightbox&quot; id=&quot;img1&quot;&gt;
-  &lt;img src=&quot;img.jpg&quot;&gt;
-&lt;/a&gt;</code></pre>
-                </div>
-              </div>
-              <div data-code="scss" class="code scss">
-                <h4>SCSS</h4>
-                <div data-lang="scss" class="code-block language-scss">
-                  <pre><code>$thumbnail-size: 40px;
-$background-color: black;
-
-.thumbnail {
-  max-width: $thumbnail-size;
-}
-
-.lightbox {
-  // Hide lightbox image
-	display: none;
-
-	// Position/style of lightbox
-	position: fixed;
-	z-index: 999;
-	width: 100%;
-	height: 100%;
-	text-align: center;
-	top: 0;
-	left: 0;
-	background: $background-color;
-}
-
-.lightbox img {
-	/// Pad the lightbox image
-	max-width: 90%;
-	max-height: 80%;
-	margin-top: 2%;
-}
-
-.lightbox:target {
-	// Remove default outline and unhide lightbox
-	outline: none;
-	display: block;
 }</code></pre>
                 </div>
               </div>
