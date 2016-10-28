@@ -1,0 +1,35 @@
+@mixin truncate($rows) {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: $rows;
+  -webkit-box-orient: vertical;
+}
+
+.show-hide-text {
+  display: flex;
+  flex-wrap: wrap;
+
+  a {
+    order: 2;
+  }
+
+  p {
+    @include truncate(3);
+  }
+}
+
+.show-less {
+  display: none;
+
+  &:target {
+    display: block;
+
+    ~ p {
+      display: block;
+    }
+
+    + a {
+      display: none;
+    }
+  }
+}
