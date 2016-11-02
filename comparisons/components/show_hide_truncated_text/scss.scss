@@ -1,20 +1,59 @@
-@mixin truncate($rows) {
+@mixin row-truncate($rows, $line-height, $background: '') {
+  position: relative;
   overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: $rows;
-  -webkit-box-orient: vertical;
+  max-height: $line-height * $rows;
+  line-height: $line-height;
+
+  &:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100px;
+    height: $line-height;
+
+    @if $background != '' {
+      background: -moz-linear-gradient(left, rgba($background, 0) 0%, rgba($background, 1) 100%);
+      background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba($background, 0)), color-stop(100%, rgba($background, 1)));
+      background: -webkit-linear-gradient(left, rgba($background, 0) 0%,rgba($background, 1) 100%);
+      background: -o-linear-gradient(left, rgba($background, 0) 0%, rgba($background, 1) 100%);
+      background: -ms-linear-gradient(left, rgba($background, 0) 0%, rgba($background, 1) 100%);
+      background: linear-gradient(to right, rgba($background, 0) 0%, rgba($background, 1) 100%);
+    }
+  }
+
+  // If supports line-clamp then add an ellipsis overflow and hide the gradient
+  // This will work in Chrome and Opera, otherwise a gradient will gradually hide the text.
+
+  @supports (-webkit-line-clamp: $rows) {
+    display: -webkit-box;
+    -webkit-line-clamp: $rows;
+    -webkit-box-orient: vertical;
+
+    &:after {
+      display: none;
+    }
+  }
 }
 
 .show-hide-text {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 
   a {
+    -webkit-box-ordinal-group: 3;
+    -webkit-order: 2;
+    -ms-flex-order: 2;
     order: 2;
   }
 
   p {
-    @include truncate(3);
+    @include truncate(3, 20px, #fff); // rows, line-height, gradient fallback
   }
 }
 
@@ -26,6 +65,11 @@
 
     ~ p {
       display: block;
+      max-height: 100%;
+
+      &:after {
+        display: none;
+      }
     }
 
     + a {
