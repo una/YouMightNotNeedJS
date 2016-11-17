@@ -1,6 +1,6 @@
-// Modal is hidden until it matches an anchor
-// target. This only sort-of works, as you can't close
-// it with the escape key or trap focus inside of it.
+// Modal hidden until it matches an anchor target 
+// Note: you can't close it with the escape key 
+// or trap focus inside of it.
 .modal {
   opacity: 0;
   visibility: hidden;

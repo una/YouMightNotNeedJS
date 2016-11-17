@@ -159,9 +159,10 @@
               </ul>
             </div>
             <div class="codpen-example">
-              <h4>CODEPEN</h4><p data-height="265" data-theme-id="light" data-slug-hash="pEVjwj" data-default-tab="result" data-user="una" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/una/pen/pEVjwj/">CSS-Only Modal: youmightnotneedjs.com</a> by Una Kravets (<a href="http://codepen.io/una">@una</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+              <h4>CODEPEN</h4><p data-height="265" data-theme-id="light" data-slug-hash="ObRKvq" data-default-tab="result" data-user="una" data-embed-version="2" data-pen-title="CSS-Only Modal: youmightnotneedjs.com" class="codepen">See the Pen <a href="http://codepen.io/una/pen/ObRKvq/">CSS-Only Modal: youmightnotneedjs.com</a> by Una Kravets (<a href="http://codepen.io/una">@una</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
             </div>
-            <div class="usage-note"><strong>Usage: Not screen reader accessible.</strong>
+            <div class="usage-note"><strong>Usage: Safe for production with caveat (see scss) &mdash; Shoutout to <a href="https://twitter.com/marcysutton">Marcy Sutton</a></strong>
             </div>
             <div class="comparison-group">
               <div data-code="html" class="code html">
@@ -174,10 +175,10 @@
 
 &lt;dialog class=&quot;modal&quot; id=&quot;modalDialog1&quot;
 		tabindex=&quot;-1&quot; role=&quot;dialog&quot;&gt;
-    &lt;a href=&quot;#modalTrigger&quot; aria-label=&quot;Close&quot;&gt;
-      &amp;times;
-    &lt;/a&gt;
   &lt;div&gt;
+	  &lt;a href=&quot;#modalTrigger&quot; aria-label=&quot;Close&quot;&gt;
+	  	&amp;times;
+	  &lt;/a&gt;
 	  &lt;p&gt;Hello Beautiful!&lt;/p&gt;
   &lt;/div&gt;
 &lt;/dialog&gt;
@@ -187,9 +188,9 @@
               <div data-code="scss" class="code scss">
                 <h4>SCSS</h4>
                 <div data-lang="scss" class="code-block language-scss">
-                  <pre><code>// Modal is hidden until it matches an anchor
-// target. This only sort-of works, as you can't close
-// it with the escape key or trap focus inside of it.
+                  <pre><code>// Modal hidden until it matches an anchor target 
+// Note: you can't close it with the escape key 
+// or trap focus inside of it.
 .modal {
   opacity: 0;
   visibility: hidden;
