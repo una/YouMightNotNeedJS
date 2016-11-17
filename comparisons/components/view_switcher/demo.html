@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #slider {
+            display: block;
+            width: 300px;
+            height: 200px;
+            overflow: hidden;
+            margin: 0 auto;
+            position: relative;
+            background-color: #c69;
+        }
+        #slider img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 300px;
+            height: 200px;
+            transition: all .5s ease-in-out;
+        }
+        #slider img:target {
+            transition: all .5s ease-in-out;
+        }
+        #slider img:not(:target), #slider img:target ~ img#slide-4 {
+            position: relative;
+            opacity: 0;
+        }
+        #slider img#slide-4 {
+            position: absolute;
+            opacity: 1;
+        }
+        #slider ul {
+            position: absolute;
+            top: 0;
+            left: -2em;
+            list-style: none;
+        }
+        #slider ul li {
+            width: 1.25em;
+            height: 1.25em;
+            font-family: monospace;
+            font-size: 1.5em;
+            border-radius: 50%;
+            background: wheat;
+            text-align: center;
+            margin-top: .7em;
+        }
+        #slider ul li:hover {
+            background: #ece;
+        }
+        #slider ul li a {
+            text-decoration: none;
+            color: #c69;
+        }
+
+        body {
+            padding: 0;
+            margin: 0;
+            overflow-y: hidden;
+        }
+
+        #slide-1 {
+            background-color: wheat;
+        }
+
+        #slide-2 {
+            background-color: #eee;
+        }
+
+        #slide-3 {
+            background-color: #d70;
+        }
+
+        #slide-4 {
+            background-color: #e50;
+        }
+    </style>
+</head>
+<body>
+    <div id="slider">
+        <!-- Slides -->
+        <img id="slide-1" src="https://unsplash.it/300/200?image=40" />
+        <img id="slide-2" src="https://unsplash.it/300/200?image=41" />
+        <img id="slide-3" src="https://unsplash.it/300/200?image=42" />
+        <img id="slide-4" src="https://unsplash.it/300/200?image=45" />
+
+        <!-- Navigation for the slides -->
+        <ul>
+            <li><a href="#slide-1">1</a></li>
+            <li><a href="#slide-2">2</a></li>
+            <li><a href="#slide-3">3</a></li>
+            <li><a href="#slide-4">4</a></li>
+        </ul>
+    </div>
+</body>
+</html>

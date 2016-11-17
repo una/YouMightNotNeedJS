@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #slider {
+            width: 400px;
+            height: 200px;
+            overflow: hidden;
+            border: 1px solid #c69;
+        }
+
+        .slide {
+            width: 400px;
+            height: 200px;
+            float: left;
+            position: relative;
+        }
+
+        #slide-holder {
+            width: 400%;
+            position: relative;
+            left: 0;
+            -webkit-animation: scroller 10s infinite;
+            animation: scroller 10s infinite;
+        }
+
+        @-webkit-keyframes scroller {
+            0% {
+                -webkit-transform: translateX(0);
+                transform: translateX(0);
+            }
+            33% {
+                -webkit-transform: translateX(-400px);
+                transform: translateX(-400px);
+            }
+            66% {
+                -webkit-transform: translateX(-800px);
+                transform: translateX(-800px);
+            }
+            100% {
+                -webkit-transform: translateX(0);
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes scroller {
+            0% {
+                -webkit-transform: translateX(0);
+                transform: translateX(0);
+            }
+            33% {
+                -webkit-transform: translateX(-400px);
+                transform: translateX(-400px);
+            }
+            66% {
+                -webkit-transform: translateX(-800px);
+                transform: translateX(-800px);
+            }
+            100% {
+                -webkit-transform: translateX(0);
+                transform: translateX(0);
+            }
+        }
+        body {
+            font-family: sans-serif;
+        }
+
+        #slider {
+            margin: 0 auto;
+        }
+
+        .slide:nth-child(1) {
+            background: #c69;
+        }
+
+        .slide:nth-child(2) {
+            background: wheat;
+        }
+
+        .slide:nth-child(3) {
+            background: #eee;
+        }
+    </style>
+</head>
+<body>
+    <div id="slider">
+        <div id="slide-holder">
+            <div class="slide"><img src="https://unsplash.it/400/200/?image=934" alt="" /></div>
+            <div class="slide"><img src="https://unsplash.it/400/200/?image=1045" alt="" /></div>
+            <div class="slide"><img src="https://unsplash.it/400/200/?image=215" alt="" /></div>
+        </div>
+    </div>
+</body>
+</html>

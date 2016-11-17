@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .tabs {
+            position: relative;
+            min-height: 180px;
+            display: block;
+            margin: 1em auto 0;
+            width: 460px;
+        }
+
+        .tab {
+            float: left;
+        }
+
+        .tab label {
+            cursor: pointer;
+            background: #c69;
+            font-size: 1.2em;
+            border-radius: 5px 5px 0 0;
+            padding: .5em 1em;
+        }
+
+        .tab [type=radio] {
+            position: absolute;
+            height: 0;
+            width: 0;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+        }
+        .tab [type=radio]:focus + label {
+            outline: 2px dotted #000;
+        }
+
+        .content {
+            background: wheat;
+            border: 1px solid #c69;
+            border-radius: 0 5px 5px;
+            padding: .5em 2em;
+            max-width: 450px;
+            position: absolute;
+            top: 2em;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0;
+        }
+
+        [type=radio]:checked ~ label {
+            z-index: 2;
+            background: #c99;
+        }
+
+        [type=radio]:checked ~ label ~ .content {
+            z-index: 1;
+            opacity: 1;
+        }
+
+        body {
+            font-family: monospace;
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+<div class="tabs">
+    <div class="tab">
+        <input type="radio" name="tabgroup" id="tab-1" checked>
+        <label for="tab-1">One</label>
+        <div class="content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum debitis dignissimos velit quasi vel! Ipsum illo vero amet cumque voluptatem accusamus dignissimos nisi quam adipisci aperiam! Temporibus necessitatibus deleniti excepturi.</p>
+        </div>
+    </div>
+
+    <div class="tab">
+        <input type="radio" name="tabgroup" id="tab-2">
+        <label for="tab-2">Two</label>
+        <div class="content">
+            <p>Hi there! Fancy seeing you here!</p>
+        </div>
+    </div>
+
+    <div class="tab">
+        <input type="radio" name="tabgroup" id="tab-3">
+        <label for="tab-3">Three</label>
+        <div class="content">
+            <p>Tempora minima itaque officia aliquid, facilis, enim atque. Quibusdam velit quo alias, laboriosam non nobis, dolorem itaque commodi ullam, corporis tempore sapiente doloribus libero cupiditate doloremque tempora. Reiciendis, ab, modi.</span></p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
