@@ -387,3 +387,6 @@ footer a {
   flex-basis: 400px;
   overflow: auto;
 }
+.usage-note {
+  text-align: center;
+}

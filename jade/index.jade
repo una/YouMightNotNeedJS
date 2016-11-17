@@ -62,7 +62,10 @@ body
 
         p
           | This site is fully copied from <a href="http://youmightnotneedjquery.com">youmightnotneedjquery.com</a>, an excellent resource for vanilla JavaScript created by <a href="http://twitter.com/adamfschwartz">@adamfschwartz</a> and <a href="http://twitter.com/zachbloom">@zackbloom</a>.
-          | But this time, we take a look at the power of modern native HTML and CSS as well as some of the syntactic sugar of Sass. Because, you might not need scripts for that task at all! <strong>(Note: these demos may not be accessible. Please take a moment to test them in your project before using in production)</strong>
+          | But this time, we take a look at the power of modern native HTML and CSS as well as some of the syntactic sugar of Sass. Because, you might not need scripts for that task at all! 
+
+        p  
+          |<strong>(Note: Some of these demos may not be accessible. Please take a moment to test them in your project before using in production)</strong>
 
     .share-buttons
 
@@ -112,6 +115,11 @@ body
                         for lang in ['html', 'markup']
                           if co[code][lang]
                             !{co[code][lang]}
+
+                div.usage-note
+                  
+                  if co.a11y
+                    strong !{co.a11y.txt}
 
                 div.comparison-group
 
