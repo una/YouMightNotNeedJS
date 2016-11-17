@@ -167,29 +167,39 @@
               <div data-code="html" class="code html">
                 <h4>HTML</h4>
                 <div data-lang="markup" class="code-block language-markup">
-                  <pre><code>&lt;button&gt;Click Me&lt;/button&gt;
+                  <pre><code>&lt;a class=&quot;modalTrigger&quot; id=&quot;modalTrigger&quot;
+   href=&quot;#modalDialog1&quot;&gt;
+	Open dialog
+&lt;/a&gt;
 
-&lt;div class=&quot;modal&quot;&gt;
-  &lt;p&gt;Hello Beautiful!&lt;/p&gt;
-&lt;/div&gt;
+&lt;dialog class=&quot;modal&quot; id=&quot;modalDialog1&quot;
+		tabindex=&quot;-1&quot; role=&quot;dialog&quot;&gt;
+    &lt;a href=&quot;#modalTrigger&quot; aria-label=&quot;Close&quot;&gt;
+      &amp;times;
+    &lt;/a&gt;
+  &lt;div&gt;
+	  &lt;p&gt;Hello Beautiful!&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/dialog&gt;
 </code></pre>
                 </div>
               </div>
               <div data-code="scss" class="code scss">
                 <h4>SCSS</h4>
                 <div data-lang="scss" class="code-block language-scss">
-                  <pre><code>// modal is invisible until
-// sibling is focused
-.modal {  
+                  <pre><code>// Modal is hidden until it matches an anchor
+// target. This only sort-of works, as you can't close
+// it with the escape key or trap focus inside of it.
+.modal {
   opacity: 0;
   visibility: hidden;
 }
 
-// modal fades in when button 
-// is in focus (i.e. clicked on)
-button:focus + .modal {
+// modal fades in when it matches
+// an anchor link (i.e. clicked on)
+#modalDialog:target {
   opacity: 1;
-  visibility: visible;
+  visibility: hidden;
 }</code></pre>
                 </div>
               </div>
