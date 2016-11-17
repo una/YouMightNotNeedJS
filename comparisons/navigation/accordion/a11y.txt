@@ -1,1 +1,1 @@
-Usage: Safe for production.
+Usage: Not keyboard navigable, inability to focus.
