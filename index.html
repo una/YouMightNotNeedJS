@@ -51,7 +51,11 @@
         </p>
         <p>
           This site is fully copied from <a href="http://youmightnotneedjquery.com">youmightnotneedjquery.com</a>, an excellent resource for vanilla JavaScript created by <a href="http://twitter.com/adamfschwartz">@adamfschwartz</a> and <a href="http://twitter.com/zachbloom">@zackbloom</a>.
-          But this time, we take a look at the power of modern native HTML and CSS as well as some of the syntactic sugar of Sass. Because, you might not need scripts for that task at all! <strong>(Note: these demos may not be accessible. Please take a moment to test them in your project before using in production)</strong>
+          But this time, we take a look at the power of modern native HTML and CSS as well as some of the syntactic sugar of Sass. Because, you might not need scripts for that task at all! 
+        </p>
+        <p>
+           
+          <strong>(Note: Some of these demos may not be accessible and work on all browsers. Please take a moment to review the usage notes and to test them in your project before using in production)</strong>
         </p>
       </div>
     </div>
@@ -91,6 +95,8 @@
             </noscript>
             <div class="codpen-example">
               <h4>CODEPEN</h4><p data-height="265" data-theme-id="light" data-slug-hash="BLxNZq" data-default-tab="result" data-user="una" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/una/pen/BLxNZq/">CSS-Only Slider: youmightnotneedjs.com</a> by Una Kravets (<a href="http://codepen.io/una">@una</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+            </div>
+            <div class="usage-note"><strong>Usage: Presentational, Option to read or be skipped by screen reader, no user control over images.</strong>
             </div>
             <div class="comparison-group">
               <div data-code="html" class="code html">
@@ -169,35 +175,48 @@
               </div>
             </noscript>
             <div class="codpen-example">
-              <h4>CODEPEN</h4><p data-height="265" data-theme-id="light" data-slug-hash="pEVjwj" data-default-tab="result" data-user="una" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/una/pen/pEVjwj/">CSS-Only Modal: youmightnotneedjs.com</a> by Una Kravets (<a href="http://codepen.io/una">@una</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+              <h4>CODEPEN</h4><p data-height="265" data-theme-id="light" data-slug-hash="ObRKvq" data-default-tab="result" data-user="una" data-embed-version="2" data-pen-title="CSS-Only Modal: youmightnotneedjs.com" class="codepen">See the Pen <a href="http://codepen.io/una/pen/ObRKvq/">CSS-Only Modal: youmightnotneedjs.com</a> by Una Kravets (<a href="http://codepen.io/una">@una</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+            </div>
+            <div class="usage-note"><strong>Usage: Safe for production with caveat (see scss) &mdash; Shoutout to <a href="https://twitter.com/marcysutton">Marcy Sutton</a></strong>
             </div>
             <div class="comparison-group">
               <div data-code="html" class="code html">
                 <h4>HTML</h4>
                 <div data-lang="markup" class="code-block language-markup">
-                  <pre><code>&lt;button&gt;Click Me&lt;/button&gt;
+                  <pre><code>&lt;a class=&quot;modalTrigger&quot; id=&quot;modalTrigger&quot;
+   href=&quot;#modalDialog1&quot;&gt;
+	Open dialog
+&lt;/a&gt;
 
-&lt;div class=&quot;modal&quot;&gt;
-  &lt;p&gt;Hello Beautiful!&lt;/p&gt;
-&lt;/div&gt;
+&lt;dialog class=&quot;modal&quot; id=&quot;modalDialog1&quot;
+		tabindex=&quot;-1&quot; role=&quot;dialog&quot;&gt;
+  &lt;div&gt;
+	  &lt;a href=&quot;#modalTrigger&quot; aria-label=&quot;Close&quot;&gt;
+	  	&amp;times;
+	  &lt;/a&gt;
+	  &lt;p&gt;Hello Beautiful!&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/dialog&gt;
 </code></pre>
                 </div>
               </div>
               <div data-code="scss" class="code scss">
                 <h4>SCSS</h4>
                 <div data-lang="scss" class="code-block language-scss">
-                  <pre><code>// modal is invisible until
-// sibling is focused
-.modal {  
+                  <pre><code>// Modal hidden until it matches an anchor target 
+// Note: you can't close it with the escape key 
+// or trap focus inside of it.
+.modal {
   opacity: 0;
   visibility: hidden;
 }
 
-// modal fades in when button 
-// is in focus (i.e. clicked on)
-button:focus + .modal {
+// modal fades in when it matches
+// an anchor link (i.e. clicked on)
+#modalDialog:target {
   opacity: 1;
-  visibility: visible;
+  visibility: hidden;
 }</code></pre>
                 </div>
               </div>
@@ -222,6 +241,8 @@ button:focus + .modal {
             </noscript>
             <div class="codpen-example">
               <h4>CODEPEN</h4><p data-height="265" data-theme-id="light" data-slug-hash="jrxbZq" data-default-tab="result" data-user="una" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/una/pen/jrxbZq/">CSS-Only Image Switcher: youmightnotneedjs.com</a> by Una Kravets (<a href="http://codepen.io/una">@una</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+            </div>
+            <div class="usage-note"><strong>Usage: Presentational: keyboard navigable, not screen reader accessible.</strong>
             </div>
             <div class="comparison-group">
               <div data-code="html" class="code html">
@@ -309,6 +330,8 @@ button:focus + .modal {
               <h4>CODEPEN</h4><p data-height="160" data-theme-id="light" data-slug-hash="BLxjoo" data-default-tab="result" data-user="una" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/una/pen/BLxjoo/">HTML File Upload: youmightnotneedjs.com</a> by Una Kravets (<a href="http://codepen.io/una">@una</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
             </div>
+            <div class="usage-note"><strong>Usage: Safe for production.</strong>
+            </div>
             <div class="comparison-group">
               <div data-code="html" class="code html">
                 <h4>HTML</h4>
@@ -339,6 +362,8 @@ button:focus + .modal {
             </noscript>
             <div class="codpen-example">
               <h4>CODEPEN</h4><p data-height="160" data-theme-id="light" data-slug-hash="dpZGPa" data-default-tab="result" data-user="una" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/una/pen/dpZGPa/">HTML File Upload: youmightnotneedjs.com</a> by Una Kravets (<a href="http://codepen.io/una">@una</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+            </div>
+            <div class="usage-note"><strong>Usage: Safe for production.</strong>
             </div>
             <div class="comparison-group">
               <div data-code="html" class="code html">
@@ -372,6 +397,8 @@ button:focus + .modal {
             </noscript>
             <div class="codpen-example">
               <h4>CODEPEN</h4><p data-height="330" data-theme-id="light" data-slug-hash="amGdzK" data-default-tab="result" data-user="una" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/una/pen/amGdzK/">HTML Form Validation: youmightnotneedjs.com</a> by Una Kravets (<a href="http://codepen.io/una">@una</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+            </div>
+            <div class="usage-note"><strong>Usage: Safe for production.</strong>
             </div>
             <div class="comparison-group">
               <div data-code="html" class="code html">
@@ -431,6 +458,8 @@ button:focus + .modal {
             </noscript>
             <div class="codpen-example">
               <h4>CODEPEN</h4><p data-height="265" data-theme-id="light" data-slug-hash="bwrEpZ" data-default-tab="result" data-user="una" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/una/pen/bwrEpZ/">CSS Only Scroll Indicator: youmightnotneedjs.com</a> by Una Kravets (<a href="http://codepen.io/una">@una</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+            </div>
+            <div class="usage-note"><strong>Usage: Presentational, no screen reader support. Not recommended for production (mobile)</strong>
             </div>
             <div class="comparison-group">
               <div data-code="html" class="code html">
@@ -498,6 +527,8 @@ body:before {
             </noscript>
             <div class="codpen-example">
               <h4>CODEPEN</h4><p data-height="310" data-theme-id="light" data-slug-hash="EgLPmZ" data-default-tab="result" data-user="una" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/una/pen/EgLPmZ/">CSS Only Accordion: youmightnotneedjs.com</a> by Una Kravets (<a href="http://codepen.io/una">@una</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+            </div>
+            <div class="usage-note"><strong>Usage: Not keyboard navigable, inability to focus.</strong>
             </div>
             <div class="comparison-group">
               <div data-code="html" class="code html">
@@ -590,6 +621,8 @@ section {
             <div class="codpen-example">
               <h4>CODEPEN</h4><p data-height="265" data-theme-id="light" data-slug-hash="wzjGAj" data-default-tab="result" data-user="una" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/una/pen/wzjGAj/">CSS Only Lightbox: youmightnotneedjs.com</a> by Una Kravets (<a href="http://codepen.io/una">@una</a>) on <a href="http://codepen.io">CodePen</a>.</p>
             </div>
+            <div class="usage-note"><strong>Usage: Not keyboard navigable.</strong>
+            </div>
             <div class="comparison-group">
               <div data-code="html" class="code html">
                 <h4>HTML</h4>
@@ -665,6 +698,8 @@ $background-color: black;
             </noscript>
             <div class="codpen-example">
               <h4>CODEPEN</h4><p data-height="265" data-theme-id="light" data-slug-hash="KgRzRE" data-default-tab="result" data-user="una" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/una/pen/KgRzRE/">KgRzRE</a> by Una Kravets (<a href="http://codepen.io/una">@una</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+            </div>
+            <div class="usage-note"><strong>Usage: Not keyboard navigable.</strong>
             </div>
             <div class="comparison-group">
               <div data-code="html" class="code html">

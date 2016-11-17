@@ -1,0 +1,1 @@
+Usage: Presentational, Option to read or be skipped by screen reader, no user control over images.
