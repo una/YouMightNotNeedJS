@@ -1,1 +1,1 @@
-Usage: Not screen reader accessible. No keyboard control.
+Usage: Not screen reader accessible.

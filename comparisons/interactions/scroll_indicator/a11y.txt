@@ -1,1 +1,1 @@
-Usage: Purely visual (no screen reader support).
+Usage: Presentational, no screen reader support.
