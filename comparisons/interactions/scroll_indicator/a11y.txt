@@ -1,1 +1,1 @@
-Usage: Presentational, no screen reader support.
+Usage: Presentational, no screen reader support. Not recommended for production (mobile)
