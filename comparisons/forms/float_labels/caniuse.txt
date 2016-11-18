@@ -1,0 +1,4 @@
+Placeholder Attribute: http://caniuse.com/#feat=input-placeholder
+Placeholder Shown: http://caniuse.com/#feat=css-placeholder-shown
+Not Selector: http://caniuse.com/#feat=css-sel2
+Adjacent Sibling Selector: http://caniuse.com/#feat=css-sel2
