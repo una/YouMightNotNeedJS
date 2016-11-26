@@ -135,6 +135,11 @@
 	left: 0;
 	will-change: transform;
 	animation: scroller 10s infinite;
+	 // stop animation when hover
+	 &:hover{
+                -webkit-animation-play-state: paused; /* Safari 4.0 - 8.0 */
+                animation-play-state: paused;
+            }
 }
 
 // need a step for each slide
