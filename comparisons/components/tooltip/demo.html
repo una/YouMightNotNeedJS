@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>You Might Not Need JavaScript - Tooltip Demo</title>
+  <style>
+    .tooltip__container {
+      position: relative;
+    }
+
+    .tooltip__trigger {
+      border-bottom: 1px dashed #c69;
+      cursor: help;
+      /* using the general sibling selector in case someone inserts something like an icon between the two */
+    }
+
+    .tooltip__trigger:focus ~ [role="tooltip"], 
+    .tooltip__trigger:hover ~ [role="tooltip"] {
+      opacity: 1;
+      visibility: visible;
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+
+    .tooltip__trigger:focus, .tooltip__trigger:hover {
+      outline: none;
+      background-color: wheat;
+    }
+
+    [role="tooltip"] {
+      position: absolute;
+      z-index: 10;
+      bottom: -2.25rem;
+      padding: .5rem .5rem 0.5rem .75rem;
+      margin-left: .25rem;
+      min-width: 12rem;
+      max-width: 320px;
+      background-color: #c69;
+      color: white;
+      border-radius: 3px;
+      opacity: 0;
+      pointer-events: none;
+      visibility: hidden;
+      -webkit-transform: translateY(1rem);
+              transform: translateY(1rem);
+      -webkit-transition: all 400ms;
+      transition: all 400ms;
+      will-change: opacity;
+    }
+
+    [role="tooltip"]::before {
+      content: '';
+      position: absolute;
+      z-index: 10;
+      left: -1.2rem;
+      top: .5rem;
+      border: .65rem solid transparent;
+      border-right-color: #c69;
+    }
+
+    /* general page style */
+    *, *:before, *:after {
+      box-sizing: inherit;
+    }
+
+    html {
+      height: 100%;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      height: 100vh;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+    }
+
+    p {
+      position: relative;
+      max-width: 60rem;
+      padding: 1.5rem;
+      margin: 5rem auto;
+      line-height: 1.55;
+      font-family: monospace;
+    }
+
+    a {
+      border-bottom: 1px solid;
+      color: #c69;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+    <p>Cat ipsum dolor sit amet,
+        <span class="tooltip__container">
+          <span class="tooltip__trigger" aria-describedby="tooltip-1" tabindex="0">fall over dead,</span>
+          <span class="tooltip__tip" role="tooltip" id="tooltip-1">(not really but gets sypathy)</span>
+        </span>
+        adipisicing elit. Velit repudiandae <a href="?">a link to show tabbing order is not affected</a> Love and coo around boyfriend who purrs and makes the perfect moonlight eyes so I can purr and swat
+        <span class="tooltip__container">
+          <span class="tooltip__trigger" aria-describedby="tooltip-2" tabindex="0">the glittery gleaming yarn to him.</span>
+          <span class="tooltip__tip" role="tooltip" id="tooltip-2">(the yarn is from a $125 sweater)</span>
+        </span>
+        Cat not kitten around plop down in the middle where everybody walks and claws in your leg.
+      </p>
+</body>
+</html>
