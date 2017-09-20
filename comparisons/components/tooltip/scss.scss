@@ -1,0 +1,31 @@
+.tooltip__container {
+  // so the tooltip is always positioned next to its trigger
+  position: relative;
+}
+
+.tooltip__trigger {
+  // these two are optional styles, but give the user an indication that the trigger is interactive
+  border-bottom: 1px dashed;
+  cursor: help;
+
+  // using the general sibling selector in case someone inserts something like an icon between the two
+  &:focus ~ [role='tooltip'],
+  &:hover ~ [role='tooltip'] {
+    visibility: visible;
+    // if you used opacity: 0 for the default style
+    opacity: 1;
+  }
+}
+
+// these are the only styles needed, and even opacity is not needed if you don't want to fade it in
+// the rest would be up to the user to decide on
+[role='tooltip'] {
+  // positioned absolutely to take it out of the normal document flow
+  position: absolute;
+  // keeps it hidden from screenreaders until the user focuses the trigger
+  visibility: hidden;
+  // prevents a glitch where sometimes hovering over a certain spot makes the tooltip flash in and out rapidly
+  pointer-events: none;
+  // opacity will hide it visually but not from screenreaders; allows us to give it a nice fade-in effect since visibiliy cannot be transitioned
+  opacity: 0;
+}

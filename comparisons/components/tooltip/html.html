@@ -1,0 +1,6 @@
+<span class="tooltip__container">
+   <!-- the item (text, image, link, etc.) that triggers the tooltip should be keyboard-focusable. Tabindex 0 puts it in the tabbing order of the document, but does not affect the rest of the tabbing order. You should never use a tabindex above 0. Using aria-describedby will link the trigger to the tooltip so they are announced as a group by screenreaders. -->
+   <span class="tooltip__trigger" aria-describedby="tooltip-1" tabindex="0">the text / link / image that has a tooltip</span>
+   <!-- each tooltip must have the role of tooltip and be given a unique ID. That ID will be used above for its trigger with aria-described by. The tooltip itself should not receive focus and should only be triggered by keyboard or mouse events on the trigger. -->
+   <span class="tooltip__tip" role="tooltip" id="tooltip-1">the actual tooltip</span>
+</span>
