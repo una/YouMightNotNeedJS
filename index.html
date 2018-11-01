@@ -20,7 +20,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
   <script type="text/javascript">
     try{Typekit.load();}catch(e){}
-    
+
   </script>
   <script src="js/prism.js"></script>
   <script src="js/index.js"></script>
@@ -32,7 +32,7 @@
     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
     ga('create', 'UA-36758177-10', 'auto');
     ga('send', 'pageview');
-    
+
   </script>
 </head>
 <body>
@@ -50,11 +50,11 @@
           you might not need anything more than what the browser ships with.
         </p>
         <p>
-          This site is fully copied from <a href="http://youmightnotneedjquery.com">youmightnotneedjquery.com</a>, an excellent resource for vanilla JavaScript created by <a href="http://twitter.com/adamfschwartz">@adamfschwartz</a> and <a href="http://twitter.com/zachbloom">@zackbloom</a>.
-          But this time, we take a look at the power of modern native HTML and CSS as well as some of the syntactic sugar of Sass. Because, you might not need scripts for that task at all! 
+          This site is fully copied from <a href="http://youmightnotneedjquery.com">youmightnotneedjquery.com</a>, an excellent resource for vanilla JavaScript created by <a href="http://twitter.com/adamfschwartz">@adamfschwartz</a> and <a href="http://twitter.com/zackbloom">@zackbloom</a>.
+          But this time, we take a look at the power of modern native HTML and CSS as well as some of the syntactic sugar of Sass. Because, you might not need scripts for that task at all!
         </p>
         <p>
-           
+
           <strong>(Note: Some of these demos may not be accessible and work on all browsers. Please take a moment to review the usage notes and to test them in your project before using in production)</strong>
         </p>
       </div>
@@ -204,8 +204,8 @@
               <div data-code="scss" class="code scss">
                 <h4>SCSS</h4>
                 <div data-lang="scss" class="code-block language-scss">
-                  <pre><code>// Modal hidden until it matches an anchor target 
-// Note: you can't close it with the escape key 
+                  <pre><code>// Modal hidden until it matches an anchor target
+// Note: you can't close it with the escape key
 // or trap focus inside of it.
 .modal {
   opacity: 0;
@@ -255,7 +255,7 @@
   	&lt;img id=&quot;slide-2&quot; src=&quot;img2.jpg&quot; alt=&quot;img description&quot;/&gt;
   	&lt;img id=&quot;slide-3&quot; src=&quot;img3.jpg&quot; alt=&quot;img description&quot;/&gt;
   	&lt;img id=&quot;slide-4&quot; src=&quot;img4.jpg&quot; alt=&quot;img description&quot;/&gt;
-	
+
 	&lt;!-- Navigation for the slides --&gt;
 	&lt;ul&gt;
 		&lt;li&gt;&lt;a href=&quot;#slide-1&quot; aria-label=&quot;Image 1&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
@@ -277,12 +277,12 @@
     left: 0;
     width: 300px;
     height: 200px;
-    
+
     &amp;:target {
       transition: all .5s ease-in-out;
     }
-    
-    &amp;:not(:target), 
+
+    &amp;:not(:target),
     &amp;:target ~ img#slide-4  {
       position: relative;
       opacity: 0;
@@ -474,11 +474,11 @@
               <div data-code="scss" class="code scss">
                 <h4>SCSS</h4>
                 <div data-lang="scss" class="code-block language-scss">
-                  <pre><code>body {	
-	background: linear-gradient(to right top, 
-	$scroller-color 50%, 
+                  <pre><code>body {
+	background: linear-gradient(to right top,
+	$scroller-color 50%,
 	$scroller-background 50%);
-	background-size: 100% calc(100% - 100vh + #{$scroller-height}); 
+	background-size: 100% calc(100% - 100vh + #{$scroller-height});
 	background-repeat: no-repeat;
 }
 
@@ -540,13 +540,13 @@ body:before {
   &lt;section id=&quot;content1&quot;&gt;
     &lt;p&gt;Content for the first accordion&lt;/p&gt;
   &lt;/section&gt;
-  
+
   &lt;input id=&quot;toggle2&quot; type=&quot;radio&quot; name=&quot;toggle&quot; /&gt;
   &lt;label for=&quot;toggle2&quot;&gt;Label 2&lt;/label&gt;
   &lt;section id=&quot;content2&quot;&gt;
     &lt;p&gt;Content for the second accordion&lt;/p&gt;
   &lt;/section&gt;
-  
+
   &lt;input id=&quot;toggle3&quot; type=&quot;radio&quot; name=&quot;toggle&quot; /&gt;
   &lt;label for=&quot;toggle3&quot;&gt;Label 3&lt;/label&gt;
   &lt;section id=&quot;content3&quot;&gt;
@@ -705,29 +705,29 @@ $background-color: black;
               <div data-code="html" class="code html">
                 <h4>HTML</h4>
                 <div data-lang="markup" class="code-block language-markup">
-                  <pre><code>&lt;div class=&quot;tabs&quot;&gt;    
+                  <pre><code>&lt;div class=&quot;tabs&quot;&gt;
    &lt;div class=&quot;tab&quot;&gt;
        &lt;input type=&quot;radio&quot; name=&quot;tabgroup&quot; id=&quot;tab-1&quot; checked&gt;
        &lt;label for=&quot;tab-1&quot;&gt;Label One&lt;/label&gt;
        &lt;div class=&quot;content&quot;&gt;
           &lt;p&gt;Tab One Content&lt;/p&gt;
-       &lt;/div&gt; 
+       &lt;/div&gt;
    &lt;/div&gt;
-    
+
    &lt;div class=&quot;tab&quot;&gt;
        &lt;input type=&quot;radio&quot; name=&quot;tabgroup&quot; id=&quot;tab-2&quot;&gt;
        &lt;label for=&quot;tab-2&quot;&gt;Label Two&lt;/label&gt;
        &lt;div class=&quot;content&quot;&gt;
            &lt;p&gt;Tab Two Content&lt;/p&gt;
-       &lt;/div&gt; 
+       &lt;/div&gt;
    &lt;/div&gt;
-    
+
     &lt;div class=&quot;tab&quot;&gt;
        &lt;input type=&quot;radio&quot; name=&quot;tabgroup&quot; id=&quot;tab-3&quot;&gt;
        &lt;label for=&quot;tab-3&quot;&gt;Label Three&lt;/label&gt;
        &lt;div class=&quot;content&quot;&gt;
            &lt;p&gt;Tab Three Content&lt;/p&gt;
-       &lt;/div&gt; 
+       &lt;/div&gt;
    &lt;/div&gt;
 &lt;/div&gt;</code></pre>
                 </div>
@@ -736,7 +736,7 @@ $background-color: black;
                 <h4>SCSS</h4>
                 <div data-lang="scss" class="code-block language-scss">
                   <pre><code>.tabs {
-  position: relative;  
+  position: relative;
   // set height to be even for all tab groups
   min-height: 200px;
 }
@@ -757,7 +757,7 @@ $background-color: black;
   width: 0;
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
-  
+
   &amp;:focus + label {
     outline: 2px dotted black;
   }
